@@ -1,14 +1,18 @@
-const Bitwise = {
-	Has: (base, flag) => (base & flag) === flag,
-	Add: (base, ...flags) => {
+class Bitwise {
+	static Has(base, flag) {
+		return (base & flag) === flag;
+	}
+
+	static Add(base, ...flags) {
 		let mask = base;
 		for(let i = 0; i < flags.length; i++) {
 			mask = mask | flags[i];
 		}
 		
 		return mask;
-	},
-	Remove: (base, ...flags) => {
+	}
+
+	static Remove(base, ...flags) {
 		let mask = base;
 		for(let i = 0; i < flags.length; i++) {
 			mask = mask & ~flags[i];
@@ -16,6 +20,6 @@ const Bitwise = {
 		
 		return mask;
 	}
-};
+}
 
 export default Bitwise;
