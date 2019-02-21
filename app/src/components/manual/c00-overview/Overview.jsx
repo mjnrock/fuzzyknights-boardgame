@@ -34,33 +34,43 @@ class Overview extends Component {
 				<ul className="step-list">
 					<li className="mb-7">
 						<h4>Distribute Resources</h4>
-						<p>Each player receives an initial cache of resources, as specified below.</p>
+						<div>Each player receives an initial cache of resources, as specified below.</div>
 
 						<ResourceList wood="+10" coin="+5" />
 					</li>
 					
 					<li className="mb-7">
 						<h4>Determine "First Player"</h4>
-						<p>Every Player will roll <code>1d6</code>.  The highest roll goes first and Player turn-order will proceed <span className="text-bold">counter clockwise</span> from the "First Player".</p>
-						<p>In the event of ties on the highest rolls, those Players continue to roll <code>1d6</code> until the tie is resolved.</p>
+						<div>Every Player will roll <code>1d6</code>.  The highest roll goes first and Player turn-order will proceed <span className="text-bold">counter clockwise</span> from the "First Player".</div>
+						<div>In the event of ties on the highest rolls, those Players continue to roll <code>1d6</code> until the tie is resolved.</div>
 					</li>
 					
 					<li className="mb-7">
 						<h4>Play Phases</h4>
+						<div>Turns are broken down into <span className="text-bold">two (2)</span> types: 1) Days and 2) Player turns.  Before <span className="text-bold">all</span> Player turns, a new Day arises resulting in resource gains and the ability to strengthen fortifications and military size.</div>
+						<div className="mt-2">
+							Once <span className="text-bold">all</span> Players have gone through the phases below
+							<ul>
+								<li>Resource Phase</li>
+								<li>Remittance Phase</li>
+								<li>Build & Recruitment Phase</li>
+							</ul>
+							then the "Day Portion" is over and Exploration Phases begin for the Players, starting with the "First Player" and moving <span className="text-bold">counter clockwise</span> through the Players.
+						</div>
 
 						<div className="pl-4">
 							<h5 className="mt-4">Resource Phase</h5>
 
 							<div className="pl-4">
 								<h6 className="text-bold">Cities</h6>
-								<p>Each Player receives the cache below for each City that s/he owns.</p>
+								<div>Each Player receives the cache below for each City that s/he owns.</div>
 						
 								<ResourceList wood="+1" coin="+2" food="+1" stone="+1" />							
 							</div>
 
 							<div className="pl-4">
 								<h6 className="text-bold">Mines</h6>
-								<p>For each resource Mine that a Player owns, receive <code>+1</code> of that resource.</p>
+								<div>For each resource Mine that a Player owns, receive <code>+1</code> of that resource.</div>
 							</div>
 						</div>
 
@@ -69,7 +79,7 @@ class Overview extends Component {
 
 							<div className="pl-4">
 								<h6 className="text-bold">Heroes</h6>
-								<p>Each Player must pay the fees below for <span className="text-bold">each Hero</span> that s/he owns, unless that Hero is currently at a City.</p>
+								<div>Each Player must pay the fees below for <span className="text-bold">each Hero</span> that s/he owns, unless that Hero is currently at a City.</div>
 									
 								<ResourceList food="-1" />							
 							</div>
@@ -80,14 +90,14 @@ class Overview extends Component {
 
 							<div className="pl-4">
 								<h6 className="text-bold">Buildings</h6>
-								<p>Players can build Spawners in any Cities that s/he presently owns according to the the build fees below.</p>						
-								<p>Rank 2 upgrades can only be purchased once its Rank 1 building has been built.</p>
+								<div>Players can build Spawners in any Cities that s/he presently owns according to the the build fees below.</div>						
+								<div>Rank 2 upgrades can only be purchased once its Rank 1 building has been built.</div>
 								<table className="table">
 									<thead>
 										<tr>
 											<th className="text-center">Spawner</th>
-											<th className="text-center"><input data-role="rating" data-value="1" data-stars="2" /></th>
-											<th className="text-center"><input data-role="rating" data-value="2" data-stars="2" /></th>
+											<th className="text-center"><input data-stared-color="amber" data-role="rating" data-value="1" data-stars="2" /></th>
+											<th className="text-center"><input data-stared-color="amber" data-role="rating" data-value="2" data-stars="2" /></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -122,13 +132,13 @@ class Overview extends Component {
 
 							<div className="pl-4">
 								<h6 className="text-bold">Recruitment</h6>
-								<p>Players can purchase as many recruits as s/he can afford, provided that s/he has also purchased the appropriate Spawner.</p>
+								<div>Players can purchase as many recruits as s/he can afford, provided that s/he has also purchased the appropriate Spawner.</div>
 								<table className="table">
 									<thead>
 										<tr>
 											<th className="text-center">Creature</th>
-											<th className="text-center"><input data-role="rating" data-value="1" data-stars="2" /></th>
-											<th className="text-center"><input data-role="rating" data-value="2" data-stars="2" /></th>
+											<th className="text-center"><input data-stared-color="amber" data-role="rating" data-value="1" data-stars="2" /></th>
+											<th className="text-center"><input data-stared-color="amber" data-role="rating" data-value="2" data-stars="2" /></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -159,6 +169,20 @@ class Overview extends Component {
 										</tr>
 									</tbody>
 								</table>
+							</div>
+						</div>
+					</li>
+					
+					<li className="mb-7">
+					<h4>Exploration Phase</h4>
+						<div className="pl-4">
+							<h5 className="mt-4">Remittance Phase</h5>
+
+							<div className="pl-4">
+								<h6 className="text-bold">Heroes</h6>
+								<div>Each Player must pay the fees below for <span className="text-bold">each Hero</span> that s/he owns, unless that Hero is currently at a City.</div>
+									
+								<ResourceList food="-1" />							
 							</div>
 						</div>
 					</li>
