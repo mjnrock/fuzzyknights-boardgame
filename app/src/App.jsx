@@ -4,14 +4,21 @@ import { connect } from "react-redux";
 
 import { RequestGame } from "./dux/API";
 
+import Components from "./components/package";
+
 class App extends Component {
     componentDidMount() {
-        this.props.RequestGame();
+        // this.props.RequestGame();
     }
 
 	render() {
+		// return (
+        //     <div>{ JSON.stringify(this.props.API) }</div>
+		// );
 		return (
-            <div>{ JSON.stringify(this.props.API) }</div>
+            <div>
+				<Components.Manual.Ch0.Overview />
+			</div>
 		);
 	}
 }

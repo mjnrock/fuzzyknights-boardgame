@@ -11,6 +11,31 @@ class LinkedList {
 		this.Length = 0;
 		this.Head = null;
 		this.Tail = null;
+
+		this.CurrentIndex = 0;
+	}
+
+	//! Current(), Next(), and Previous() have NOT been validated
+	Current() {
+		return this.Get(this.CurrentIndex);
+	}
+	Next() {
+		this.CurrentIndex += 1;
+
+		if(this.CurrentIndex > this.Length) {
+			this.CurrentIndex = 0;
+		}
+
+		return this.Get(this.CurrentIndex);
+	}
+	Previous() {
+		this.CurrentIndex -= 1;
+
+		if(this.CurrentIndex < 1) {
+			this.CurrentIndex = this.Length;
+		}
+
+		return this.Get(this.CurrentIndex);
 	}
 
 	Get(index) {
