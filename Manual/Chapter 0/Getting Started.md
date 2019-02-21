@@ -275,3 +275,46 @@ If a Neutral `City` is assaulted, the Player must roll to determine the size of 
 
 
 ## Collectables
+Upon moving to a tile with an `Item` or `Resource`, the Hero/Player respectively can acquire the collectable.
+
+### Items
+Draw an `Item` card from the deck.  Once an `Item` is drawn, attempt a `Quality Roll` by performing an opportunistic "promotion" to the `Item` rank, described below.
+
+#### Quality Roll
+
+
+### Resources
+The Player must roll to determine the `Resource Type` and the quantity collected.  Upon collection, remove the `Resource` token from the board.
+
+#### Type
+Determine the `Resource Type` by rolling a **`1d4`**.
+
+|Roll|
+|---|
+|🎲 **`1d4`**|
+
+#### Quantity
+Determine the quantity collected by rolling a **`1d6`**.
+
+|Roll|
+|---|
+|🎲 **`1d4`**|
+
+> *Example*
+> **Rolling for Resource Collection**
+>
+> |Roll|Result|Resource|
+> |---|---|---|
+> |**`1d4`**|🎲 **2**|🌳|
+> 
+> Guardian Quantity Roll
+> 
+> |Roll|Result|Resource|
+> |---|---|---|
+> |**`1d6 +2`**|🎲 **7**|**`🌳(+7)`**|
+> 
+> *Result*
+> 
+> **`Player: 🌳(+7)`**
+
+## Battle
