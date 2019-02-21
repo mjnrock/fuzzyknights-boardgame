@@ -43,8 +43,6 @@ In the event of ties on the highest rolls, those Players continue to roll **`1d6
 ## Play Phases
 Turns are broken down into **two (2)** cycles: **1) Acquisition** and **2) Exploration**. Before **all** Player turns, a new Day arises resulting in resource gains and the ability to strengthen fortifications and military size.
 
-Once all Players have gone through the phases below:
-
 *`Acquisition`*
 During this cycle, **all** Players perform actions simultaneously in real-time, within whatever phase they are currently in.
 1. **Resource Phase**
@@ -55,14 +53,14 @@ During this cycle, **all** Players perform actions simultaneously in real-time, 
 During this cycle, the **First Player** performs his or her `Exploration Phase`, and upon completion, it moves to the next Player in sequence.
 1. **Exploration Phase**
 
-then the `Acquisition` cycle is over and `Exploration Phases` begin for the Players, starting with the **First Player** and moving *counter clockwise* through the Players.
+Once all Players have gone through the phases above then the `Acquisition` cycle is over and `Exploration Phases` begin for the Players, starting with the **First Player** and moving *counter clockwise* through the Players.
 
 ---
 
 ## Days
 ### Resource Phase
 #### Cities
-Each Player receives the cache below for each City that s/he owns.
+Each Player receives the cache below for **each** `City` that s/he owns.
 
 |💰|🌳|🥩|⛏️|
 |---|---|---|---|
@@ -85,11 +83,25 @@ Each Player receives the cache below for each City that s/he owns.
 > **`Player A: 💰(+6) 🌳(+3) 🥩(+3) ⛏️(+3)`**
 
 #### Mines
-For each resource Mine that a Player owns, receive **`+1`** of that resource.
+For each resource `Mine` that a Player owns, receive **`+1`** of that resource.
+
+> *Example*
+> **Calculating Mine Rewards**
+> 
+> **Total Mines: 3**
+> 
+> |⚒️|Qty|Formula|Result|
+> |---|---|---|---|
+> |💰|**2**|`1 * (2)`|**+2** 💰|
+> |🥩|**1**|`1 * (1)`|**+1** 🥩|
+> 
+> *Result*
+> 
+> **`Player A: 💰(+2) 🥩(+1)`**
 
 ### Remittance Phase
 #### Heroes
-Each Player must pay the fees below for **each Hero** that s/he owns, unless that Hero is currently garrisoned at a City.
+Each Player must pay the fees below for **each Hero** that s/he owns, unless that Hero is currently garrisoned at a `City`.
 
 |🥩|
 |---|
@@ -263,16 +275,22 @@ If the Player rolls an **`18`**, **`19`**, or **`20`** then the `Mine` **has** G
 ##### Hero Loss / Death
 If the interacting Hero loses all of his or her `Troops` as a result of the Guardian battle, then that Hero is immediately removed from play.  Any `Items` on the Hero are dropped on the `Mine` tile.  Those `Items` can then be acquired by any Hero that collects them.
 
-### Cities [ 🏰 ]
+## Cities [ 🏰 ]
 Upon landing on a tile with a foreign `City` token (Player-Owned or Neutral), the assaulting Player gains the opportunity to siege the `City` in an attempt to control it and gain access to its `Resource` generation and buildings.
 
-#### Player-Owned
+### Player-Owned
 
 
-#### Neutral
+### Neutral
 If a Neutral `City` is assaulted, the Player must roll to determine the size of the Defending army.
 
+### Building
 
+
+### Recruits
+There are **five (5)** recruit slots in a city that can be populated and garrisoned in the `City` for strategic purposes.
+
+Players can combine and/or split any identical Tier (1/2/3/4/5) and Rank (⭐/⭐⭐) creatures from his or her Heroes and/or Cities, while that Hero is currently garrisoned at a City.  Differently-Ranked creatured (even of the same Tier) cannot be combined until **all** of the garrisoned lower Rank (⭐) are promoted [Rank (⭐⭐)].
 
 ## Collectables
 Upon moving to a tile with an `Item` or `Resource`, the Hero/Player respectively can acquire the collectable.
