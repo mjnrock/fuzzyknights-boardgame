@@ -1,4 +1,12 @@
 # Getting Started
+Unless specifically specified, the core set of rules pertains to **all game modes**.  By default, `Normal Mode` is used with explicit exceptions written for `Campaign Mode`.
+
+**`[ ☠️ CAMPAIGN MODE ☠️ ]`**
+
+There is a more complex rule set that can be used instead when playing the game in `Campaign Mode`.  While the normal game is aimed a shorter length version, the `Campaign Mode` is designed to be able to sustain an extremely long adventure with potentially tens of hours of play for one game.
+
+Please consult the "Campaign Mode" rules addendum for specific details.
+
 ## Distribute Resources
 There are **four (4)** different types of resources
 
@@ -43,13 +51,15 @@ In the event of ties on the highest rolls, those Players continue to roll **`1d6
 ## Play Phases
 Turns are broken down into **two (2)** cycles: **1) Acquisition** and **2) Exploration**. Before **all** Player turns, a new Day arises resulting in resource gains and the ability to strengthen fortifications and military size.
 
-*`Acquisition`*
+**Acquisition Cycle**
+
 During this cycle, **all** Players perform actions simultaneously in real-time, within whatever phase they are currently in.
 1. **Resource Phase**
 2. **Remittance Phase**
 3. **Build & Recruitment Phase**
    
-*`Exploration`*
+**Exploration Cycle**
+
 During this cycle, the **First Player** performs his or her `Exploration Phase`, and upon completion, it moves to the next Player in sequence.
 1. **Exploration Phase**
 
@@ -190,6 +200,8 @@ To begin exploring, roll **`1d10`** to determine movement range for **each Hero*
 > |Hero B|**`1d10`**|🎲 **9**|
 > |Hero C|**`1d10`**|🎲 **1**|
 > 
+> The rolls are **not** reassignable (e.g. the 🎲 **1** roll *cannot* be given to Hero A, instead)
+> 
 > *Result*
 > 
 > **`Hero A: 🐎(+4) this turn`**
@@ -210,6 +222,8 @@ To begin exploring, roll **`1d10`** to determine movement range for **each Hero*
 > |**Hero A**|**`MOVE 🐎(-3)`**|`3 - 3 = 0`|`2`|`0`|
 > |**Hero B**|**`MOVE 🐎(-2)`**|`0`|`2 - 2 = 0`|`0`|
 > |Player|*End of Turn*|**0**|**0**|**0**|
+> 
+> The example immediatebly above is here to emphasize that you as the Player are **not** restricted to moving **one (1)** Hero at a time, but that you instead can move each Hero *up to* the amount of movement that each Hero individually rolled in any order you wish, maxing out at that Hero's movement roll that turn.  While this *can* add complexity by breaking up movement this way, you as the Player are fully allowed to go Hero by Hero to move, instead, if you want.
 
 ---
 
@@ -266,7 +280,7 @@ If the Player rolls an **`18`**, **`19`**, or **`20`** then the `Mine` **has** G
 > 
 > |Roll|Result|
 > |---|---|
-> |**`1d6 +2`**|🎲 **4**|
+> |**`1d6 +2`**|🎲 **2 +2 = 4**|
 > 
 > *Result*
 > 
@@ -282,7 +296,7 @@ Upon landing on a tile with a foreign `City` token (Player-Owned or Neutral), th
 
 
 ### Neutral
-If a Neutral `City` is assaulted, the Player must roll to determine the size of the Defending army.
+If a Neutral `City` is assaulted, the Player must roll to determine the size of the Defending `Army`.
 
 ### Building
 
@@ -329,10 +343,90 @@ Determine the quantity collected by rolling a **`1d6`**.
 > 
 > |Roll|Result|Resource|
 > |---|---|---|
-> |**`1d6 +2`**|🎲 **7**|**`🌳(+7)`**|
+> |**`1d6 +2`**|🎲 **5 +2 = 7**|**`🌳(+7)`**|
 > 
 > *Result*
 > 
 > **`Player: 🌳(+7)`**
 
 ## Battle
+When attacking, a Player has the option to split his or her `Army` into (up to) **four (4) squads**, comprised of whatever combination of `Units` the Player desires, so long as there is at least **one (1)** in each squad.
+
+A Player is not required to split into squads, it just simply allows for the Player to "play the odds" differently when rolling dice.
+
+> *Example*
+> **Breaking into Two (2) Squads**
+> 
+> An example `Army` composition of a Player
+>
+> |🧟️ Tier|Quantity|
+> |---|---|
+> |1|`15`|
+> |2|`5`|
+> |3️|`2`|
+>
+> An example `Squad` composition of that same Player
+> |Squad|Tier 1|Tier 2|Tier 3|
+> |---|---|---|---|
+> |A|`10`|`3`|-|
+> |B|`5`|`2`|`2`|
+> 
+> **This example setup will be used to describe rolls**
+
+To attack, a Players must decide to either use **Representative Rolls** or **Individual Rolls** to attack and defend.  Neutral camps **always** use **Representative Rolls**.
+
+**Tier/Rank Dice**
+
+||Tier 1|Tier 2|Tier 3|Tier 4|Tier 5|
+|-|-|-|-|-|-|
+|**Rank 1**|`1d6`|`2d6`|`3d6`|`4d6`|`5d6`|
+|**Rank 2**|`1d6 +3`|`2d6 +6`|`3d6 +9`|`4d6 +12`|`5d6 +15`|
+
+Once the `Squads` have been segmented, decide which roll paradigm you wish to use and begin attacking the opponent's `Squads` in a manner similar to a turn-based RPG.  That is, if your team has `Squads A1 & B1` and the opponent has only `Squad A2`, the attacker at any turn can choose which of his or her squads will attack whichever `Squads` of the opponent that s/he chooses.
+
+To perform battle, for each `Squad` choose an enemy `Squad` to attack, roll dice appropriate to either a **Representative Roll** or **Individual Roll** setup, have the opponent do the same, and then compare the **Totals** for each of the **two (2)** `Squads`.  Whichever `Squad` has the higher total wins the skirmish, and the **entire** `Squad` of the losing side is killed.  Battle continues until an one side's `Army` is completely killed, or the Player retreats.
+
+#### Retreat
+A **`RETREAT`** triggers an automatic forfeiture of that Hero and its accompanying `Army`.  Any items on that Hero are placed on the Tile, which can then potentially be recollected by another Hero upon venturing to that Tile.  If that Tile is occupied by a Token (e.g. Monster, City, Hero, etc.) that can perform battle, then the "defending" entity must be beat in battle before claiming the items again.
+
+> *Example*
+> 
+> If a Hero retreats from fighting a monster group on the map *and* that Hero has items in its inventory, then the Hero is removed from player, its `Army` is disbanded, and the items are placed on the *same Tile* as the monster.  That monster must be defeated before another Hero can claim those items.
+
+### Representative Rolls
+In this mode, only **one (1)** version of the appropriate dice and *multiply* the result by the quantity of `Units` in that `Squad`.
+
+> *Example*
+> **Representative Rolls**
+> 
+> |Squad|Tier 1|Tier 3|Tier 2|
+> |---|---|---|---|
+> |A|`10`|`3`|`0`|
+> |B|`5`|`2`|`2`|
+> 
+> |Squad|Tier 1 Roll|Tier 3 Roll|Tier 2 Roll|
+> |---|---|---|---|
+> |A|`10 * 1d6`|`3 * 2d6`|-|
+> |B|`5 * 1d6`|`2 * 2d6`|`2 * 3d6`|
+> 
+> |Squad|Tier 1 Roll|Tier 3 Roll|Tier 2 Roll|Total|
+> |---|---|---|---|---|
+> |A|**`10` * 🎲 3 = 30**|**`3` * 🎲 7 = 21**|-|**30 + 21 = `🎲 51`**|
+> |B|**`5` * 🎲 2 = 10**|**`2` * 🎲 9 = 18**|**`2` * 🎲 11 = 22**|**10 + 18 + 22 = `🎲 50`**|
+> 
+
+### Individual Rolls
+In this mode, roll the appropriate dice for each `Unit` in that `Squad`.  Instead of rolling "one version" of the dice and multiplying by quantity, roll for every unit individually.
+
+> *Example*
+> **Individual Rolls**
+> 
+> |Squad|Tier 1 Roll|Tier 3 Roll|Tier 2 Roll|
+> |---|---|---|---|
+> |A|`1d6`, ..., `1d6` (10x🎲)|`2d6`, `2d6`, `2d6` (3x🎲)|-|
+> |B|`1d6`, ..., `1d6` (5x🎲)|`2d6`, `2d6` (2x🎲)|`3d6`, `3d6` (2x🎲)|
+> 
+> |Squad|Tier 1 Roll|Tier 3 Roll|Tier 2 Roll|Total|
+> |---|---|---|---|---|
+> |A|**🎲 3 + ... + 🎲 4 = 41**|**🎲 7 + 🎲 8 + 🎲 12 = 27**|-|**41 + 27 = `🎲 68`**|
+> |B|**🎲 1 + ... + 🎲 6 = 19**|**🎲 9 + 🎲 9 = 18**|**🎲 18 + 🎲 15 = 33**|**19 + 18 + 33 = `🎲 70`**|
