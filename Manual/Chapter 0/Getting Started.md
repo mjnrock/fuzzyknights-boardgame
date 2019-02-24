@@ -48,6 +48,27 @@ In the event of ties on the highest rolls, those Players continue to roll **`1d6
 
 ---
 
+## Potential Token Placement
+*Starting on the second day*, **all** Players roll a `1dP`.  In the event of a successful roll, that Player should then roll a `1d4` to determine which type of Token s/he will place.  After determining the Token type, the Player can place that Token on **any** unoccupied Tile
+
+> **TIP:** Strategically consider placing Monsters on the board to restrict Players from certain paths while that Monster remains, or to place `Items` and `Resources` in defensible or allied territory
+
+**Roll for Success**
+
+|Roll|🎲 10 - 50|🎲 60 - 100|
+|---|---|---|
+|🎲 **`1dP`**|-|Roll `1d4` to determine Token type|
+
+**Roll for Token Type**
+
+|Roll|🎲 1 - 2|🎲 3|🎲 4|
+|---|---|---|---|
+|🎲 **`1d4`**|`Resource`|`Item`|`Monster`|
+
+
+
+---
+
 ## Play Phases
 Turns are broken down into **two (2)** cycles: **1) Acquisition** and **2) Exploration**. Before **all** Player turns, a new Day arises resulting in resource gains and the ability to strengthen fortifications and military size.
 
@@ -321,10 +342,63 @@ There are **five (5)** recruit slots in a city that can be populated and garriso
 Players can combine and/or split any identical Tier (1/2/3/4/5) and Rank (⭐/⭐⭐) creatures from his or her Heroes and/or Cities, while that Hero is currently garrisoned at a City.  Differently-Ranked creatured (even of the same Tier) cannot be combined until **all** of the garrisoned lower Rank (⭐) are promoted [Rank (⭐⭐)].
 
 ## Collectables
-Upon moving to a tile with an `Item` or `Resource`, the Hero/Player respectively can acquire the collectable.
+Upon moving to a tile with an `Item` or `Resource`, the Hero/Player respectively can acquire the collectable.  **All** Tokens take **`🐎(-1)`** each to acquire.
+
+**Token Interaction Priority Order**
+In the event that there are multiple Tokens on the same Tile, the Players must interact with the Tokens according to a "precedence" described below.
+
+1. Hero
+2. City
+   1. If a City has a Hero `Garrisoned`, then that City has highester priority
+3. Monster
+4. Item
+5. Resource
+6. Mine
+
+> *Example*
+> 
+> If an `Item` and **two (2)** Monsters reside on the same Tile, then the Players would be forced to confront *both* Monsters independetly (i.e. one at a time, each time `EXPEND 🐎(-1)`) *before* they could `ACQUIRE` that `Item` (also `EXPEND 🐎(-1)`).
 
 ### Items
-Draw an `Item` card from the deck.  Once an `Item` is drawn, attempt a `Quality Roll` by performing an opportunistic "promotion" to the `Item` rank, described below.
+Draw an `Item` card from the deck.  Once an `Item` is drawn, attempt a `Quality Roll` by performing an opportunistic "promotion" to the `Item` rank, described below.  `Items` take **`🐎(-1)`** each to `ACQUIRE`.
+
+> *Example*
+> 
+> Suppose that a Hero is adjacent to a Tile with **three (3)** `Items`
+> 
+> **Current State**
+> 
+> |0,0|1|2|3|4|5|
+> |-|-|-|-|-|-|
+> |**1**|-|-|-|-|-|
+> |**2**|-|🧛|🎁🎁🎁|-|-|
+> |**3**|-|-|-|-|-|
+> |**4**|-|-|-|-|-|
+> |**5**|-|-|-|-|-|
+> 
+> **Desired State**
+> 
+> |0,0|1|2|3|4|5|
+> |-|-|-|-|-|-|
+> |**1**|-|-|-|-|-|
+> |**2**|-|-|🧛|-|-|
+> |**3**|-|-|-|-|-|
+> |**4**|-|-|-|-|-|
+> |**5**|-|-|-|-|-|>
+> 
+> *Result*
+>  
+> |Sequence|Action|
+> |---|---|
+> |**`MOVE 🐎(-1)`**|`(2, 2) to (3, 2)`|
+> |**`EXPEND 🐎(-1)`**|`ACQUIRE Item 🎁(+1)`|
+> |**`EXPEND 🐎(-1)`**|`ACQUIRE Item 🎁(+1)`|
+> |**`EXPEND 🐎(-1)`**|`ACQUIRE Item 🎁(+1)`|
+> |||
+> |**`Total 🐎(-4)`**|Perform above **four (4)** actions|
+
+#### Hero Death
+Upon the `DEATH` of a Hero, *all* `Items` currently on that Hero are dropped onto the Tile upon which the Hero died.  Each `Item` can then be acquired by any other Hero that ventures to that Tile to acquire those `Items`.
 
 #### Quality Roll
 
@@ -367,6 +441,7 @@ Determine the quantity collected by rolling a **`1d6`**.
 
 ## Board Monsters
 Upon a Hero landing on a Tile that has a Monster token, first roll a `1dP` to determine how to proceed.  Next, consult the interaction chart below.  If a battle results and the Player wins, the Player is rewarded **one (1)** per Neutral Monster killed. **`[ 💰(+1) x Neutral Monsters Killed = Total Reward 💰(+X)]`**  Reward gold is only given after a successful battle (i.e. not in cases of `BRIBE` or `DEFECT`).
+
 **Roll for Interaction**
 
 |Roll|🎲 10|🎲 20 - 70|🎲 80 - 90|🎲 100|
