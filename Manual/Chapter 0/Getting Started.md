@@ -376,9 +376,8 @@ Upon a Hero landing on a Tile that has a Monster token, first roll a `1dP` to de
 The Tier-rank for any Monsters resulting from `Mine` interactions (e.g. Guardians) or any Monster resultings from Monster-token interactions is determined by the highest-tiered Spawner that *any* Player has, **up to a max of Tier 3**.
 
 > *Example*
-> **Breaking into Two (2) Squads**
 > 
-> An example determining Monster Tier
+> **Determining Monster Tier**
 >
 > |Player|City 1 Highest-Tiered Spawner|City 2 Highest-Tiered Spawner|etc.|
 > |---|---|---|---|
@@ -410,19 +409,76 @@ All interactions must determine which Tier of Monsters the Player will be attack
 
 Any Monsters that cannot be `BRIBED` (e.g. due to lack of resources) or are refused during a `DEFECT` (e.g. the Player doesn't want them for whatever reason) are forfeited and the Monster token is removed from the board.  To summarize, if a `2d6` rolls `🎲 9` and the Player can only purchase **three (3)** Monsters, then s/he can purchase only up to **three (3)** and the remaining are lost forever.
 
-### `FIGHT`
-##### Encampment
-Upon rolling a `🎲 10`, the attacking Player must `FIGHT` `4d6` Monsters.  Monsters will **always** split into **two (2)** `Squads`.
+> **NOTE:** All interaction examples below will assume **Tier 3** Monsters for the sake of consistency
 
-##### Group
-Upon rolling a `🎲 20 - 70`, the attacking Player must `FIGHT` `2d6` Monsters.  Monsters will **always** split into **two (2)** `Squads`.
+### `FIGHT`
+Monsters will **always** split into **two (2)** `Squads`, split as evenly as the Monster quantity will allow.
+
+#### Encampment
+Upon rolling a `🎲 10`, the attacking Player must `FIGHT` `4d6` Monsters.  
+
+> *Example*
+> This example will assume **Tier 3** Monsters
+> 
+> **Fighting an Encampment**> 
+>
+> |Roll|Result|
+> |---|---|
+> |**`4d6`**|🎲 20|
+> 
+> *Result*
+> 
+> **`Player: FIGHT twenty (20) Tier-3 Monsters split into two (2) Squads of ten (10) Monsters each`**
+
+#### Group
+Upon rolling a `🎲 20 - 70`, the attacking Player must `FIGHT` `2d6` Monsters. 
+
+> *Example*
+> This example will assume **Tier 3** Monsters
+> 
+> **Fighting a Group of Monsters**
+> 
+> |Roll|Result|
+> |---|---|
+> |**`2d6`**|🎲 7|
+> 
+> *Result*
+> 
+> **`Player: FIGHT seven (7) Tier-3 Monsters split into two (2) Squads of four (4) and three (3) Monsters each`**
 
 ### `BRIBE`
 Upon rolling a `🎲 80 - 90`, the attacking Player can opt to `BRIBE` up to `2d6` Monsters.  If the Player chooses to `BRIBE`, s/he must pay the same amount of resources as that Monster would cause if being recruited in a `City`.
 
+> *Example*
+> This example will assume **Tier 3** Monsters
+> 
+> **Bribing Monsters**
+> 
+> |Roll|Result|
+> |---|---|
+> |**`2d6`**|🎲 9|
+> 
+> *Result*
+> 
+> **`Player: Can RECRUIT up to nine (9) Tier-3 Monsters at 💰(-3) each`**
+> 
+> **`e.g. 💰(-27) Total if all are purchased`**
+
 ### `DEFECT`
 Upon rolling a `🎲 100`, the attacking Player can opt to `RECEIVE` up to `2d6` Monsters.
 
+> *Example*
+> This example will assume **Tier 3** Monsters
+> 
+> **Defection of Monsters**
+> 
+> |Roll|Result|
+> |---|---|
+> |**`2d6`**|🎲 5|
+> 
+> *Result*
+> 
+> **`Player: Can RECEIVE up to five (5) Tier-3 Monsters for free`**
 
 ## Battle
 When attacking, a Player has the option to split his or her `Army` into (up to) **four (4) squads**, comprised of whatever combination of `Units` the Player desires, so long as there is at least **one (1)** in each squad.
