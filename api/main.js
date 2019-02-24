@@ -7,6 +7,8 @@ const app = expressWS.app;
 
 const PORT = 3087;
 
+import FKBG from "./fkbg-core/package";
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(function(req, res, next) {
@@ -24,7 +26,7 @@ app.get("/validate", function (req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.set("Content-Type", "Application/json");
     res.status(200).send({
-        "verified": false
+        "verified": new FKBG.Player("Cat", "blue")
     });
 });
 

@@ -24,8 +24,7 @@ export default connect(
         Players: state.Player
     }),
 	(dispatch) => ({
-        AcquireResource: () => dispatch(PlayerActions.AcquireResource()),
-        SpendResource: () => dispatch(PlayerActions.SpendResource()),
-        ExchangeResource: () => dispatch(PlayerActions.ExchangeResource()),
+        AddPlayer: (name, color) => dispatch(PlayerActions.AddPlayer(name, color)),
+        RemovePlayer: (name) => dispatch(PlayerActions.RemovePlayer(name))
     })
 )(App);
