@@ -21,7 +21,13 @@ Each Player receives an **initial cache** of resources, as specified below.
 
 |💰|🌳|
 |---|---|
-|**`+5`**|**`+10`**|
+|**`+5`**|**`+5`**|
+
+Each Player's `Capital` is also awarded
+* Ramparts
+  * `Level 1`
+* Unit Spawner
+  * `Tier 1`
 
 ---
 
@@ -328,7 +334,61 @@ If the interacting Hero loses all of his or her `Troops` as a result of the Guar
 Upon landing on a tile with a foreign `City` token (Player-Owned or Neutral), the assaulting Player gains the opportunity to siege the `City` in an attempt to control it and gain access to its `Resource` generation and buildings.
 
 ### Player-Owned
+#### Resource Mine
+During `Daybreak`, a Player may purchase a `Resource Mine` as a Building choice for that `City`.  Once the resource cost has been remitted, the Player rolls a `1d4` for a `Resource Type` roll.  Which resource is rolled will permanently increase that `City's` production of that resource by `+1 per turn`.
 
+|Roll|
+|-|
+|**`🎲 1d4`**|
+
+|Resource|Cost|
+|---|---|
+|💰|`1`|
+|🌳|`1`|
+|⛏️|`1`|
+
+> *Example*
+> 
+> **Building a City Resource Mine**
+>
+> |Roll|Result|City Reward|
+> |---|---|---|
+> |**`1d4`**|🎲 **2**|🌳(+1) /turn|
+
+#### Ramparts
+Ramparts are a defensive barrier to a `City` (a `City` with `Level 1+ Ramparts` is `BARRICADED`) in that can have states of `None`, `Level 1`, or `Level 2`.  While a `City` has at least a `Level 1 Ramparts`, the `City` cannot be attacked directly, but must instead be `UNDER SIEGE`.  Each `Hero` that is sieging a `City` can remove up to **one (1)** Level of `Ramparts` on that `City` under the circumstance described below (`UNDER SIEGE` Section).  While a `City` is `UNDER SIEGE`, that `City` **does not / can not:**
+
+* Collect Resources
+* Build Buildings
+* Recruit Units
+
+### **`UNDER SIEGE`**
+In order to perform a `SIEGE`, a `Hero` must have *at least* **🐎(10)** (ten movement) remaining in its turn *and* be immediately adjacent (`N`, `W`, `S`, or `E`) of the `City`.  If a `City` has no `Ramparts`, then a `SIEGE` cannot take place (the `City` in this case is `VULNERABLE`), but instead, the `Hero` can simply assault the `City` directly and perform `City` battle as normal.
+
+When a `Hero` performs a `SIEGE`, that `Hero` *ends its turn* and will remove **one (1)** Level of `Ramparts` from that `City`.  Remember, that while a `City` is under `SIEGE`, it does not generate resources and it cannot build or recruit.
+
+> **NOTE:** If **two (2)** `Heroes [ 🧛 ]` validly and simultaneously `SIEGE` [ 💥 ] a `City` [ 🏰 ], then **each** `SIEGE` removes a Level of `Ramparts` from that `City`.
+
+A single Player can perform multiple `SIEGES` in **one (1)** turn on a `City`, *if and only if* the Player sends multiple `Heroes` to `SIEGE` the `City` *and* each of those `Heroes` is "siege-eligible" (i.e. **one (1)** Hero alone can--at most-- remove **one (1)** level of `Ramparts` per turn and they must *each* have *at least* 🐎(10) movement remaining)
+
+> *Example*
+> 
+> Suppose the `City` at **`(3, 2)`** has a `Level 2 Rampart` was `SIEGED` by **two (2)** `Heroes` in **one (1)** turn.
+> 
+> |0,0|1|2|3|4|5
+> |-|-|-|-|-|-|
+> |**1**|⚒️💰|-|🧛💥|-|-|
+> |**2**|-|🧛💥|🏰|-|-|
+> |**3**|-|🎁|-|-|-|
+> |**4**|-|-|-|-|🧟|
+> |**5**|🧟|-|-|🏰|-|
+> 
+> *Result*
+> 
+> The `City` at **`(3, 2)`** no longer has **any** `Ramparts` (i.e. *both* `Level 1 Ramparts` and the `Level 2 Ramparts` in that `City` were destroyed) and as a result, the `City` is now `VULNERABLE`.
+
+#### Capital
+Only the the Player's original `City` (`Capital`) starts with a `Level 1 Ramparts`.  Otherwise, a `City` will, *by default*, not have any `Ramparts` built.
 
 ### Neutral
 If a Neutral `City` is assaulted, the Player must roll to determine the size of the Defending `Army`.
