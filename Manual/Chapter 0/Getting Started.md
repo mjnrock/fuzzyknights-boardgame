@@ -97,14 +97,29 @@ Once all Players have gone through the phases above then the `Acquisition` cycle
 ## Days
 ### Resource Phase
 #### Cities
-Each Player receives the cache below for **each** `City` that s/he owns.
+Each Player receives the cache below for **each** `City` that s/he owns.  Players can only **build** new `Cities` while they own fewer than `2 x Total Player Count` at a time.
+
+> **NOTE:** The `City` restriction above **only** applies to building and not to capturing.
 
 |💰|🌳|🥩|⛏️|
 |---|---|---|---|
 |**`+2`**|**`+1`**|**`+1`**|**`+1`**|
 
+The numbers above **are only** the *base* numbers for a `City`.  If a `City` has added `Resource Mines`, then those must *also* be added to the `City's` reward cache.
+
+> *Examples*
+> 
+> **Total Players: 3**
+> 
+> Each Player is eligible to build a `City` only when s/he owns fewer than **`2 x (3 Players) = 6 Cities`**.
+> 
+> If a Player owns **six (6)** `Cities` and **captures** another `City`, then that Player now has **seven (7)** `Cities`.
+> 
+> If a Player owns **six (6)** `Cities`, then that Player is prohibited from **building** another `City`.
+
 > *Example*
-> **Calculating Total Cost**
+> 
+> **Calculating Base Cost**
 > 
 > **Total Cities: 3**
 > 
@@ -118,6 +133,17 @@ Each Player receives the cache below for **each** `City` that s/he owns.
 > *Result*
 > 
 > **`Player A: 💰(+6) 🌳(+3) 🥩(+3) ⛏️(+3)`**
+
+##### Building a New City
+A new `City` can be founded by a `Hero` when that `Hero`:
+1. Has *at least* 🐎(15) movement remaining
+2. Is the sole-occupant of a Tile
+
+If both conditions above are met, then the Player can spend the resources below and have that `Hero` establish a new `City`.
+
+|Building|💰|🌳|⛏️|
+|-|-|-|-|
+|`City`|**`5`**|**`5`**|**`10`**|
 
 #### Mines
 For each resource `Mine` that a Player owns, receive **`+1`** of that resource.
@@ -618,7 +644,7 @@ Upon rolling a `🎲 100`, the attacking Player can opt to `RECEIVE` up to `2d6`
 ## Battle
 When attacking, a Player has the option to split his or her `Army` into (up to) **four (4) squads**, comprised of whatever combination of `Units` the Player desires, so long as there is at least **one (1)** in each squad.
 
-A Player is not required to split into squads, it just simply allows for the Player to "play the odds" differently when rolling dice.
+A Player is not required to split into squads, it just simply allows for the Player to "play the odds" differently when rolling dice.  In all battle, ties favor the *defending* `Army`.
 
 > *Example*
 > **Breaking into Two (2) Squads**
