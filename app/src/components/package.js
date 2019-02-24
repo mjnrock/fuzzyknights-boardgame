@@ -1,11 +1,7 @@
-import ResourceTable from "./ResourceTable";
-import ResourceList from "./ResourceList";
-
-import Manual from "./manual/package";
+import City from "./City";
+import Hero from "./Hero";
 
 export default {
-	ResourceTable,
-	ResourceList,
-
-	Manual
+	City,
+	Hero
 };

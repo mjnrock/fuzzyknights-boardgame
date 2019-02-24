@@ -10,7 +10,7 @@ export const Enum = {
 
 export const RequestGame = () => ({
     type: Enum.REQUEST_GAME,
-    url: "http://localhost:3099/validate"
+    url: "http://localhost:3087/validate"
 });
 
 export const RequestGameSuccess = (payload) => ({

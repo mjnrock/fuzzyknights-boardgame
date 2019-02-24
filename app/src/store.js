@@ -1,16 +1,14 @@
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { createEpicMiddleware, combineEpics  } from 'redux-observable';
 
-import { Reducer as APIReducer, RequestGameEpic as APIRequestGameEpic } from "./dux/API";
+import { Reducer as PlayerReducer } from "./dux/Player";
 
 export const rootReducer = combineReducers({
-    API: APIReducer
+    Player: PlayerReducer
 });
 
 const epicMiddleware = createEpicMiddleware();
-export const rootEpic = combineEpics(
-    APIRequestGameEpic
-);
+export const rootEpic = combineEpics();
 
 export default function configureStore() {
     const store = createStore(

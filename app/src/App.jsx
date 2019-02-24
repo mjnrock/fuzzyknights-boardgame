@@ -2,31 +2,30 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { RequestGame } from "./dux/API";
+import { Actions as PlayerActions } from "./dux/Player";
 
 import Components from "./components/package";
 
 class App extends Component {
     componentDidMount() {
-        // this.props.RequestGame();
+        console.log(this.props);
     }
 
 	render() {
-		// return (
-        //     <div>{ JSON.stringify(this.props.API) }</div>
-		// );
 		return (
             <div>
-				<Components.Manual.Ch0.Overview />
+				
 			</div>
 		);
 	}
 }
 export default connect(
 	(state) => ({
-        API: state.API
+        Players: state.Player
     }),
 	(dispatch) => ({
-        RequestGame: () => dispatch(RequestGame()),
+        AcquireResource: () => dispatch(PlayerActions.AcquireResource()),
+        SpendResource: () => dispatch(PlayerActions.SpendResource()),
+        ExchangeResource: () => dispatch(PlayerActions.ExchangeResource()),
     })
 )(App);
