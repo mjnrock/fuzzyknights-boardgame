@@ -658,6 +658,7 @@ A Player is not required to split into squads, it just simply allows for the Pla
 > |3️|`2`|
 >
 > An example `Squad` composition of that same Player
+> 
 > |Squad|Tier 1|Tier 2|Tier 3|
 > |---|---|---|---|
 > |A|`10`|`3`|-|
