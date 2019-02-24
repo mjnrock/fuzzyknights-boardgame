@@ -229,18 +229,32 @@ To begin exploring, roll **`1d10`** to determine movement range for **each Hero*
 
 ## Resources
 
-|Roll|
-|---|
-|🎲 **`1d4`**|
+**Determine Resource Type**
 
-|Result|Resource|
-|---|---|
-|🎲 **1**|💰|
-|🎲 **2**|🌳|
-|🎲 **3**|🥩|
-|🎲 **4**|⛏️|
+|Roll|🎲 1|🎲 2|🎲 3|🎲 4|
+|---|---|---|---|---|
+|🎲 **`1d4`**|💰|🌳|🥩|⛏️|
 
 ### Mines [ ⚒️ ]
+
+**Determine Resource Type**
+
+|Roll|🎲 1|🎲 2|🎲 3|🎲 4|
+|---|---|---|---|---|
+|🎲 **`1d4`**|💰|🌳|🥩|⛏️|
+
+**Check for Guardians**
+
+|Roll|🎲 10 - 80|🎲 90 - 100|
+|---|---|---|
+|🎲 **`1dP`**|`CAPTURE` `Mine`|`FIGHT` **`1d6 +2`** Monsters|
+
+**Determine Guardian Quantity**
+
+|Roll|
+|---|
+|🎲 **`1d6 +2`**|
+
 Upon landing on a tile with a `Mine` token, the Player can attempt to `CAPTURE` the `Mine`.  Upon a `CAPTURE`, immediately collect **`+1`** of the `Resource` of the `Mine`.  To determine the `Resource` of the `Mine`, roll a **`1d4`** to determine the type of the `Mine`, if it has not yet been determined.
 
 The Player must roll **`1d20`** to determine if the `Mine` has any Guardians present.  If the `Mine` interaction results in a `CAPTURE`, it becomes owned by the conquering Player.
@@ -321,16 +335,18 @@ The Player must roll to determine the `Resource Type` and the quantity collected
 #### Type
 Determine the `Resource Type` by rolling a **`1d4`**.
 
-|Roll|
-|---|
-|🎲 **`1d4`**|
+**Determine Resource Type**
+
+|Roll|🎲 1|🎲 2|🎲 3|🎲 4|
+|---|---|---|---|---|
+|🎲 **`1d4`**|💰|🌳|🥩|⛏️|
 
 #### Quantity
 Determine the quantity collected by rolling a **`1d6`**.
 
 |Roll|
 |---|
-|🎲 **`1d4`**|
+|🎲 **`1d6`**|
 
 > *Example*
 > **Rolling for Resource Collection**
@@ -348,6 +364,65 @@ Determine the quantity collected by rolling a **`1d6`**.
 > *Result*
 > 
 > **`Player: 🌳(+7)`**
+
+## Board Monsters
+Upon a Hero landing on a Tile that has a Monster token, first roll a `1dP` to determine how to proceed.  Next, consult the interaction chart below.  If a battle results and the Player wins, the Player is rewarded **one (1)** per Neutral Monster killed. **`[ 💰(+1) x Neutral Monsters Killed = Total Reward 💰(+X)]`**  Reward gold is only given after a successful battle (i.e. not in cases of `BRIBE` or `DEFECT`).
+**Roll for Interaction**
+
+|Roll|🎲 10|🎲 20 - 70|🎲 80 - 90|🎲 100|
+|---|---|---|---|---|
+|🎲 **`1dP`**|`FIGHT` **`4d6`** Monsters|`FIGHT` **`2d6`** Monsters|`BRIBE` **`2d6`** Monsters|`DEFECT` **`2d6`** Monsters|
+
+The Tier-rank for any Monsters resulting from `Mine` interactions (e.g. Guardians) or any Monster resultings from Monster-token interactions is determined by the highest-tiered Spawner that *any* Player has, **up to a max of Tier 3**.
+
+> *Example*
+> **Breaking into Two (2) Squads**
+> 
+> An example determining Monster Tier
+>
+> |Player|City 1 Highest-Tiered Spawner|City 2 Highest-Tiered Spawner|etc.|
+> |---|---|---|---|
+> |`Player A`|**`3`**|**`2`**|...|
+> |`Player B`|**`4`**|`N/A`|...|
+> |`Player C`|**`2`**|`N/A`|...|
+> 
+> *Result*
+> 
+> **`Player: Interact with Tier 3 Monsters`**
+> 
+> Even though `Player B` has a **Tier 4** Spawner, Board Monsters cannot exceed **Tier 3**, so any Monsters from this nteraction will be **Tier 3**.
+
+### Interactions
+All interactions must determine which Tier of Monsters the Player will be attacking.  If the interaction results in the Player surviving, remove the Monster token from the board.
+* Fight
+  * Encampment
+    * [ **`1dP`** = 🎲 10 ]
+    * [ **`4d6`** Quantity]
+  * Group
+    * [ **`1dP`** = 🎲 20 - 70 ]
+    * [ **`2d6`** Quantity]
+* Bribe
+  * [ **`1dP`** = 🎲 80 - 90 ]
+  * [ **`2d6`** Quantity]
+* Defect
+  * [ **`1dP`** = 🎲 100 ]
+  * [ **`2d6`** Quantity]
+
+Any Monsters that cannot be `BRIBED` (e.g. due to lack of resources) or are refused during a `DEFECT` (e.g. the Player doesn't want them for whatever reason) are forfeited and the Monster token is removed from the board.  To summarize, if a `2d6` rolls `🎲 9` and the Player can only purchase **three (3)** Monsters, then s/he can purchase only up to **three (3)** and the remaining are lost forever.
+
+### `FIGHT`
+##### Encampment
+Upon rolling a `🎲 10`, the attacking Player must `FIGHT` `4d6` Monsters.  Monsters will **always** split into **two (2)** `Squads`.
+
+##### Group
+Upon rolling a `🎲 20 - 70`, the attacking Player must `FIGHT` `2d6` Monsters.  Monsters will **always** split into **two (2)** `Squads`.
+
+### `BRIBE`
+Upon rolling a `🎲 80 - 90`, the attacking Player can opt to `BRIBE` up to `2d6` Monsters.  If the Player chooses to `BRIBE`, s/he must pay the same amount of resources as that Monster would cause if being recruited in a `City`.
+
+### `DEFECT`
+Upon rolling a `🎲 100`, the attacking Player can opt to `RECEIVE` up to `2d6` Monsters.
+
 
 ## Battle
 When attacking, a Player has the option to split his or her `Army` into (up to) **four (4) squads**, comprised of whatever combination of `Units` the Player desires, so long as there is at least **one (1)** in each squad.
