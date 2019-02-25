@@ -1,4 +1,4 @@
-export default ResourceType = {
+const ResourceType = {
 	//	💰 🌳 🥩 ⛏️
 	GOLD: "GOLD",
 	WOOD: "WOOD",

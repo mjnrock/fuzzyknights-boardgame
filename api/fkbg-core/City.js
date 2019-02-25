@@ -4,11 +4,11 @@ class City {
 	constructor(player, name = "City") {
 		this.UUID = Helper.NewUUID();
 
-		this.Player = player;
+		this.Player = player.UUID;
 		this.Name = name;
-		this.Resources = [];
+		this.Resources = [ 0, 0, 0, 0, 2, 1, 1, 1 ];
 		this.Buildings = 0;
-		this.Army = [];
+		this.Army = [ 0, 0, 0, 0, 0 ];
 	}
 }
 

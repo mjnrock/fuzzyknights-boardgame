@@ -4,6 +4,9 @@ import Mutator from "./mutator/package";
 import Player from "./Player";
 import City from "./City";
 import Hero from "./Hero";
+import Item from "./Item";
+
+import Main from "./Main";
 
 export default {
 	Enum,
@@ -11,5 +14,8 @@ export default {
 
 	Player,
 	City,
-	Hero
+	Hero,
+	Item,
+
+	Main
 };

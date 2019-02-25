@@ -5,9 +5,13 @@ const path = require("path");
 const expressWS = require("express-ws")(express());
 const app = expressWS.app;
 
+const flatted = require("flatted");
+
 const PORT = 3087;
 
 import FKBG from "./fkbg-core/package";
+FKBG.Main = (new FKBG.Main(FKBG)).NewGame();
+FKBG.Main.Daybreak().Daybreak().Daybreak();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -24,10 +28,8 @@ app.listen(PORT, () => {
 
 app.get("/validate", function (req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*");
-    res.set("Content-Type", "Application/json");
-    res.status(200).send({
-        "verified": new FKBG.Player("Cat", "blue")
-    });
+	res.set("Content-Type", "Application/json");
+	res.json(FKBG.Main.Players);
 });
 
 //! Use this and/or a GET/POST API to coordinate Save/Load for the Player

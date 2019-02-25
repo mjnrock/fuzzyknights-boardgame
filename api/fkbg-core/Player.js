@@ -9,7 +9,29 @@ class Player {
 
 		this.Heroes = [];
 		this.Cities = [];
-		this.Resources = [];
+		this.Resources = [ 0, 0, 0, 0, 0, 0, 0, 0 ];
+	}
+
+	AddHero(Hero) {
+		this.Heroes.push(Hero);
+
+		return this;
+	}
+	RemoveHero(index) {
+		this.Heroes.splice(index, 1);
+
+		return this;
+	}
+
+	AddCity(city) {
+		this.Cities.push(city);
+
+		return this;
+	}
+	RemoveCity(index) {
+		this.Cities.splice(index, 1);
+
+		return this;
 	}
 }
 
