@@ -6,6 +6,9 @@ class Hero {
 
 		this.Player = player;
 		this.Name = name;
+		this.Items = [];
+		this.Equipment = [];
+		this.Army = [];
 	}
 }
 

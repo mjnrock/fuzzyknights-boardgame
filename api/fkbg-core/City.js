@@ -6,6 +6,9 @@ class City {
 
 		this.Player = player;
 		this.Name = name;
+		this.Resources = [];
+		this.Buildings = 0;
+		this.Army = [];
 	}
 }
 
