@@ -135,31 +135,31 @@ If a Player rolls a **Success**, add `+1 Rarity Level` to the `Item`.  The `Item
 
 |Rarity Level|Name|Roll|
 |-|-|-|
-|1|`Common`|`1d6 +2`|
-|2|`Uncommon`|`1d6 +3`|
-|3|`Rare`|`2d6 +3`|
-|4|`Epic`|`3d6 +3`|
-|5|`Legendary`|`4d6 +5`|
+|1|`Common`|`🎲 1d6 +2`|
+|2|`Uncommon`|`🎲 1d6 +3`|
+|3|`Rare`|`🎲 2d6 +3`|
+|4|`Epic`|`🎲 3d6 +3`|
+|5|`Legendary`|`🎲 4d6 +5`|
 
 ***Off Hand***
 
 |Rarity Level|Name|Roll|
 |-|-|-|
-|1|`Common`|`1d6`|
-|2|`Uncommon`|`1d6 +1`|
-|3|`Rare`|`2d6`|
-|4|`Epic`|`2d6 +3`|
-|5|`Legendary`|`3d6 +5`|
+|1|`Common`|`🎲 1d6`|
+|2|`Uncommon`|`🎲 1d6 +1`|
+|3|`Rare`|`🎲 2d6`|
+|4|`Epic`|`🎲 2d6 +3`|
+|5|`Legendary`|`🎲 3d6 +5`|
 
 ***Amulet***
 
 |Rarity Level|Name|Roll|
 |-|-|-|
-|1|`Common`|`1d6`|
-|2|`Uncommon`|`1d6 +1`|
-|3|`Rare`|`1d6 +2`|
-|4|`Epic`|`2d6`|
-|5|`Legendary`|`2d6 +3`|
+|1|`Common`|`🎲 1d6`|
+|2|`Uncommon`|`🎲 1d6 +1`|
+|3|`Rare`|`🎲 1d6 +2`|
+|4|`Epic`|`🎲 2d6`|
+|5|`Legendary`|`🎲 2d6 +3`|
 
 **Determine Item Type**
 
