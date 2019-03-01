@@ -239,7 +239,7 @@ Before a `🏰 City` can be attacked, it must not have any `🛡 Ramparts` prese
 
 > **[ Special Case ]** If the `🧙‍ Hero` has *at least* `🐎(15)` remaining, it can `SIEGE` by ending its turn.
 
-If a `🧙‍ Hero` `SIEGES` a `🏰 City`, then destroy that `City's` `🛡 Ramparts`.  While a `🏰 City` is under `SIEGE`, it produces **`0 Resources`** and it cannot produce `Mercenaries`, `🧙‍ Heroes`, or `Buildings` during the *next* `Daybreak`.
+If a `🧙‍ Hero` `SIEGES` a `🏰 City`, then destroy that `City's` `🛡 Ramparts`.  While a `🏰 City` is under `SIEGE`, it produces **`0 Resources`** and it cannot produce `🤺 Mercenaries`, `🧙‍ Heroes`, or `Buildings` during the *next* `Daybreak`.
 
 Once the `🛡 Ramparts` are destroyed, a `🧙‍ Hero` can attack the `🏰 City` as it would attack a `🧟 Monster` Token.  In `Battle`, the `🏰 City` get its own roll of `🎲 3d3 +9` each round.
 

@@ -1,7 +1,7 @@
 # Daybreak
-At the beginning of every `Day`, **all** Players engage in `💰 Resource` collection and expenditures.  Players can `Build` **one (1)** time per `Day`, per `🏰 City`.  Any `Recruitments` purchased will be placed at the `🏰 City` and a `🧙‍ Hero` must come and collect them.
+At the beginning of every `Day`, **all** Players engage in `💰 Resource` collection and expenditures.  Players can `Build` **one (1)** time per `Day`, per `🏰 City`.  Any `🤺 Mercenaries` purchased will be placed at the `🏰 City` and a `🧙‍ Hero` must come and collect them.
 
-> If a `🧙‍ Hero` is already `Garrisoned` to a `🏰 City` and `Recruits` are purchased (at that same `🏰 City`), then the Player can decide how to allocate those `Recruits` between that `🏰 City` and that `🧙‍ Hero`.
+> If a `🧙‍ Hero` is already `Garrisoned` to a `🏰 City` and `🤺 Mercenaries` are purchased (at that same `🏰 City`), then the Player can decide how to allocate those `🤺 Mercenaries` between that `🏰 City` and that `🧙‍ Hero`.
 
 ## Step 1) Distribute Resources [ 💰 ]
 `🏰 Cities` and `Mines` generate `💰 Resources` each `Day`.  How much they each generate is described below.
@@ -40,7 +40,7 @@ Each `🧙‍ Hero` that a Player has must be paid *each* turn to continue to fi
 > **`💰(-1) * 🧙‍(2)`** = **`💰(-2)`**
 
 ## Step 3) Building and Recruitment
-Each `🏰 City` can build **one (1)** `Building` per `Day`.  Players can `Recruit` as many `Mercenaries` as s/he can afford, so long as all prerequisites are met.
+Each `🏰 City` can build **one (1)** `Building` per `Day`.  Players can `Recruit` as many `🤺 Mercenaries` as s/he can afford, so long as all prerequisites are met.
 
 ### Step 3.A) Buildings
 |Gold Mine|Cost|Reward `/Day`|Prerequisite|
