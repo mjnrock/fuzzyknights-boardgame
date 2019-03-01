@@ -12,7 +12,7 @@ There are **four (4)** different types of tokens that will be dropped or placed 
 |Token|Symbol|Quantity|
 |---|---|---|
 |Item|🎁|3 x Player Count|
-|Resource|💎|4 x Player Count|
+|Resource|💰|4 x Player Count|
 |Monster|🧟|4 x Player Count|
 |Mine|⚒️|3 x Player Count|
 
@@ -23,7 +23,7 @@ There are **four (4)** different types of tokens that will be dropped or placed 
 > |Token|Symbol|Quantity|
 > |---|---|---|
 > |Item|🎁|9|
-> |Resource|💎|12|
+> |Resource|💰|12|
 > |Monster|🧟|12|
 > |Mine|⚒️|9|
 
@@ -61,16 +61,16 @@ The `Anchor` will place his or her `Capital` first, the each Player *counter clo
 > 
 > |0,0|1|2|3|4|5|6|7|8|9|10|
 > |-|-|-|-|-|-|-|-|-|-|-|
-> |**1**|💎|-|-|🏰|-|-|💎|-|-|🎁|
+> |**1**|💰|-|-|🏰|-|-|💰|-|-|🎁|
 > |**2**|-|-|⚒️|-|🎁|-|-|🧟|⚒️|-|
-> |**3**|🧟|-|💎|-|-|-|-|💎|-|-|
-> |**4**|-|💎|-|-|-|💎|🧟|-|-|-|
+> |**3**|🧟|-|💰|-|-|-|-|💰|-|-|
+> |**4**|-|💰|-|-|-|💰|🧟|-|-|-|
 > |**5**|-|-|🧟|-|-|-|-|⚒️|🎁|-|
-> |**6**|🎁|-|-|💎|🏰|-|🧟|-|-|-|
+> |**6**|🎁|-|-|💰|🏰|-|🧟|-|-|-|
 > |**7**|-|-|-|⚒️|-|🎁|-|-|⚒️|-|
 > |**8**|-|🧟|-|-|-|🧟|-|🎁|-|-|
 > |**9**|-|-|-|-|-|-|-|-|-|-|
-> |**10**|⚒️|-|-|-|💎|-|-|🧟|-|-|
+> |**10**|⚒️|-|-|-|💰|-|-|🧟|-|-|
 > 
 > *Results*
 > 
