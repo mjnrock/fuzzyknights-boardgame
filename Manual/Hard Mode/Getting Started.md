@@ -1,11 +1,4 @@
 # Getting Started
-Unless specifically specified, the core set of rules pertains to **all game modes**.  By default, `Normal Mode` is used with explicit exceptions written for `Campaign Mode`.
-
-**`[ ☠️ CAMPAIGN MODE ☠️ ]`**
-
-There is a more complex rule set that can be used instead when playing the game in `Campaign Mode`.  While the normal game is aimed a shorter length version, the `Campaign Mode` is designed to be able to sustain an extremely long adventure with potentially tens of hours of play for one game.
-
-Please consult the "Campaign Mode" rules addendum for specific details.
 
 ## Distribute Resources
 There are **four (4)** different types of resources

@@ -1,7 +1,7 @@
 # Board Setup
 There can be up to **four (4)** Players per Game Board (`Map`).  If multiple `Maps` are being used, Players can choose how to align them.
 
-> *Choosing different ways to align multiple `Maps` will change how the strategy of the game will play out (e.g. 4 `Maps` in a line configuration, versus 4 `Maps` in a square configuration, etc.)*
+> **TIP:** *Choosing different ways to align multiple `Maps` will change how the strategy of the game will play out (e.g. 4 `Maps` in a line configuration, versus 4 `Maps` in a square configuration, etc.)*
 
 ## Banker
 Choose a banker(s) by whatever method you wish (e.g. a designated banker, self-banking, etc.)
@@ -27,8 +27,8 @@ There are **four (4)** different types of tokens that will be dropped or placed 
 > |Monster|🧟|12|
 > |Mine|⚒️|9|
 
-## Determine First Player
-Every Player will roll **`1d6`**. The highest roll goes first and Player turn-order will proceed *counter clockwise* from the **First Player**.
+## Determine the `Anchor`
+Every Player will roll **`1d6`**. The highest roll becomes the `Anchor` and Player turn-order will proceed *counter clockwise* from the `Anchor`.
 In the event of ties on the highest rolls, those Players continue to roll **`1d6`** until the tie is resolved.
 
 |Roll|
@@ -49,7 +49,11 @@ In the event of ties on the highest rolls, those Players continue to roll **`1d6
 > As a result, **Player A** goes first.  Play would proceed *counter clockwise* to **Player A**
 
 ## City Placement
-Once the **First Player** has been determined, the `City` of each Player will be placed on **any** open tile on the map.  The **First Player** will place his or her `City` first, the each Player *counter clockwise* will take turns placing his or her city until all `Cities` have been placed.
+Once the `Anchor` has been determined, the `Capital` of each Player will be placed on **any** open tile on the map.
+
+> The initial `City` of a Player is called the `Capital`.  The `Capital` itself is no different than another `City`, except that it comes with some buildings already built.  `Capital` is functionally a term that only applies to Board Setup, after which everything is a `City`.
+
+The `Anchor` will place his or her `Capital` first, the each Player *counter clockwise* will take turns placing his or her city until all `Capitals` have been placed.
 
 > *Example*
 > 
@@ -73,3 +77,20 @@ Once the **First Player** has been determined, the `City` of each Player will be
 > **`Player 1: CONSTRUCT 🏰 at (4, 1)`**
 > 
 > **`Player 2: CONSTRUCT 🏰 at (5, 6)`**
+
+## Distribute Resources
+There is **one (1)** type of `Resource` called **Coin [ 💰 ]**.
+
+|Resource|Symbol|
+|---|---|
+|Coin|💰|
+
+Each Player receives an **initial cache** of resources, as specified below.
+
+|💰|
+|---|
+|**`+5`**|
+
+Each Player's `Capital` is also awarded
+* Ramparts [ 🛡 ]
+* Unit Spawner [ 🏛️ ]
