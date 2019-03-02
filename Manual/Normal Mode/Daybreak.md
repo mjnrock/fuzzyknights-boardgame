@@ -43,11 +43,15 @@ Each `🧙‍ Hero` that a Player has must be paid *each* turn to continue to fi
 Each `🏰 City` can build **one (1)** `Building` per `Day`.  Players can `Recruit` as many `🤺 Mercenaries` as s/he can afford, so long as all prerequisites are met.
 
 ### Step 3.A) Buildings
+## The Base Camp rework is the new City, update the verbiage in all files
 |Base Camp|Cost|Reward `/Day`|Prerequisite|
 |-|-|-|-|
-|*Villa*|**`10 💰`**|**`💰(+1)`**|*Encampment*|
-|*Estate*|**`15 💰`**|**`💰(+1)`**|*Villa*|
-|*Castle*|**`25 💰`**|**`💰(+2)`**|*Estate*|
+|*Encampment*|**`5 💰`**|**`💰(+2)`**|*Hero**|
+|*Villa*|**`10 💰`**|**`💰(+3)`**|*Encampment*|
+|*Estate*|**`15 💰`**|**`💰(+4)`**|*Villa*|
+|*Castle*|**`25 💰`**|**`💰(+6)`**|*Estate*|
+
+* Hero must be on an otherwise unoccupied Tile and sacrifices himself to become the Mayor.  All Mercenaries, Gold, and Items transfer to the City.
 
 |Ramparts|Cost|Prerequisite|
 |-|-|-|
@@ -57,12 +61,6 @@ Each `🏰 City` can build **one (1)** `Building` per `Day`.  Players can `Recru
 |Mercenary Camp|Cost|Prerequisite|
 |-|-|-|
 |*Mercenary Camp*|**`5 💰`**|*City*|
-
-|Encampment|Cost|Prerequisite|
-|-|-|-|
-|*Encampment*|**`5 💰`**|*Hero**|
-
-* Hero must be on an otherwise unoccupied Tile and sacrifices himself to become the Mayor.  All Mercenaries, Gold, and Items transfer to the City.
 
 ### Step 3.B) Recruitment [ 🧙‍, 🤺 ]
 |Hero|Cost|Prerequisite|
