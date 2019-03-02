@@ -46,19 +46,21 @@ If the Player or `Ally` owns a `🏰 City` or `⚒️ Mine`, then **all** `Allia
 > 
 > |0,0|1|2|3|4|5|
 > |-|-|-|-|-|-|
-> |**1**|🐎(-1)|🐎(-1)|🧟🐎(-2)|🐎(-1)|🐎(-1)|
-> |**2**|🏰🐎(*)|🐎(-1)|🐎(-1)|💰🐎(-2)|⚒️️🐎(*)|
+> |**1**|🐎(-1)|🐎(-1)|🧟🐎(-1)|🐎(-1)|🐎(-1)|
+> |**2**|🏰🐎(*)|🐎(-1)|🐎(-1)|💰🐎(-2)|⚒️️🐎(-1)|
 > |**3**|🐎(-1)|🐎(-1)|🧙‍|🐎(-1)|🎁🐎(-2)|
 > |**4**|🐎(-1)|🎁🎁🐎(-3)|🐎(-1)|🐎(-1)|🐎(-1)|
-> |**5**|🧟🐎(-2)|🐎(-1)|🐎(-1)|🐎(-1)|⚒️🐎(*)|
+> |**5**|🧟🐎(-1)|🐎(-1)|🐎(-1)|🐎(-1)|⚒️🐎(-1)|
 > 
-> **`INTERACT` NOTE:** Because of the **`💰[4, 2]`** and **`💰[2, 4]`**, the `🧙‍ Hero` must spend `🐎(-1)` on the TIle movement and `🐎(-1)` to `INTERACT` with ("pick up") the `💰 Resource`.  Each `🐎(X)` on the `Map` below represents how movement *that Tile alone* costs.
+> **`INTERACT` NOTE:** Because of the **`💰[4, 2]`** and **`💰[2, 4]`**, the `🧙‍ Hero` must spend `🐎(-1)` on the Tile movement and `🐎(-1)` to `INTERACT` with ("pick up") the `💰 Resource`.  Each `🐎(X)` on the `Map` below represents how movement *that Tile alone* costs.
 > 
-> **`ENGAGE` NOTE:** Notice above that the `Mines` and `🏰 City` have an * next to them indicating that they would only cost `🐎(-1)` instead of `🐎(-2)` **if and only if** the Player currently owns it.  If the `⚒️ Mine` or `City
+> **`ENGAGE` NOTE:** Notice above that the `🏰 City` has an * next to them indicating that it would only cost `🐎(-1)` **if and only if** the Player currently owns it.  If the `🏰 City` is owned by another Player, normal `🏰 City`  `ENGAGEMENT` rules apply.
 >
-> **`INTERACT` NOTE:** Notice at **`[2, 4]`** that there are `2 Item [ 🎁 ]` Tokens.  This *can only happen* as a result of a `🧙‍ Hero` dying on that Tile, but is perfectly acceptable under that condition for a TIle to have multiple `🎁 Item` tokens.  Because there are `🎁(2)`, the `🧙‍ Hero` must spend `🐎(-1)` to occupy the Tile, `🐎(-1)` to acquire the **first (1st)** 🎁, and 🐎(-1) to acquire the **second** 🎁, resulting in `🐎(-1) + 🐎(-1) + 🐎(-1) = 🐎(-3)`.
+> **`INTERACT` NOTE:** Notice at **`[2, 4]`** that there are `2 Item [ 🎁 ]` Tokens.  This *can only happen* as a result of a `🧙‍ Hero` dying on that Tile, but is perfectly acceptable under that condition for a Tile to have multiple `🎁 Item` tokens.  Because there are `🎁(2)`, the `🧙‍ Hero` must spend `🐎(-1)` to occupy the Tile, `🐎(-1)` to acquire the **first (1st)** 🎁, and 🐎(-1) to acquire the **second** 🎁, resulting in `🐎(-1) + 🐎(-1) + 🐎(-1) = 🐎(-3)`.
 > 
-> **`ENGAGE` NOTE:** A Tile occupied by a `🧟 Monster` requires the `🧙‍ Hero` to expend `🐎(-1)` to occupy the Tile and `🐎(-1)` to `ENGAGE` the `🧟 Monster`, resulting in `🐎(-1) + 🐎(-1) = 🐎(-2)`
+> **`ENGAGE` NOTE:** A Tile occupied by a `🧟 Monster` requires the `🧙‍ Hero` to expend `🐎(-1)` to occupy the Tile.  If a `🧙‍ Hero` is ever on a Tile with a `🧟 Monster`, the `🧙‍ Hero` **must** perform normal `🧟 Monster` interaction rules.
+>
+> **`INTERACT` NOTE:** A Tile occupied by a `⚒️️ Mine` requires the `🧙‍ Hero` to expend `🐎(-1)` to occupy the Tile.  If a `🧙‍ Hero` is ever on a Tile with a `⚒️️ Mine`, the `🧙‍ Hero` **must** perform normal `⚒️️ Mine` interaction rules.
 
 ## Hero Death
 In **any and all** cases where a `🧙‍ Hero` dies, **all** `🎁 Items` are dropped at the Tile on which the `🧙‍ Hero` died.
@@ -274,9 +276,11 @@ If a Tile is occupied by more than `1` Token, then the following priority order 
 Below are some random things not *often* relevant to the game, but it may come up.
 
 ### Voting
-If a situation arises where a `Vote` is necessary, then each Player can "cast" `1 Vote`.  In the event of a tie (e.g. an even number of Players), the `Anchor` determines the result based on whatever criteria s/he chooses.  If this becomes problematic, the `Vote` automatically fails.
+Do not read this section too rigidly, it is meant as a high-level guidance, but the ultimate decision is up to you.
 
-> **TIP:** In the event of a tie and you are the `Anchor`, consider introducing light-hearted fun at the other Players' expense, such as pitting each side of the `Vote` against each other by some means (e.g. a mini event, a trivia contest, etc.).
+If a situation arises where a `Vote` is necessary, then each Player can "cast" `1 Vote`.  In the event of a tie (e.g. an even number of Players), choose a reconciliation method that has fair and even odds (e.g. flip a coin, roll a `1dP` and split `10 - 50` and `60 - 100`, etc.), or create a fun and/or competitive event to decide.
+
+> **TIP:** In the event of a tie, consider introducing light-hearted fun at the other Players' expense, such as pitting each side of the `Vote` against each other by some means (e.g. a mini event, a trivia contest, etc.).
 
 ### Fractional Remains
 Intuitively, imagine all fractional roles as if they were dividing people and you must keep them alive--you can't have half a person (at least, not a person that is still alive...).
@@ -287,3 +291,5 @@ Any time an event happens where there are fractional remains, you must ***always
 An `Alliance` can be made with any Player at any time, and if an `Alliance` forms, then each Player continues to operate independently; however, each Player in the `Alliance` can treat the other `Alliance Members'` `🏰 Cities` and `Mines` and **unoccupied Tiles** for movement.
 
 *Any other perks or restrictions are determined by the `Alliance Members` themselves.*
+
+Alliance business is a good situation to introduce `Voting`, if the number of Players warrants it.
