@@ -88,16 +88,27 @@ If the `⚒️ Mine` was **not** owned by a Player, then normal `🧟 Monster` r
 
 **Determine Guardian Quantity**
 
-|Roll|
-|---|
-|🎲 **`1d6 +2`**|
+|Highest Overall|Roll|
+|---|---|
+|*Encampment*|🎲 **`1d6`**|
+|*Villa*|🎲 **`1d6 +2`**|
+|*Estate*|🎲 **`2d6 +3`**|
+|*Castle*|🎲 **`3d6 +4`**|
+
+**A `⚒️ Mine's` `🧟 Monster` quantity is determined by whatever Player has the ***highest*** `🏰 City` building.***
 
 > *Example*
 > 
+> **ASSUME:** That the *highest* `🏰 City` construction is a `Villa` out of all Players `🏰 Cities`.
+>
 > |Roll|Result||Implication|
 > |-|-|-|-|
 > |🎲 **`1dP`**|`90`|=>|`🎲 1d6 +2 Guardians`|
 > 
+> |Highest Overall|Roll|
+> |---|---|
+> |*Villa*|🎲 **`1d6 +2`**|
+>
 > |Roll|Result||Implication|
 > |-|-|-|-|
 > |🎲 **`1d6 +2`**|`5`|=>|`5 Guardians`|
@@ -216,6 +227,7 @@ Upon landing on a Tile with a `🧟 Monster` Token, roll a `🎲 1dP` to determi
 |`FIGHT`|`🎲 2d6`|
 |`BRIBE`|`🎲 2d6`|
 |`DEFECT`|`🎲 1d6 +3`|
+
 
 #### `HARD-FIGHT`/`FIGHT`
 `🎲 4d6`/`🎲 2d6` `🧟 Monsters` (depending on `🎲 1dP` roll above) `ENGAGE` the `🧙‍ Hero`, forcing it to attack.  If the `🧙‍ Hero` dies as a result, normal **Hero Death** rules apply.  If the Player wins, however, s/he is awarded the ***integer*** portion of `+💰(Monster Quantity / 2)` (i.e. **truncate** the decimal, **do not** round).

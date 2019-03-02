@@ -46,8 +46,8 @@ Each `🏰 City` can build **one (1)** `Building` per `Day`.  Players can `Recru
 ## The Base Camp rework is the new City, update the verbiage in all files
 |Base Camp|Cost|Reward `/Day`|Prerequisite|
 |-|-|-|-|
-|*Encampment*|**`5 💰`**|**`💰(+2)`**|*Hero**|
-|*Villa*|**`10 💰`**|**`💰(+3)`**|*Encampment*|
+|*Encampment*|**`5 💰`**|**`💰(+1)`**|*Hero**|
+|*Villa*|**`10 💰`**|**`💰(+2)`**|*Encampment*|
 |*Estate*|**`15 💰`**|**`💰(+4)`**|*Villa*|
 |*Castle*|**`25 💰`**|**`💰(+6)`**|*Estate*|
 
