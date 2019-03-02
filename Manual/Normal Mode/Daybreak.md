@@ -69,7 +69,7 @@ Each `🏰 City` can build **one (1)** `Building` per `Day`.  Players can `Recru
 
 |Recruit|Cost|Prerequisite|
 |-|-|-|
-|*🤺 Mercenary*|**`1 💰`**|*Mercenary Camp*|
+|*🤺 Mercenary*|**`2 💰`**|*Mercenary Camp*|
 
 ## Step 4) Token Placement Rolls
 *Starting on the second* `Day`, **all** Players roll a `1dP >= 60`.  In the event of a successful roll, that Player should then roll a `1d4` to determine which type of Token s/he will place.  After determining the Token type, the Player can place that Token on **any** unoccupied Tile.

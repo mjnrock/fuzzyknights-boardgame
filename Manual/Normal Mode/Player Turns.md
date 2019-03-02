@@ -229,15 +229,20 @@ Upon landing on a Tile with a `🧟 Monster` Token, roll a `🎲 1dP` to determi
 > **The Player will fight `🧟(x19)` and, if victorious, will receive `19 / 2 = 9.5` => `💰(+9)`**
 
 #### `BRIBE`
-Up to `🎲 2d6` `🧟 Monsters` decide to adventure with the `🧙‍ Hero`, at the expense of `💰(-2) per Monster`.  The Player does not have to take all of them.
+Up to `🎲 2d6` `🧟 Monsters` decide to adventure with the `🧙‍ Hero`, at the expense of `💰(-3) per Monster`.  The Player does not have to take all of them.
 
-> **TIP:** While the cost is 2x that of the cost at a `🏰 City`, there might be strategic advantage to boosting your `Army`--even at the higher cost--especially under circumstances where you plan to attack your enemies soon.
+> **TIP:** While the cost is 1.5x that of the cost at a `🏰 City`, there might be strategic advantage to boosting your `Army`--even at the higher cost--especially under circumstances where you plan to attack your enemies soon.
 
 #### `DEFECT`
 Up to `🎲 2d6` `🧟 Monsters` decide to adventure with the `🧙‍ Hero`, **for FREE**.  The Player does not have to take all of them.
 
 ## Cities [ 🏰 - `🎲 3d3 +9` ]
-Before a `🏰 City` can be attacked, it must not have any `🛡 Ramparts` present.  If it does, the `🧙‍ Hero` must spend `SIEGE = 🐎(-15)` and end its turn in a Tile immediately adjacent to the `Enemy City` and `SIEGE` it.
+Before a `🏰 City` can be attacked, it must not have any `🛡 Ramparts` present.  If it does have `🛡 Ramparts` present, then the `🧙‍ Hero` can either:
+* Forego its roll and perform a `SIEGE`
+
+***OR***
+
+* Risk a roll `>= 15` to potentially move a few Tiles before `SIEGING`.  If a roll is `< 15`, then that `Hero` **cannot** `SIEGE` that turn.
 
 > **[ Special Case ]** If the `🧙‍ Hero` has *at least* `🐎(15)` remaining, it can `SIEGE` by ending its turn.
 
@@ -246,7 +251,9 @@ If a `🧙‍ Hero` `SIEGES` a `🏰 City`, then destroy that `City's` `🛡 Ram
 Once the `🛡 Ramparts` are destroyed, a `🧙‍ Hero` can attack the `🏰 City` as it would attack a `🧟 Monster` Token.  In `Battle`, the `🏰 City` get its own roll of `🎲 3d3 +9` each round.
 
 ### Garrisoned Heroes
-A `Garrisoned`
+A `Garrisoned` `🧙‍ Hero` cannot be attacked directly, as it is protected by the `🏰 City`.  If a `🏰 City` is attacked while a `🧙‍ Hero` is `Garrisoned`, then the `🧙‍ Hero` and its `Army` will assist in defending the `🏰 City`.
+
+> **NOTE:** If A `Garrisoned` `🧙‍ Hero` is at a `🏰 City` while it is attacked, there would be a `🧙‍ Hero`, a `🏰 City`, and the aggregation of the `Recruits` both in the `🏰 City` and on the `🧙‍ Hero` (if there were any) defending the  `🏰 City`.
 
 ### Armory
 A `City's` `Armory` is simply a collection of `🎁 Items` that any `🧙‍ Hero` currently `Garrisoned` at that `🏰 City` can exchange, deposit, or withdraw `🎁 Items`.
