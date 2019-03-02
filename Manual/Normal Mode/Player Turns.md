@@ -260,6 +260,13 @@ A `City's` `Armory` is simply a collection of `🎁 Items` that any `🧙‍ Her
 
 `🎁 Items` in the `Armory` do not apply to `Battle` rolls in the event of a `🏰 City` assault.
 
+### Successful City Assault
+If a `🏰 City` falls to an assault, ***all*** `🎁 Items` in the Armory and all `💰 Resources` at that `🏰 City` now become the property of the conquering party.
+
+If a `🧙‍ Hero` was also *defending* a `🏰 City` in the assault, ***all*** `🎁 Items` in the Armor and all `💰 Resources` at that `🏰 City` now become the property of the conquering party.
+
+All `🎁 Items` and `💰 Resources` transferred from the assault go into the `🏰 City's` `Armory` and `King's Purse` by default.  While it can be readily transferred to a `Garrisoned` `🧙‍ Hero`, conquered `🎁 Items` and `💰 Resources` default to the `🏰 City`.
+
 ## Multiply-Occupied Tiles
 Any Token interaction will cost a minimum of `🐎(-1)`.  This applies to consecutive Token acquisitions on the same Tile.
 
