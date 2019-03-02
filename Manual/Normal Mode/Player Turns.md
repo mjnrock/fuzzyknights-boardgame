@@ -147,7 +147,7 @@ In lieu of cards, you may instead roll a `🎲 1dP` to determine the `Item Type`
 
 **Determine Item Rarity**
 
-|Roll|🎲 10 - 80|🎲 90 - 100|
+|Roll|🎲 10 - 70|🎲 80 - 100|
 |---|---|---|
 |🎲 **`1dP`**|**Failure**|**Success**|
 
