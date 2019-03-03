@@ -63,7 +63,7 @@ If the Player or `Ally` owns a `🏰 City` or `⚒️ Mine`, then **all** `Allia
 > **`INTERACT` NOTE:** A Tile occupied by a `⚒️️ Mine` requires the `🧙‍ Hero` to expend `🐎(-1)` to occupy the Tile.  If a `🧙‍ Hero` is ever on a Tile with a `⚒️️ Mine`, the `🧙‍ Hero` **must** perform normal `⚒️️ Mine` interaction rules.
 
 ## Hero Death
-In **any and all** cases where a `🧙‍ Hero` dies, **all** `🎁 Items` are dropped at the Tile on which the `🧙‍ Hero` died.
+In **any and all** cases where a `🧙‍ Hero` dies, **all** `🎁 Items`, and `1` `💰 Resource` Token per `5 💰` on that `🧙‍ Hero` are dropped at the Tile on which the `🧙‍ Hero` died.
 
 > **[ Special Case ]** If the `🧙‍ Hero` dies at a `🏰 City`, the `🎁 Items` are instead placed within the `Armory` of that `🏰 City` and normal `Armory` rules apply.
 
