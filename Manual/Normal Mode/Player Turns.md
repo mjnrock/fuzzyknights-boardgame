@@ -1,6 +1,9 @@
 # Table of Contents<!-- omit in toc --> 
 
 - [Player Turns](#player-turns)
+	- [End of Game Conditions](#end-of-game-conditions)
+		- [Victory](#victory)
+		- [Elimination](#elimination)
 	- [Hero [ 🧙‍ - `🎲 2d6 +6` ]](#hero------2d6-6-)
 	- [Hero Movement [ 🐎 ]](#hero-movement---)
 	- [Hero Death](#hero-death)
@@ -41,9 +44,32 @@
 
 After `☀️ Daybreak`, each Player takes his or her turn in a *counter clockwise* sequence, starting with the `Anchor`, as determined in the **Board Setup**.
 
+## End of Game Conditions
+
+*[Back to Top](#table-of-contents)*
+
+Players will go through multiple `Days` in the game, performing actions and attempting to eliminate **all other** `🧙‍ Heroes` and to conquer all foreign `🏰 Settlements`.
+
+### Victory
+
+*[Back to Top](#table-of-contents)*
+
+A Player is declared the winner if all other Players have been eliminated from the `🗺️ Map` by conquering and occupying all foreign `🏰 Settlements`.
+
+### Elimination
+
+*[Back to Top](#table-of-contents)*
+
+As play goes on, Players can find themselves without a `🏰 Settlement` due to conquest.  In this case, the Player's `🧙‍ Hero(es)` **must** acquire a `🏰 Settlement` before the end of the next turn's **Exploration Phase** or that Player is permanently eliminated from play.
+
+As long as a Player has a 
+
+
 ## Hero [ 🧙‍ - `🎲 2d6 +6` ]
 
 *[Back to Top](#table-of-contents)*
+
+**A Player is limited to `2` `🧙‍ Heroes` at any time**
 
 In `Battle`, the `🧙‍ Hero` is a unit itself with a roll of `🎲 2d6 +6`.  If the `🧙‍ Hero` falls in `Battle` (this is called `FAINTING`), its `Army` can still fight and if successful, the `🧙‍ Hero` will not die.
 
@@ -78,7 +104,9 @@ In **any and all** cases where a `🧙‍ Hero` dies, **all** `🎁 Items` on th
 
 > **[ Special Case ]** If the `🧙‍ Hero` dies at a `🏰 Settlement`, the `🎁 Items` are instead placed within the `Armory` of that `🏰 Settlement` and normal `Armory` rules apply.
 
-If the `🧙‍ Hero` had any `Mercenaries [ 🤺 ]` still alive within its command at the time of death (for any reason), then `1` `🧟 Monster` Token is placed on the Tile, as well.
+If a `🧙‍ Hero` dies to a **`🧟 Monster` Token specifically**, then an *additional* `🧟 Monster` Token is placed on that same Tile (the original Token(s), plus `1` from the fallen `🧙‍ Hero`).
+
+If the `🧙‍ Hero` was fighting *anything **except** a `🧟 Monster` Token* and had any `🤺 Mercenaries` still alive within its command at the time of death, then `1` `🧟 Monster` Token is placed on the Tile, as well.
 
 > **TIP:** Strategically retreating from a fight with a "Pawn Hero" can force your enemy to deal with a `🧟 Monster` Token on his or her `🏰 Settlement`.  Be careful, though, as a Player is rewarded for killing `🧟 Monsters` and also has a `🎲 1dP` roll chance to acquire those `🧟 Monsters`.
 
@@ -310,6 +338,10 @@ Up to `🎲 1d6 +3` `🧟 Monsters` decide to adventure with the `🧙‍ Hero` 
 ## Settlement [ 🏰 - `🎲 Building-Dependent` ]
 
 *[Back to Top](#table-of-contents)*
+
+**Players cannot build additional `🏰 Settlements` at any point**
+
+It is only possible to control multiple `🏰 Settlements` by conquering other Players.  If a Player successfully defeats an opponent in a battle for a `🏰 Settlement`, the winning Player takes full control of the `🏰 Settlement`.
 
 > `🏰 Settlement` is the **generic** term for each Player's "city".  If the `🏰` icon precedes *other text* (e.g "`🏰 Estate`" means "`🏰 Settlement` at tier of `Estate`"), it is calling out *that* particular "Settlement Building Tier" for a specific reason--the same logic applies to `🛡️ Ramparts` (e.g. `🛡️ Pallisade`).
 
