@@ -86,9 +86,9 @@ If the `🧙‍ Hero` had any `Mercenaries [ 🤺 ]` still alive within its comm
 
 *[Back to Top](#appendix)*
 
-Upon landing on a tile with a `⚒️ Mine` Token, the Player can attempt to capture the `⚒️ Mine`.  Upon a successful capture, immediately collect **`💰(+1)`**.  Any time a Player attempts to change possession of a `⚒️ Mine`, roll a `🎲 1dP` to determine if the `⚒️ Mine` is guarded by `Guardians`.
+Upon landing on a tile with a `⚒️ Mine` Token, the Player can attempt to capture the `⚒️ Mine`.  Upon a successful capture, immediately collect **`💰(+1)`**.  Any time a Player attempts to change possession of a `⚒️ Mine`, roll a `🎲 1dP` to determine if the `⚒️ Mine` is guarded by `🧟 Guardians`.
 
-If the `🎲 1dP` roll results in `Guardians`, the Player must roll (based on the table below) to determine how many `Guardians` will attempt to defend the `⚒️ Mine`.  If the Player then defeats the `Guardians`, s/he captures the `⚒️ Mine`.
+If the `🎲 1dP` roll results in `🧟 Guardians`, the Player must roll (based on the table below) to determine how many `🧟 Guardians` will attempt to defend the `⚒️ Mine`.  If the Player then defeats the `🧟 Guardians`, s/he captures the `⚒️ Mine`.
 
 If the `⚒️ Mine` was owned by a Player, then no ***bonus*** `💰 Resource` is collected for `Guardian` kills, ***only*** a capture and `💰(+1)` for the capture.
 
@@ -372,28 +372,47 @@ All `🎁 Items` transferred from the assault go into the `🏰 Settlement's` `A
 
 *[Back to Top](#appendix)*
 
-> This section describes how to perform fights and battles between or against `🏰 Settlements`, `🧙‍ Heroes`, `🧟 Monsters`, and `⚒️ Mine` `Guardians`, collectively called **`Units`** on the battlefield, whenever they arise out of play.
+> This section describes how to perform fights and battles between or against `🏰 Settlements`, `🧙‍ Heroes`, `🤺 Mecenaries`, `🧟 Monsters`, and `⚒️ Mine` `🧟 Guardians`, collectively called **`Units`** on the battlefield, whenever they arise out of play.
 
-Each fight consisted of `1` Player fighting against another Player or against a neutral fight, such as `🧟 Monsters` and `⚒️ Mine` `Guardians`.  Each side of the battle boards contains **up to** `5` total slots that may or may not be used, depending on what the battle involves:
+To set up for battle, place your `🤺 Mercenaries` in up to `3` different "piles" (Squads).  Each `🧙‍ Hero` **always** gets a squad of its own, as does each `🏰 Settlement` **always**.  At a maximum, there should never be more than `5` squads on a Player's side, and never more than `2` squads on a battle involving `⚒️ Mine` `🧟 Guardians` or `🧟 Monsters`.
 
-- `1` slot for a `🏰 Settlement`
-- `1` slot for `🧙‍ Hero`
-- `3` slots total for `🤺 Mercenaries`, `1` for each squad
+Squads are simply there to give the Player a strategic placement in the battle, but it is perfectly acceptable to have all `🤺 Mercenaries` in a single squad.
 
-[ 🏰 ][ 🧙‍ ][ 🤺 ][ 🤺 ][ 🤺 ]
+- `1` squad for a `🏰 Settlement`
+- `1` squad for `🧙‍ Hero`
+- `3` squads total for ` 🧟 Monsters`/`🤺 Mercenaries`
 
-[ 🏰 ][ 🧙‍ ][ 🤺 ][ 🤺 ][ 🤺 ]
+|Squad #|Squad Unit|Use Case|
+|-|-|-|
+|1|🧟/🤺|**Always for 🧟/🤺**|
+|2|🧟/🤺|**Always for 🧟, Optionally for 🤺**|
+|3|🤺|**Optionally for 🤺**|
+|4|🧙‍|**Only if side has a `🧙‍ Hero`**|
+|5|🏰|**Only if side has a `🏰 Settlement`**|
+
+Battle proceeds by taking `1` or more squads and coordinating an attack on another squad.  During an attack, all squads involved roll their respective dice to determine the power.
+
+If the total power of the attacking squad(s) is greater than the total power of the defending squad, then the ***entire*** defending squad dies.  By contrast, an ***entire*** attacking squad is killed if the defending squad rolls a higher total.  In the event of a tie, favor goes to the defender and the attacker loses that round.
+
+In **all** cases where an attacking squad loses, the attacking Player choose which squad to kill; if only `1` squad attacked, the choice is automatic.
 
 ### Squads
+During a battle, `🧟 Monsters/Guardians` will **always** split evenly into `2` squads; if the quantity is odd, put the extra `1` in either squad.
+
+A Player, however, is entitles to splitting the `🤺 Mercenaries` into up to `3` different squads, allocating the quantities as s/he wishes, until all `🤺 Mercenaries` have been accounted for.
 
 *[Back to Top](#appendix)*
 
 ### Heroes
+A `🧙‍ Hero` will **always** occupy a squad of its own, by itself.  As a `🧙‍ Hero`, its "base roll" is `🎲 2d6 +6`.
+
+If that `🧙‍ Hero` has any `🎁 Items` on it, the `🧙‍ Hero` can bring `1x Main Hand`, `1x Off Hand`, and `1x Amulet` with it into battle.  Whatever the stats are of those `🎁 Items` are added to the "base roll" of that `🧙‍ Hero` any time the `🧙‍ Hero` is engaged in battle.
 
 *[Back to Top](#appendix)*
 
 
 ### Settlements
+A `🏰 Settlement` will **always** occupy a squad of its own, by itself.  As a `🏰 Settlement`, its "base roll" is dependent on its tier.
 
 *[Back to Top](#appendix)*
 

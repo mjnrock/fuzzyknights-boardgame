@@ -86,14 +86,14 @@ Each Player can `Recruit` as many `🤺 Mercenaries` as s/he can afford at a `�
 
 *[Back to Top](#appendix)*
 
-|🏰 Settlement|Cost|Reward `/Day`|Defense|Prerequisite|
+|🏰 Settlement|Cost|Reward `/Day`|Base Roll|Prerequisite|
 |-|-|-|-|-|
 |*Encampment*|**`5 💰`**|**`💰(+1)`**|🎲 `2d6 +6`|-|
 |*Villa*|**`10 💰`**|**`💰(+2)`**|🎲 `3d6 +9`|*Encampment*|
 |*Estate*|**`15 💰`**|**`💰(+4)`**|🎲 `4d6 +12`|*Villa*|
 |*Castle*|**`25 💰`**|**`💰(+6)`**|🎲 `5d6 +15`|*Estate*|
 
-|🛡️ Ramparts|Cost|Defense|Prerequisite|
+|🛡️ Ramparts|Cost|Base Roll|Prerequisite|
 |-|-|-|-|
 |*Pallisade*|**`5 💰`**|🎲 `1d6 +3`|`🏰 Settlement`, *Villa*|
 |*Fortifications*|**`15 💰`**|🎲 `2d6 +6`|*Pallisade*, *Castle*|
@@ -102,13 +102,13 @@ Each Player can `Recruit` as many `🤺 Mercenaries` as s/he can afford at a `�
 
 *[Back to Top](#appendix)*
 
-|🧙‍ Hero|Cost|Prerequisite|
-|-|-|-|
-|*Hero*|**`5 💰`**|`🏰 Settlement`|
+|🧙‍ Hero|Cost|Base Roll|Prerequisite|
+|-|-|-|-|
+|*Hero*|**`5 💰`**, **`💰(-1) /Daybreak`**|🎲 `2d6 +6`|`🏰 Settlement`|
 
-|🤺 Mercenary|Cost|Prerequisite|
-|-|-|-|
-|*Mercenary*|**`2 💰`**|*Mercenary Camp*|
+|🤺 Mercenary|Cost|Base Roll|Prerequisite|
+|-|-|-|-|
+|*Mercenary*|**`2 💰`**|🎲 `1d6`|*Mercenary Camp*|
 
 ---
 - **`💡 REMINDER`** *You cannot build an `Armory`--it comes by default*
