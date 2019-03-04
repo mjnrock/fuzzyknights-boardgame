@@ -16,6 +16,10 @@
    1. [Garrisoned Heroes](#garrisoned-heroes)
    1. [Armory](#armory)
    1. [Successful Settlement Assault](#successful-settlement-assault)
+1. [Battle](#battle)
+   1. [Squads](#squads)
+   1. [Heroes](#heroes)
+   1. [Settlements](#settlements)
 1. [Multiply-Occupied Tiles](#multiply-occupied-tiles)
    1. [Example Section](#example-section)
 1. [Miscellaneous](#miscellaneous)
@@ -363,6 +367,36 @@ If a `🏰 Settlement` falls to an assault, ***all*** `🎁 Items` in the `Armor
 If a `🧙‍ Hero` was also *defending* a `🏰 Settlement` in the assault, ***all*** `🎁 Items` in the Armor and all `💰 Resources` at that `🏰 Settlement` now become the property of the conquering party.
 
 All `🎁 Items` transferred from the assault go into the `🏰 Settlement's` `Armory` by default.  While it can be readily transferred to a `Garrisoned` `🧙‍ Hero`, conquered `🎁 Items` default to the `🏰 Settlement`.
+
+## Battle
+
+*[Back to Top](#appendix)*
+
+> This section describes how to perform fights and battles between or against `🏰 Settlements`, `🧙‍ Heroes`, `🧟 Monsters`, and `⚒️ Mine` `Guardians`, collectively called **`Units`** on the battlefield, whenever they arise out of play.
+
+Each fight consisted of `1` Player fighting against another Player or against a neutral fight, such as `🧟 Monsters` and `⚒️ Mine` `Guardians`.  Each side of the battle boards contains **up to** `5` total slots that may or may not be used, depending on what the battle involves:
+
+- `1` slot for a `🏰 Settlement`
+- `1` slot for `🧙‍ Hero`
+- `3` slots total for `🤺 Mercenaries`, `1` for each squad
+
+[ 🏰 ][ 🧙‍ ][ 🤺 ][ 🤺 ][ 🤺 ]
+
+[ 🏰 ][ 🧙‍ ][ 🤺 ][ 🤺 ][ 🤺 ]
+
+### Squads
+
+*[Back to Top](#appendix)*
+
+### Heroes
+
+*[Back to Top](#appendix)*
+
+
+### Settlements
+
+*[Back to Top](#appendix)*
+
 
 ## Multiply-Occupied Tiles
 
