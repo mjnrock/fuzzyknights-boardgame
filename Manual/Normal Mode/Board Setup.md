@@ -1,10 +1,12 @@
 # Appendix
-1. [Board Setup](#board-setup)
-1. [Banker](#step-1-banker)
-1. [Token Placement](#step-2-token-placement)
-1. [Determine the Anchor](#step-3-determine-the--anchor)
-1. [Settlement Placement](#step-4-settlement-placement)
-1. [Distribute Resources](#step-5-distribute-resources)
+- [Appendix](#appendix)
+- [Board Setup](#board-setup)
+	- [Step 1) Banker](#step-1-banker)
+	- [Step 2) Token Placement](#step-2-token-placement)
+	- [Step 3) Determine the `⚓ Anchor`](#step-3-determine-the-%E2%9A%93-anchor)
+	- [- **`💡 REMINDER`** *The `⚓ Anchor` simply determines who goes first whenever Player ordering must take place (e.g. placing `🏰 Settlements`, moving `🧙‍ Heroes`, etc.)*](#%F0%9F%92%A1-reminder-the-%E2%9A%93-anchor-simply-determines-who-goes-first-whenever-player-ordering-must-take-place-eg-placing-%F0%9F%8F%B0-settlements-moving-%F0%9F%A7%99%E2%80%8D-heroes-etc)
+	- [Step 4) Settlement Placement](#step-4-settlement-placement)
+	- [Step 5) Distribute Resources](#step-5-distribute-resources)
 
 # Board Setup
 
@@ -54,7 +56,7 @@ In the event of ties on the highest rolls, those Players continue to roll `🎲 
 
 |Roll|
 |---|
-|🎲 `1d6`|
+|`🎲 1d6`|
 
 > *Example*
 > **Comparing Rolls**
@@ -63,9 +65,9 @@ In the event of ties on the highest rolls, those Players continue to roll `🎲 
 > 
 > |Player|Roll|Result|
 > |---|---|---|
-> |Player A|**`1d6`|🎲 **6**|
-> |Player B|**`1d6`|🎲 **2**|
-> |Player C|**`1d6`|🎲 **3**|
+> |Player A|`🎲 1d6`|`🎲[6]`|
+> |Player B|`🎲 1d6`|`🎲[2]`|
+> |Player C|`🎲 1d6`|`🎲[3]`|
 > 
 > As a result, **Player A** goes first.  Play would proceed *counter clockwise* to **Player A**
 

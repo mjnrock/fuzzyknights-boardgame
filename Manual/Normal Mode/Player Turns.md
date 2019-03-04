@@ -96,16 +96,16 @@ If the `⚒️ Mine` was owned by a Player, then no ***bonus*** `💰 Resource` 
 
 |Roll|🎲[10 - 80]|🎲[90 - 100]|
 |---|---|---|
-|🎲 `1dP`|`CAPTURE`|`FIGHT 🧟 Monsters`|
+|`🎲 1dP`|`CAPTURE`|`FIGHT 🧟 Monsters`|
 
 **Determine Guardian Quantity**
 
 |Highest Overall|Roll|
 |---|---|
-|*Encampment*|🎲 `1d6`|
-|*Villa*|🎲 `1d6 +2`|
-|*Estate*|🎲 `2d6 +3`|
-|*Castle*|🎲 `3d6 +4`|
+|*Encampment*|`🎲 1d6`|
+|*Villa*|`🎲 1d6 +2`|
+|*Estate*|`🎲 2d6 +3`|
+|*Castle*|`🎲 3d6 +4`|
 
 **A `⚒️ Mine's` `🧟 Monster` quantity is determined by whatever Player has the ***highest*** `🏰 Settlement` rank**
 
@@ -115,15 +115,15 @@ If the `⚒️ Mine` was owned by a Player, then no ***bonus*** `💰 Resource` 
 >
 > |Roll|Result||Implication|
 > |-|-|-|-|
-> |🎲 `1dP`|`🎲[90]`|=>|`🎲 1d6 +2 Guardians`|
+> |`🎲 1dP`|`🎲[90]`|=>|`🎲 1d6 +2 Guardians`|
 > 
 > |Highest Overall|Roll|
 > |---|---|
-> |*Villa*|🎲 `1d6 +2`|
+> |*Villa*|`🎲 1d6 +2`|
 >
 > |Roll|Result||Implication|
 > |-|-|-|-|
-> |🎲 `1d6 +2`|`🎲[3] +2`|=>|`5 Guardians`|
+> |`🎲 1d6 +2`|`🎲[3] +2`|=>|`5 Guardians`|
 > 
 > **Player will `FIGHT 5 Guardians`**
 
@@ -137,24 +137,24 @@ Upon landing on a Tile with a `💰 Resource` Token, roll a `🎲 1dP` to determ
 
 |Roll|🎲[10 - 70]|🎲[80 - 100]|
 |---|---|---|
-|🎲 `1dP`|Small|Large|
+|`🎲 1dP`|Small|Large|
 
 **Determine Cache Reward**
 
 |Cache Size|Reward Size Roll|
 |---|---|
-|Small|🎲 `1d6`|
-|Large|🎲 `2d6`|
+|Small|`🎲 1d6`|
+|Large|`🎲 2d6`|
 
 > *Example*
 > 
 > |Roll|Result||Implication|
 > |-|-|-|-|
-> |🎲 `1dP`|`🎲[80]`|=>|`Large Cache`|
+> |`🎲 1dP`|`🎲[80]`|=>|`Large Cache`|
 > 
 > |Roll|Result||Implication|
 > |-|-|-|-|
-> |🎲 `2d6`|`🎲[9]`|=>|`💰(+9)`|
+> |`🎲 2d6`|`🎲[9]`|=>|`💰(+9)`|
 > 
 > **Player receives `💰(+9)`**
 
@@ -180,13 +180,13 @@ In lieu of cards, you may instead roll a `🎲 1dP` to determine the `Item Type`
 
 |Roll|🎲[10 - 40]|🎲[50 - 80]|🎲[90 - 100]|
 |---|---|---|---|
-|🎲 `1dP`|`Main Hand`|`Off Hand`|`Amulet`|
+|`🎲 1dP`|`Main Hand`|`Off Hand`|`Amulet`|
 
 **Determine Item Rarity**
 
 |Roll|🎲[10 - 70]|🎲[80 - 100]|
 |---|---|---|
-|🎲 `1dP`|**Failure**|**Success**|
+|`🎲 1dP`|**Failure**|**Success**|
 
 If a Player rolls a **Success**, add `+1 Rarity Level` to the `🎁 Item`, else remain at current `Rarity Level`.
 
@@ -252,7 +252,7 @@ In the rare event that a Tile has multiple `🧟 Monster` Tokens present, you mu
 
 |Roll|🎲[10]|🎲[20 - 70]|🎲[80 - 90]|🎲[100]|
 |---|---|---|---|---|
-|🎲 `1dP`|`HARD-FIGHT`|`FIGHT`|`BRIBE`|`DEFECT`|
+|`🎲 1dP`|`HARD-FIGHT`|`FIGHT`|`BRIBE`|`DEFECT`|
 
 **Roll for Monster Quantity**
 
@@ -312,15 +312,15 @@ In battle, a `🏰 Settlement` gets a roll for itself.  That roll is dependent o
 
 |Tier|🏰 Settlement|Cost|Reward `/Day`|Defense|Prerequisite|
 |-|-|-|-|-|-|
-|1|*Encampment*|`5 💰`|`💰(+1)`|🎲 `2d6 +6`|-|
-|2|*Villa*|`10 💰`|`💰(+2)`|🎲 `3d6 +9`|`🏰 Encampment`|
-|3|*Estate*|`15 💰`|`💰(+4)`|🎲 `4d6 +12`|`🏰 Villa`|
-|4|*Castle*|`25 💰`|`💰(+6)`|🎲 `5d6 +15`|`🏰 Estate`|
+|1|*Encampment*|`5 💰`|`💰(+1)`|`🎲 2d6 +6`|-|
+|2|*Villa*|`10 💰`|`💰(+2)`|`🎲 3d6 +9`|`🏰 Encampment`|
+|3|*Estate*|`15 💰`|`💰(+4)`|`🎲 4d6 +12`|`🏰 Villa`|
+|4|*Castle*|`25 💰`|`💰(+6)`|`🎲 5d6 +15`|`🏰 Estate`|
 
 |Tier|🛡️ Ramparts|Cost|Defense|Prerequisite|
 |-|-|-|-|-|
-|1|*Pallisade*|`5 💰`|🎲 `1d6 +3`|`🏰 Villa`|
-|2|*Fortifications*|`15 💰`|🎲 `2d6 +6`|`🛡️ Pallisade`, `🏰 Castle`|
+|1|*Pallisade*|`5 💰`|`🎲 1d6 +3`|`🏰 Villa`|
+|2|*Fortifications*|`15 💰`|`🎲 2d6 +6`|`🛡️ Pallisade`, `🏰 Castle`|
 
 > *Example*
 > 
@@ -397,25 +397,61 @@ If the total power of the attacking squad(s) is greater than the total power of 
 In **all** cases where an attacking squad loses, the attacking Player choose which squad to kill; if only `1` squad attacked, the choice is automatic.
 
 ### Squads
+
+*[Back to Top](#appendix)*
+
 During a battle, `🧟 Monsters/Guardians` will **always** split evenly into `2` squads; if the quantity is odd, put the extra `1` in either squad.
 
 A Player, however, is entitles to splitting the `🤺 Mercenaries` into up to `3` different squads, allocating the quantities as s/he wishes, until all `🤺 Mercenaries` have been accounted for.
 
+### Heroes
+
 *[Back to Top](#appendix)*
 
-### Heroes
 A `🧙‍ Hero` will **always** occupy a squad of its own, by itself.  As a `🧙‍ Hero`, its "base roll" is `🎲 2d6 +6`.
 
-If that `🧙‍ Hero` has any `🎁 Items` on it, the `🧙‍ Hero` can bring `1x Main Hand`, `1x Off Hand`, and `1x Amulet` with it into battle.  Whatever the stats are of those `🎁 Items` are added to the "base roll" of that `🧙‍ Hero` any time the `🧙‍ Hero` is engaged in battle.
+If that `🧙‍ Hero` has any `🎁 Items` on it, the `🧙‍ Hero` can bring **`1x`** `Main Hand`, **`1x`** `Off Hand`, and **`1x`** `Amulet` with it into battle.  Whatever the stats are on those `🎁 Items` are added to the "base roll" of that `🧙‍ Hero` any time the `🧙‍ Hero` is engaged in battle (i.e. attacking or defending).
 
-*[Back to Top](#appendix)*
-
+> *Example*
+>
+> If a `🧙‍ Hero` has equipped an `Epic` `Main Hand` and a `Common` `Amulet`, then:
+> 
+> |Roll|Reason|
+> |-|-|
+> |`🎲 2d6 +6`|`🧙‍ Hero`|
+> |`🎲 2d6 +3`|`Main Hand [Epic Rarity]`|
+> |`🎲 1d6 +2`|`Amulet [Common Rarity]`|
+> |=||
+> |`🎲 5d6 +11`|Total Base Roll|
 
 ### Settlements
-A `🏰 Settlement` will **always** occupy a squad of its own, by itself.  As a `🏰 Settlement`, its "base roll" is dependent on its tier.
 
 *[Back to Top](#appendix)*
 
+A `🏰 Settlement` will **always** occupy a squad of its own, by itself.  As a `🏰 Settlement`, its "base roll" is dependent on its tier.
+
+|Tier|🏰 Settlement|Base Roll|
+|-|-|-|
+|1|*Encampment*|`🎲 2d6 +6`|
+|2|*Villa*|`🎲 3d6 +9`|
+|3|*Estate*|`🎲 4d6 +12`|
+|4|*Castle*|`🎲 5d6 +15`|
+
+|Tier|🛡️ Ramparts|Base Roll|
+|-|-|-|
+|1|*Pallisade*|`🎲 1d6 +3`|
+|2|*Fortifications*|`🎲 2d6 +6`|
+
+> *Example*
+>
+> If a `🏰 Settlement` is, for example, a `🏰 Castle` with `🛡️ Fortifications`, then "base roll" for the `🏰 Settlement` is:
+> 
+> |Roll|Reason|
+> |-|-|
+> |`🎲 5d6 +15`|`🏰 Castle`|
+> |`🎲 2d6 +6`|`🛡️ Fortifications`|
+> |=||
+> |`🎲 7d6 +21`|Total Base Roll|
 
 ## Multiply-Occupied Tiles
 
