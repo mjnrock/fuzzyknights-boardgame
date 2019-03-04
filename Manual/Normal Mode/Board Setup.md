@@ -1,12 +1,29 @@
+# Appendix
+1. [Board Setup](#board-setup)
+1. [Banker](#step-1-banker)
+1. [Token Placement](#step-2-token-placement)
+1. [Determine the Anchor](#step-3-determine-the--anchor)
+1. [Settlement Placement](#step-4-settlement-placement)
+1. [Distribute Resources](#step-5-distribute-resources)
+
 # Board Setup
+
+*[Back to Top](#appendix)*
+
 There can be up to **`4`** Players per Game Board (`🗺️ Map`).  If multiple `🗺️ Maps` are being used, Players can choose how to align them.
 
 > **TIP:** *Choosing different ways to align multiple `🗺️ Maps` will change how the strategy of the game will play out (e.g. 4 `🗺️ Maps` in a line configuration, versus 4 `🗺️ Maps` in a square configuration, etc.)*
 
 ## Step 1) Banker
+
+*[Back to Top](#appendix)*
+
 Choose a banker(s) by whatever method you wish (e.g. a designated banker, self-banking, etc.)
 
 ## Step 2) Token Placement
+
+*[Back to Top](#appendix)*
+
 There are **`4`** different types of tokens that will be dropped or placed randomly (Players' choice) on the board for setup.
 
 |Token|Symbol|Quantity|
@@ -28,6 +45,9 @@ There are **`4`** different types of tokens that will be dropped or placed rando
 > |Mine|⚒️|9|
 
 ## Step 3) Determine the `⚓ Anchor`
+
+*[Back to Top](#appendix)*
+
 Each Player will roll `🎲 1d6`. The highest roll becomes the `⚓ Anchor` and Player turn-order will proceed *counter clockwise* from the `⚓ Anchor`.
 
 In the event of ties on the highest rolls, those Players continue to roll `🎲 1d6` until the tie is resolved.
@@ -54,6 +74,9 @@ In the event of ties on the highest rolls, those Players continue to roll `🎲 
 ---
 
 ## Step 4) Settlement Placement
+
+*[Back to Top](#appendix)*
+
 Once the `⚓ Anchor` has been determined, the `🏰 Settlement` of each Player will be placed on **any** open tile on the map.
 
 The `⚓ Anchor` will place his or her `🏰 Settlement` first, then each Player *counter clockwise* will take turns placing his or her `🏰 Settlement` until all `🏰 Settlements` have been placed.
@@ -82,6 +105,9 @@ The `⚓ Anchor` will place his or her `🏰 Settlement` first, then each Player
 > **`Player 2: CONSTRUCT 🏰 at (5, 6)`**
 
 ## Step 5) Distribute Resources
+
+*[Back to Top](#appendix)*
+
 There is **`1`** type of `Resource` called **Coin [ 💰 ]**.
 
 |Resource|Symbol|

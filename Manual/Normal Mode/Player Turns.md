@@ -1,10 +1,48 @@
+# Appendix
+1. [Player Turns](#player-turns)
+1. [Hero](#hero------2d6-6-)
+   1. [Hero Movement](#hero-movement---)
+   1. [Hero Death](#hero-death)
+1. [Mines](#mines--%EF%B8%8F-)
+1. [Resources](#resources---)
+1. [Items](#items---)
+   1. [Card Rules](#ruleset-1-card--dice-rules-default-ruleset)
+   1. [Dice Rules](#ruleset-2-dice-only-rules-alternative-ruleset)
+1. [Monsters](#monsters---)
+   1. [Hard-Fight / Fight](#hard-fightfight)
+   1. [Bribe](#bribe)
+   1. [Defect](#defect)
+1. [Settlements](#settlement------building-dependent-)
+   1. [Garrisoned Heroes](#garrisoned-heroes)
+   1. [Armory](#armory)
+   1. [Successful Settlement Assault](#successful-settlement-assault)
+1. [Multiply-Occupied Tiles](#multiply-occupied-tiles)
+   1. [Example Section](#example-section)
+1. [Miscellaneous](#miscellaneous)
+   1. [Dice](#dice)
+      1. [Bonus](#bonus)
+      1. [Number-Sided-Bonus](#number-sided-bonus--nds-b)
+      1. [Dice Arithmetic](#dice-arithmetic)
+   1. [Voting](#voting)
+   1. [Fractional Remains](#fractional-remains)
+   1. [Alliance](#Alliance)
+   
 # Player Turns
+
+*[Back to Top](#appendix)*
+
 After `☀️ Daybreak`, each Player takes his or her turn in a *counter clockwise* sequence, starting with the `Anchor`, as determined in the **Board Setup**.
 
 ## Hero [ 🧙‍ - `🎲 2d6 +6` ]
+
+*[Back to Top](#appendix)*
+
 In `Battle`, the `🧙‍ Hero` is a unit itself with a roll of `🎲 2d6 +6`.  If the `🧙‍ Hero` falls in `Battle` (this is called `FAINTING`), its `Army` can still fight and if successful, the `🧙‍ Hero` will not die.
 
 ## Hero Movement [ 🐎 ]
+
+*[Back to Top](#appendix)*
+
 Each `🧙‍ Hero` is able to `MOVE` up to `🎲 1d12 +12` Tiles.  A `🧙‍ Hero` may **only** expend movement from its own movement roll, and can voluntarily end its own movement for that turn at any point.
 
 > **ELI5**
@@ -24,6 +62,9 @@ If the Player or `Ally` owns a `🏰 Settlement` or `⚒️ Mine`, then **all** 
 ---
 
 ## Hero Death
+
+*[Back to Top](#appendix)*
+
 In **any and all** cases where a `🧙‍ Hero` dies, **all** `🎁 Items` on that `🧙‍ Hero` are dropped at the Tile on which the `🧙‍ Hero` died.
 
 > **[ Special Case ]** If the `🧙‍ Hero` dies at a `🏰 Settlement`, the `🎁 Items` are instead placed within the `Armory` of that `🏰 Settlement` and normal `Armory` rules apply.
@@ -38,6 +79,9 @@ If the `🧙‍ Hero` had any `Mercenaries [ 🤺 ]` still alive within its comm
 ---
 
 ## Mines [ ⚒️ ]
+
+*[Back to Top](#appendix)*
+
 Upon landing on a tile with a `⚒️ Mine` Token, the Player can attempt to capture the `⚒️ Mine`.  Upon a successful capture, immediately collect **`💰(+1)`**.  Any time a Player attempts to change possession of a `⚒️ Mine`, roll a `🎲 1dP` to determine if the `⚒️ Mine` is guarded by `Guardians`.
 
 If the `🎲 1dP` roll results in `Guardians`, the Player must roll (based on the table below) to determine how many `Guardians` will attempt to defend the `⚒️ Mine`.  If the Player then defeats the `Guardians`, s/he captures the `⚒️ Mine`.
@@ -80,6 +124,9 @@ If the `⚒️ Mine` was owned by a Player, then no ***bonus*** `💰 Resource` 
 > **Player will `FIGHT 5 Guardians`**
 
 ## Resources [ 💰 ]
+
+*[Back to Top](#appendix)*
+
 Upon landing on a Tile with a `💰 Resource` Token, roll a `🎲 1dP` to determine the cache size.  The cache size will determine how much `💰 Resource` the Player finds.
 
 **Determine Cache Size**
@@ -108,12 +155,21 @@ Upon landing on a Tile with a `💰 Resource` Token, roll a `🎲 1dP` to determ
 > **Player receives `💰(+9)`**
 
 ## Items [ 🎁 ]
+
+*[Back to Top](#appendix)*
+
 All Players must agree on a ruleset below, though the Players are allowed to change the ruleset at any point, if it passes a `Vote`.
 
 ### Ruleset 1) Card & Dice Rules (Default Ruleset)
+
+*[Back to Top](#appendix)*
+
 Upon landing on a Tile with an `🎁 Item` Token, draw a card from the `Item Deck`.  Roll the dice stated on the card to determine the `Rarity` of the `🎁 Item`.  Place a marker on the `Rarity` placeholder on the card's edge.
 
 ### Ruleset 2) Dice-Only Rules (Alternative Ruleset)
+
+*[Back to Top](#appendix)*
+
 In lieu of cards, you may instead roll a `🎲 1dP` to determine the `Item Type` according to table below.  After determining `Item Type`, roll a `🎲 1dP` to determine `Rarity`.  Upon a **Success**, you may roll again; upon a **Failure** *do not* continue to roll.  **Always** start at `Common` and attempt upgrades from there.
 
 **Determine Item Type**
@@ -175,6 +231,9 @@ The `Item's` final stats are determined by the `Rarity` chart below:
 |5|`Legendary`|`🎲 4d6 +5`|
 
 ## Monsters [ 🧟 ]
+
+*[Back to Top](#appendix)*
+
 Upon landing on a Tile with a `🧟 Monster` Token, roll a `🎲 1dP` to determine the result, based on the table below.
 
 In the rare event that a Tile has multiple `🧟 Monster` Tokens present, you must **aggregate** all rolls into one (cf. **"Multiply-Occupied Tiles"** for routine with example).  In that case, peform actions on the `🧟 Monsters` in the follow priority order:
@@ -208,6 +267,9 @@ In the rare event that a Tile has multiple `🧟 Monster` Tokens present, you mu
 |`DEFECT`|`0 💰` (Free)|
 
 #### `HARD-FIGHT`/`FIGHT`
+
+*[Back to Top](#appendix)*
+
 `🎲 4d6`/`🎲 2d6` `🧟 Monsters` (depending on `🎲 1dP` roll above) `ENGAGE` the `🧙‍ Hero`, forcing it to attack.  If the `🧙‍ Hero` dies as a result, normal **Hero Death** rules apply.  If the Player wins, however, s/he is awarded the ***integer*** portion of `+💰(Monster Quantity / 2)` (i.e. **truncate** the decimal, **do not** round).
 
 > *Example*
@@ -219,9 +281,15 @@ In the rare event that a Tile has multiple `🧟 Monster` Tokens present, you mu
 > **The Player will fight `🧟(x19)` and, if victorious, will receive `19 / 2 = 9.5` => `💰(+9)`**
 
 #### `BRIBE`
+
+*[Back to Top](#appendix)*
+
 Up to `🎲 2d6` `🧟 Monsters` decide to adventure with the `🧙‍ Hero`, at the expense of `💰(-3) per 🧟 Monster` to become (up to) `🤺(2d6)` for that `🧙‍ Hero`.  The Player does not have to take all of them.
 
 #### `DEFECT`
+
+*[Back to Top](#appendix)*
+
 Up to `🎲 1d6 +3` `🧟 Monsters` decide to adventure with the `🧙‍ Hero` to become `🤺(1d6 +3)` for that `🧙‍ Hero`, **for FREE**.  The Player does not have to take all of them.
 
 ---
@@ -229,6 +297,8 @@ Up to `🎲 1d6 +3` `🧟 Monsters` decide to adventure with the `🧙‍ Hero` 
 ---
 
 ## Settlement [ 🏰 - `🎲 Building-Dependent` ]
+
+*[Back to Top](#appendix)*
 
 > `🏰 Settlement` is the **generic** term for each Player's "city".  If the `🏰` icon precedes *other text* (e.g "`🏰 Estate`" means "`🏰 Settlement` at tier of `Estate`"), it is calling out *that* particular "Settlement Building Tier" for a specific reason--the same logic applies to `🛡️ Ramparts` (e.g. `🛡️ Pallisade`).
 
@@ -259,6 +329,9 @@ In battle, a `🏰 Settlement` gets a roll for itself.  That roll is dependent o
 ---
 
 ### Garrisoned Heroes
+
+*[Back to Top](#appendix)*
+
 A `Garrisoned` `🧙‍ Hero` cannot be attacked directly, as it is protected by the `🏰 Settlement`.  If a `🏰 Settlement` is attacked while a `🧙‍ Hero` is `Garrisoned`, then the `🧙‍ Hero` and its `Army` will assist in defending the `🏰 Settlement`.
 
 > **NOTE:** If A `Garrisoned` `🧙‍ Hero` is at a `🏰 Settlement` while it is attacked, there would be a `🧙‍ Hero`, a `🏰 Settlement`, and the aggregation of the `Recruits` between the `🏰 Settlement` and the `🧙‍ Hero` (if it has any) defending the  `🏰 Settlement`.
@@ -268,6 +341,9 @@ A `Garrisoned` `🧙‍ Hero` cannot be attacked directly, as it is protected by
 ---
 
 ### Armory
+
+*[Back to Top](#appendix)*
+
 A `🏰 Settlement's` `Armory` is simply a collection of `🎁 Items` that any `🧙‍ Hero` currently `Garrisoned` at that `🏰 Settlement` can exchange, deposit, or withdraw `🎁 Items`.
 
 `🎁 Items` in the `Armory` do not apply to `Battle` rolls in the event of a `🏰 Settlement` assault.
@@ -277,6 +353,9 @@ A `🏰 Settlement's` `Armory` is simply a collection of `🎁 Items` that any `
 ---
 
 ### Successful Settlement Assault
+
+*[Back to Top](#appendix)*
+
 If a `🏰 Settlement` falls to an assault, ***all*** `🎁 Items` in the `Armory` become the property of the conquering party.
 
 > **IMPORTANT** If a `🏰 Settlement` has any `🎁 Items` in the `Armory` at the time of a conquest, *those items* are **not** "tokenized" like they would be in the death of a  `🧙‍ Hero`--they remain as the cards they are.
@@ -286,6 +365,9 @@ If a `🧙‍ Hero` was also *defending* a `🏰 Settlement` in the assault, ***
 All `🎁 Items` transferred from the assault go into the `🏰 Settlement's` `Armory` by default.  While it can be readily transferred to a `Garrisoned` `🧙‍ Hero`, conquered `🎁 Items` default to the `🏰 Settlement`.
 
 ## Multiply-Occupied Tiles
+
+*[Back to Top](#appendix)*
+
 Any Token interaction will cost a minimum of `🐎(-1)`.  This applies to consecutive Token acquisitions on the same Tile.
 
 > **IMPORTANT** `🎁 Items` and `💰 Resources` uniquely take `🐎(-1)` for **each** Token on a Tile, while all other Token are "automatically" interacted with simply by being on the same Tile
@@ -311,6 +393,9 @@ In the rare event that a Tile has multiple `🧟 Monster` Tokens present, you mu
 ---
 
 ### Example Section
+
+*[Back to Top](#appendix)*
+
 Below are some various examples to help explicate the idea.
 
 #### Example A) Multiple `🎁 Items` and `💰 Resources` Tokens on a Single Tile
@@ -371,9 +456,15 @@ Below are some various examples to help explicate the idea.
 >   |Total||`🎲[20] + 🎲[9] + 🎲[11] = 🧟(40)`|=>|`FIGHT 🧟(40)`|
 
 ## Miscellaneous
+
+*[Back to Top](#appendix)*
+
 Below are some random things and situations for which Players may need additional reference and explanation.
 
 ### Dice
+
+*[Back to Top](#appendix)*
+
 As a notational explicative for this section and the guide in general:
 
 * `🎲[#]` will mean a roll ***result***
@@ -385,6 +476,9 @@ As a notational explicative for this section and the guide in general:
 * `(# * 🎲 NdS) +B` will mean a dice roll ***to perform***, the result of which will be multiplied by `#` and `+B` will be *added to the final result*.  This is called a **Representative Roll**
 
 #### Bonus
+
+*[Back to Top](#appendix)*
+
 Bonus is **always** added *at the very end* of ***all*** rolls.  An example roll of `🎲 2d6 +9` means:
 
 ---
@@ -411,6 +505,9 @@ Bonus is **always** added *at the very end* of ***all*** rolls.  An example roll
 ---
 
 #### Number-Sided-Bonus (`🎲 NdS +B`)
+
+*[Back to Top](#appendix)*
+
 When writing dice rolls, the "Number-Sided-Bonus" convention is used, taking the general form of `🎲 NdS +B`.
 * `N` is the "Number"
   - The *quantity* of dice
@@ -436,6 +533,8 @@ When writing dice rolls, the "Number-Sided-Bonus" convention is used, taking the
 |`🎲 dP`|`10`|Increments of `10` from `🎲[10 - 00]`,  `🎲[00]` = `100%`.|
 
 #### Dice Arithmetic
+
+*[Back to Top](#appendix)*
 
 > **PSA**
 > 
@@ -467,6 +566,9 @@ That being said, if you have multiple of the *same* **Sidedness** on the combine
 > into a consolidated form of: `🎲 5d6 +9`.
 
 ### Voting
+
+*[Back to Top](#appendix)*
+
 Do not read this section too rigidly, it is meant as a high-level guidance, but the ultimate decision is up to you.
 
 If a situation arises where a `Vote` is necessary, then each Player can "cast" `1 Vote`.  In the event of a tie (e.g. an even number of Players), choose a reconciliation method that has fair and even odds (e.g. flip a coin, roll a `1dP` and split `10 - 50` and `60 - 100`, etc.), or create a fun and/or competitive event to decide.
@@ -474,11 +576,17 @@ If a situation arises where a `Vote` is necessary, then each Player can "cast" `
 > **TIP:** In the event of a tie, consider introducing light-hearted fun at the other Players' expense, such as pitting each side of the `Vote` against each other by some means (e.g. a mini event, a trivia contest, etc.).
 
 ### Fractional Remains
+
+*[Back to Top](#appendix)*
+
 Intuitively, imagine all fractional roles as if they were dividing people and you must keep them alive--you can't have half a person (at least, not a person that is still alive...).
 
 Any time an event happens where there are fractional remains, you must ***always remove (truncate) the decimal portion***.  This remains true *even if* the fraction would *round* up (e.g. 0.6).
 
 ### Alliance
+
+*[Back to Top](#appendix)*
+
 An `Alliance` can be made with any Player at any time, and if an `Alliance` forms, then each Player continues to operate independently; however, each Player in the `Alliance` can treat the other `Alliance Members'` `🏰 Settlements` and `Mines` and **unoccupied Tiles** for movement.
 
 *Any other perks or restrictions are determined by the `Alliance Members` themselves.*

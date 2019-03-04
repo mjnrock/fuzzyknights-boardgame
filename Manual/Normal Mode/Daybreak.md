@@ -1,12 +1,33 @@
+# Appendix
+1. [Daybreak](#daybreak--%EF%B8%8F-)
+1. [Distribute Resource](#step-1-distribute-resources---)
+   1. [Settlement](#step-1a-settlement---)
+   1. [Mines](#step-1b-mines--%EF%B8%8F-)
+1. [Paying Heroes](#step-2-paying-heroes---)
+1. [Building and Recruitment](#step-3-building-and-recruitment)
+   1. [Buildings](#step-3a-buildings)
+   1. [Recruitment](#step-3b-recruitment----)
+1. [Token Placement Rolls](#step-4-token-placement-rolls)
+1. [Player Turns](#step-5-player-turns)
+
 # Daybreak [ ☀️ ]
+
+*[Back to Top](#appendix)*
+
 At the beginning of every turn cycle, `☀️ Daybreak` occurs.  **All** Players engage in `💰 Resource` collection and expenditures.  Players can build **`1`** `Building` per `☀️ Day`.  Any `🤺 Mercenaries` purchased will be placed at the `🏰 Settlement` and a `🧙‍ Hero` must come and collect them.
 
 > If a `🧙‍ Hero` is already `Garrisoned` to a `🏰 Settlement` and `🤺 Mercenaries` are purchased (at that same `🏰 Settlement`), then the Player can decide how to allocate those `🤺 Mercenaries` between that `🏰 Settlement` and that `🧙‍ Hero`.
 
 ## Step 1) Distribute Resources [ 💰 ]
+
+*[Back to Top](#appendix)*
+
 `🏰 Settlement` and owned `Mines` generate `💰 Resources` each `☀️ Day`.  How much they each generate is described below.
 
 ### Step 1.A) Settlement [ 🏰 ]
+
+*[Back to Top](#appendix)*
+
 *Each* `🏰 Settlement` awards its Player the `💰 Resources` below
 
 |Capital Upgrades|Reward `/Day`|Notes|
@@ -22,6 +43,9 @@ At the beginning of every turn cycle, `☀️ Daybreak` occurs.  **All** Players
 ---
 
 ### Step 1.B) Mines [ ⚒️ ]
+
+*[Back to Top](#appendix)*
+
 *Each* `Mine` awards its Player the `💰 Resources` below
 
 |💰|
@@ -33,6 +57,9 @@ At the beginning of every turn cycle, `☀️ Daybreak` occurs.  **All** Players
 > **`💰(+1) * ⚒️(5)`** = **`💰(+5)`**
 
 ## Step 2) Paying Heroes [ 🧙‍ ]
+
+*[Back to Top](#appendix)*
+
 Each `🧙‍ Hero` that a Player has must be paid *each* turn to continue to fight for the Player.  If the Player cannot afford to pay any or all of the `🧙‍ Heroes`, s/he must kill each `🧙‍ Hero` that s/he cannot afford.  All normal `🧙‍ Hero` `DEATH` rules apply.
 
 |💰|
@@ -48,11 +75,16 @@ Each `🧙‍ Hero` that a Player has must be paid *each* turn to continue to fi
 ---
 
 ## Step 3) Building and Recruitment
+
+*[Back to Top](#appendix)*
+
 `🏰 Settlements` can build **`1`** `Building` per `☀️ Day`.
 
 Each Player can `Recruit` as many `🤺 Mercenaries` as s/he can afford at a `🏰 Settlement`.
 
 ### Step 3.A) Buildings
+
+*[Back to Top](#appendix)*
 
 |🏰 Settlement|Cost|Reward `/Day`|Defense|Prerequisite|
 |-|-|-|-|-|
@@ -68,6 +100,7 @@ Each Player can `Recruit` as many `🤺 Mercenaries` as s/he can afford at a `�
 
 ### Step 3.B) Recruitment [ 🧙‍, 🤺 ]
 
+*[Back to Top](#appendix)*
 
 |🧙‍ Hero|Cost|Prerequisite|
 |-|-|-|
@@ -85,6 +118,9 @@ Each Player can `Recruit` as many `🤺 Mercenaries` as s/he can afford at a `�
 ---
 
 ## Step 4) Token Placement Rolls
+
+*[Back to Top](#appendix)*
+
 **All** Players roll a `🎲 1dP` to attempt to place a Token on the `🗺️ Map`.
 
 Each Player that rolls **successfully** should then roll a `🎲 1d4` to determine which type of Token s/he will place.  After determining the Token type, the Player can place that Token on **any** unoccupied Tile.
@@ -104,6 +140,9 @@ Each Player that rolls **successfully** should then roll a `🎲 1d4` to determi
 |🎲 `1d4`|`💰 Resource`|`🎁 Item`|`🧟 Monster`|
 
 ## Step 5) Player Turns
+
+*[Back to Top](#appendix)*
+
 Starting with the `⚓ Anchor` and moving through Players in a *counter clockwise* manner, each Player takes individual turns moving `🧙‍ Heroes`, performing battle, and interacting with Tokens on the `🗺️ Map`.
 
 Once **all** Players have taken their turns, start a new `☀️ Day` and begin the `☀️ Daybreak` routine.
