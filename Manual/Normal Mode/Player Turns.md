@@ -344,23 +344,23 @@ It is only possible to control multiple `🏰 Settlements` by conquering other P
 
 A Player can attack a `🏰 Settlement` in a similar capacity as fighting `🧟 Monsters` or against another `🧙‍ Hero`.
 
-In battle, a `🏰 Settlement` gets a roll for itself.  That roll is dependent on whatever rank the `🏰 Settlement` is, *plus* additional impact if the `🏰 Settlement` has any `🛡️ Ramparts`.  To determine the final roll, add the "**Defense**" columns below.
+In battle, a `🏰 Settlement` gets a roll for itself.  That roll is dependent on whatever rank the `🏰 Settlement` is, *plus* additional impact if the `🏰 Settlement` has any `🛡️ Ramparts`.  To determine the final roll, add the "**Base Roll**" columns below.
 
-|Tier|🏰 Settlement|Cost|Reward `/Day`|Defense|Prerequisite|
+|Tier|🏰 Settlement|Cost|Reward `/Day`|Base Roll|Prerequisite|
 |-|-|-|-|-|-|
 |1|*Encampment*|`5 💰`|`💰(+1)`|`🎲 2d6 +6`|-|
 |2|*Villa*|`10 💰`|`💰(+2)`|`🎲 3d6 +9`|`🏰 Encampment`|
 |3|*Estate*|`15 💰`|`💰(+4)`|`🎲 4d6 +12`|`🏰 Villa`|
 |4|*Castle*|`25 💰`|`💰(+6)`|`🎲 5d6 +15`|`🏰 Estate`|
 
-|Tier|🛡️ Ramparts|Cost|Defense|Prerequisite|
-|-|-|-|-|-|
+|Tier|🛡️ Ramparts|Cost|Base Roll|Prerequisite|
+|-|-|-|-|-|Base Roll
 |1|*Palisade*|`5 💰`|`🎲 1d6 +3`|`🏰 Villa`|
 |2|*Fortifications*|`15 💰`|`🎲 2d6 +6`|`🛡️ Palisade`, `🏰 Castle`|
 
 > *Example*
 > 
-> An **`🏰 Estate (🎲 4d6 +12)`** with **`🛡️ Palisade (🎲 1d6 +3)`** amounts to a total **Defense** of **`🎲 5d6 +15`**
+> An **`🏰 Estate (🎲 4d6 +12)`** with **`🛡️ Palisade (🎲 1d6 +3)`** amounts to a total **Base Roll** of **`🎲 5d6 +15`**
 
 ---
 - **`💡 REMINDER`** *You cannot purchase the next tier of `🏰 Settlement` until you have purchased its preceding tier*
