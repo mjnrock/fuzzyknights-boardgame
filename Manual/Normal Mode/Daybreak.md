@@ -1,14 +1,15 @@
-# Appendix
-1. [Daybreak](#daybreak--%EF%B8%8F-)
-1. [Distribute Resource](#step-1-distribute-resources---)
-   1. [Settlement](#step-1a-settlement---)
-   1. [Mines](#step-1b-mines--%EF%B8%8F-)
-1. [Paying Heroes](#step-2-paying-heroes---)
-1. [Building and Recruitment](#step-3-building-and-recruitment)
-   1. [Buildings](#step-3a-buildings)
-   1. [Recruitment](#step-3b-recruitment----)
-1. [Token Placement Rolls](#step-4-token-placement-rolls)
-1. [Player Turns](#step-5-player-turns)
+# Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Daybreak [ ☀️ ]](#daybreak--️-)
+	- [Step 1) Distribute Resources [ 💰 ]](#step-1-distribute-resources---)
+		- [Step 1.A) Settlement [ 🏰 ]](#step-1a-settlement---)
+		- [Step 1.B) Mines [ ⚒️ ]](#step-1b-mines--️-)
+	- [Step 2) Paying Heroes [ 🧙‍ ]](#step-2-paying-heroes---)
+	- [Step 3) Building and Recruitment](#step-3-building-and-recruitment)
+		- [Step 3.A) Buildings](#step-3a-buildings)
+		- [Step 3.B) Recruitment [ 🧙‍, 🤺 ]](#step-3b-recruitment----)
+	- [Step 4) Token Placement Rolls](#step-4-token-placement-rolls)
+	- [Step 5) Player Turns](#step-5-player-turns)
 
 # Daybreak [ ☀️ ]
 
@@ -40,6 +41,7 @@ At the beginning of every turn cycle, `☀️ Daybreak` occurs.  **All** Players
 ---
 - **`💡 REMINDER`** *`🏰 Settlements` start out at Encampment and additional upgrades must be purchased*
 - **`💡 REMINDER`** *You **cannot** build another `🏰 Settlement`, so be careful with it!*
+
 ---
 
 ### Step 1.B) Mines [ ⚒️ ]
@@ -72,6 +74,7 @@ Each `🧙‍ Hero` that a Player has must be paid *each* turn to continue to fi
 
 ---
 - **`💡 REMINDER`** *You can only have up to `2 🧙‍ Heroes` at a time*
+
 ---
 
 ## Step 3) Building and Recruitment
@@ -115,6 +118,7 @@ Each Player can `Recruit` as many `🤺 Mercenaries` as s/he can afford at a `�
 - **`💡 REMINDER`** *All recruitment takes place at the `🏰 Settlement` and all recruits spawn there*
 - **`💡 REMINDER`** *`🤺 Mercenaries` cannot move on their own, so a `🧙‍ Hero` must be there to pick them up*
 - **`💡 REMINDER`** *The `🏰 Settlement` and the `🛡️ Ramparts` are themselves units on the battlefield when a `🏰 Settlement` is under attack*
+
 ---
 
 ## Step 4) Token Placement Rolls
