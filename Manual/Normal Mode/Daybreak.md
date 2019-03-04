@@ -97,8 +97,8 @@ Each Player can `Recruit` as many `🤺 Mercenaries` as s/he can afford at a `�
 
 |🛡️ Ramparts|Cost|Base Roll|Prerequisite|
 |-|-|-|-|
-|*Pallisade*|**`5 💰`**|`🎲 1d6 +3`|`🏰 Settlement`, *Villa*|
-|*Fortifications*|**`15 💰`**|`🎲 2d6 +6`|*Pallisade*, *Castle*|
+|*Palisade*|**`5 💰`**|`🎲 1d6 +3`|`🏰 Settlement`, *Villa*|
+|*Fortifications*|**`15 💰`**|`🎲 2d6 +6`|*Palisade*, *Castle*|
 
 ### Step 3.B) Recruitment [ 🧙‍, 🤺 ]
 

@@ -340,7 +340,7 @@ Up to `🎲 1d6 +3` `🧟 Monsters` decide to adventure with the `🧙‍ Hero` 
 
 It is only possible to control multiple `🏰 Settlements` by conquering other Players.  If a Player successfully defeats an opponent in a battle for a `🏰 Settlement`, the winning Player takes full control of the `🏰 Settlement`.
 
-> `🏰 Settlement` is the **generic** term for each Player's "city".  If the `🏰` icon precedes *other text* (e.g "`🏰 Estate`" means "`🏰 Settlement` at tier of `Estate`"), it is calling out *that* particular "Settlement Building Tier" for a specific reason--the same logic applies to `🛡️ Ramparts` (e.g. `🛡️ Pallisade`).
+> `🏰 Settlement` is the **generic** term for each Player's "city".  If the `🏰` icon precedes *other text* (e.g "`🏰 Estate`" means "`🏰 Settlement` at tier of `Estate`"), it is calling out *that* particular "Settlement Building Tier" for a specific reason--the same logic applies to `🛡️ Ramparts` (e.g. `🛡️ Palisade`).
 
 A Player can attack a `🏰 Settlement` in a similar capacity as fighting `🧟 Monsters` or against another `🧙‍ Hero`.
 
@@ -355,12 +355,12 @@ In battle, a `🏰 Settlement` gets a roll for itself.  That roll is dependent o
 
 |Tier|🛡️ Ramparts|Cost|Defense|Prerequisite|
 |-|-|-|-|-|
-|1|*Pallisade*|`5 💰`|`🎲 1d6 +3`|`🏰 Villa`|
-|2|*Fortifications*|`15 💰`|`🎲 2d6 +6`|`🛡️ Pallisade`, `🏰 Castle`|
+|1|*Palisade*|`5 💰`|`🎲 1d6 +3`|`🏰 Villa`|
+|2|*Fortifications*|`15 💰`|`🎲 2d6 +6`|`🛡️ Palisade`, `🏰 Castle`|
 
 > *Example*
 > 
-> An **`🏰 Estate (🎲 4d6 +12)`** with **`🛡️ Pallisade (🎲 1d6 +3)`** amounts to a total **Defense** of **`🎲 5d6 +15`**
+> An **`🏰 Estate (🎲 4d6 +12)`** with **`🛡️ Palisade (🎲 1d6 +3)`** amounts to a total **Defense** of **`🎲 5d6 +15`**
 
 ---
 - **`💡 REMINDER`** *You cannot purchase the next tier of `🏰 Settlement` until you have purchased its preceding tier*
@@ -478,7 +478,7 @@ A `🏰 Settlement` will **always** occupy a squad of its own, by itself.  As a 
 
 |Tier|🛡️ Ramparts|Base Roll|
 |-|-|-|
-|1|*Pallisade*|`🎲 1d6 +3`|
+|1|*Palisade*|`🎲 1d6 +3`|
 |2|*Fortifications*|`🎲 2d6 +6`|
 
 > *Example*
