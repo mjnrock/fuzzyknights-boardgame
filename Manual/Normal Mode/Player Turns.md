@@ -70,6 +70,10 @@ As play goes on, Players can find themselves without a `🏰 Settlement` due to 
 
 In `Battle`, the `🧙‍ Hero` is a unit itself with a roll of `🎲 2d6 +6`.  If the `🧙‍ Hero` falls in `Battle` (this is called `FAINTING`), its `Army` can still fight and if successful, the `🧙‍ Hero` will not die.
 
+|🧙‍ Hero|Cost|Base Roll|Prerequisite|
+|-|-|-|-|
+|*Hero*|**`5 💰`**, **`💰(-1) /Daybreak`**|`🎲 2d6 +6`|`🏰 Settlement`|
+
 ## Hero Movement [ 🐎 ]
 
 *[Back to Top](#table-of-contents)*
