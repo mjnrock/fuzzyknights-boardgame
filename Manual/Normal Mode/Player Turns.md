@@ -62,9 +62,6 @@ A Player is declared the winner if all other Players have been eliminated from t
 
 As play goes on, Players can find themselves without a `🏰 Settlement` due to conquest.  In this case, the Player's `🧙‍ Hero(es)` **must** acquire a `🏰 Settlement` before the end of the next turn's **Exploration Phase** or that Player is permanently eliminated from play.
 
-As long as a Player has a 
-
-
 ## Hero [ 🧙‍ - `🎲 2d6 +6` ]
 
 *[Back to Top](#table-of-contents)*
