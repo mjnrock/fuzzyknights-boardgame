@@ -1,5 +1,4 @@
-# Table of Contents
-- [Table of Contents](#table-of-contents)
+# Table of Contents<!-- omit in toc --> 
 - [Board Setup](#board-setup)
 	- [Step 1) Banker](#step-1-banker)
 	- [Step 2) Token Placement](#step-2-token-placement)
@@ -9,7 +8,7 @@
 
 # Board Setup
 
-*[Back to Top](#appendix)*
+*[Back to Top](#table-of-contents)*
 
 There can be up to **`4`** Players per Game Board (`🗺️ Map`).  If multiple `🗺️ Maps` are being used, Players can choose how to align them.
 
@@ -17,13 +16,13 @@ There can be up to **`4`** Players per Game Board (`🗺️ Map`).  If multiple 
 
 ## Step 1) Banker
 
-*[Back to Top](#appendix)*
+*[Back to Top](#table-of-contents)*
 
 Choose a banker(s) by whatever method you wish (e.g. a designated banker, self-banking, etc.)
 
 ## Step 2) Token Placement
 
-*[Back to Top](#appendix)*
+*[Back to Top](#table-of-contents)*
 
 There are **`4`** different types of tokens that will be dropped or placed randomly (Players' choice) on the board for setup.
 
@@ -47,7 +46,7 @@ There are **`4`** different types of tokens that will be dropped or placed rando
 
 ## Step 3) Determine the `⚓ Anchor`
 
-*[Back to Top](#appendix)*
+*[Back to Top](#table-of-contents)*
 
 Each Player will roll `🎲 1d6`. The highest roll becomes the `⚓ Anchor` and Player turn-order will proceed *counter clockwise* from the `⚓ Anchor`.
 
@@ -77,7 +76,7 @@ In the event of ties on the highest rolls, those Players continue to roll `🎲 
 
 ## Step 4) Settlement Placement
 
-*[Back to Top](#appendix)*
+*[Back to Top](#table-of-contents)*
 
 Once the `⚓ Anchor` has been determined, the `🏰 Settlement` of each Player will be placed on **any** open tile on the map.
 
@@ -108,7 +107,7 @@ The `⚓ Anchor` will place his or her `🏰 Settlement` first, then each Player
 
 ## Step 5) Distribute Resources
 
-*[Back to Top](#appendix)*
+*[Back to Top](#table-of-contents)*
 
 There is **`1`** type of `Resource` called **Coin [ 💰 ]**.
 
