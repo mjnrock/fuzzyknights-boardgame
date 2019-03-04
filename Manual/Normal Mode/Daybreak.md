@@ -1,10 +1,10 @@
-# Daybreak
-At the beginning of every turn cycle, `Daybreak` occurs.  **All** Players engage in `💰 Resource` collection and expenditures.  Players can build **`1`** `Building` per `Day`.  Any `🤺 Mercenaries` purchased will be placed at the `🏰 Settlement` and a `🧙‍ Hero` must come and collect them.
+# Daybreak [ ☀️ ]
+At the beginning of every turn cycle, `☀️ Daybreak` occurs.  **All** Players engage in `💰 Resource` collection and expenditures.  Players can build **`1`** `Building` per `☀️ Day`.  Any `🤺 Mercenaries` purchased will be placed at the `🏰 Settlement` and a `🧙‍ Hero` must come and collect them.
 
 > If a `🧙‍ Hero` is already `Garrisoned` to a `🏰 Settlement` and `🤺 Mercenaries` are purchased (at that same `🏰 Settlement`), then the Player can decide how to allocate those `🤺 Mercenaries` between that `🏰 Settlement` and that `🧙‍ Hero`.
 
 ## Step 1) Distribute Resources [ 💰 ]
-`🏰 Settlement` and owned `Mines` generate `💰 Resources` each `Day`.  How much they each generate is described below.
+`🏰 Settlement` and owned `Mines` generate `💰 Resources` each `☀️ Day`.  How much they each generate is described below.
 
 ### Step 1.A) Settlement [ 🏰 ]
 *Each* `🏰 Settlement` awards its Player the `💰 Resources` below
@@ -48,38 +48,40 @@ Each `🧙‍ Hero` that a Player has must be paid *each* turn to continue to fi
 ---
 
 ## Step 3) Building and Recruitment
-`🏰 Settlements` can build **`1`** `Building` per `Day`.
+`🏰 Settlements` can build **`1`** `Building` per `☀️ Day`.
 
 Each Player can `Recruit` as many `🤺 Mercenaries` as s/he can afford at a `🏰 Settlement`.
 
 ### Step 3.A) Buildings
 
-|Settlement|Cost|Reward `/Day`|Prerequisite|
-|-|-|-|-|
-|*Encampment*|**`5 💰`**|**`💰(+1)`**|-|
-|*Villa*|**`10 💰`**|**`💰(+2)`**|*Encampment*|
-|*Estate*|**`15 💰`**|**`💰(+4)`**|*Villa*|
-|*Castle*|**`25 💰`**|**`💰(+6)`**|*Estate*|
+|🏰 Settlement|Cost|Reward `/Day`|Defense|Prerequisite|
+|-|-|-|-|-|
+|*Encampment*|**`5 💰`**|**`💰(+1)`**|🎲 `2d6 +6`|-|
+|*Villa*|**`10 💰`**|**`💰(+2)`**|🎲 `3d6 +9`|*Encampment*|
+|*Estate*|**`15 💰`**|**`💰(+4)`**|🎲 `4d6 +12`|*Villa*|
+|*Castle*|**`25 💰`**|**`💰(+6)`**|🎲 `5d6 +15`|*Estate*|
 
-|Ramparts|Cost|Prerequisite|
-|-|-|-|
-|*Ramparts*|**`5 💰`**|`🏰 Settlement`, *Villa*|
-|*Fortifications*|**`15 💰`**|*Ramparts*, *Castle*|
+|🛡️ Ramparts|Cost|Defense|Prerequisite|
+|-|-|-|-|
+|*Pallisade*|**`5 💰`**|🎲 `1d6 +3`|`🏰 Settlement`, *Villa*|
+|*Fortifications*|**`15 💰`**|🎲 `2d6 +6`|*Pallisade*, *Castle*|
 
 ### Step 3.B) Recruitment [ 🧙‍, 🤺 ]
 
 
-|Hero|Cost|Prerequisite|
+|🧙‍ Hero|Cost|Prerequisite|
 |-|-|-|
-|*🧙‍ Hero*|**`5 💰`**|`🏰 Settlement`|
+|*Hero*|**`5 💰`**|`🏰 Settlement`|
 
-|Recruit|Cost|Prerequisite|
+|🤺 Mercenary|Cost|Prerequisite|
 |-|-|-|
-|*🤺 Mercenary*|**`2 💰`**|*Mercenary Camp*|
+|*Mercenary*|**`2 💰`**|*Mercenary Camp*|
 
 ---
+- **`💡 REMINDER`** *You cannot build an `Armory`--it comes by default*
 - **`💡 REMINDER`** *All recruitment takes place at the `🏰 Settlement` and all recruits spawn there*
 - **`💡 REMINDER`** *`🤺 Mercenaries` cannot move on their own, so a `🧙‍ Hero` must be there to pick them up*
+- **`💡 REMINDER`** *The `🏰 Settlement` and the `🛡️ Ramparts` are themselves units on the battlefield when a `🏰 Settlement` is under attack*
 ---
 
 ## Step 4) Token Placement Rolls
@@ -93,15 +95,15 @@ Each Player that rolls **successfully** should then roll a `🎲 1d4` to determi
 
 |Roll|🎲[10 - 50]|🎲[60 - 100]|
 |---|---|---|
-|🎲 **`1dP`**|-|Roll `1d4` to determine Token type|
+|🎲 `1dP`|-|Roll `1d4` to determine Token type|
 
 **Roll for Token Type**
 
 |Roll|🎲[1 - 2]|🎲[3]|🎲[4]|
 |---|---|---|---|
-|🎲 **`1d4`**|`💰 Resource`|`🎁 Item`|`🧟 Monster`|
+|🎲 `1d4`|`💰 Resource`|`🎁 Item`|`🧟 Monster`|
 
 ## Step 5) Player Turns
 Starting with the `⚓ Anchor` and moving through Players in a *counter clockwise* manner, each Player takes individual turns moving `🧙‍ Heroes`, performing battle, and interacting with Tokens on the `🗺️ Map`.
 
-Once **all** Players have taken their turns, start a new `Day` and begin the `Daybreak` routine.
+Once **all** Players have taken their turns, start a new `☀️ Day` and begin the `☀️ Daybreak` routine.

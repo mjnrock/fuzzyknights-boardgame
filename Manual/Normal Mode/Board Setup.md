@@ -28,13 +28,13 @@ There are **`4`** different types of tokens that will be dropped or placed rando
 > |Mine|⚒️|9|
 
 ## Step 3) Determine the `⚓ Anchor`
-Each Player will roll **`🎲 1d6`**. The highest roll becomes the `⚓ Anchor` and Player turn-order will proceed *counter clockwise* from the `⚓ Anchor`.
+Each Player will roll `🎲 1d6`. The highest roll becomes the `⚓ Anchor` and Player turn-order will proceed *counter clockwise* from the `⚓ Anchor`.
 
-In the event of ties on the highest rolls, those Players continue to roll **`🎲 1d6`** until the tie is resolved.
+In the event of ties on the highest rolls, those Players continue to roll `🎲 1d6` until the tie is resolved.
 
 |Roll|
 |---|
-|🎲 **`1d6`**|
+|🎲 `1d6`|
 
 > *Example*
 > **Comparing Rolls**
@@ -43,9 +43,9 @@ In the event of ties on the highest rolls, those Players continue to roll **`�
 > 
 > |Player|Roll|Result|
 > |---|---|---|
-> |Player A|**`1d6`**|🎲 **6**|
-> |Player B|**`1d6`**|🎲 **2**|
-> |Player C|**`1d6`**|🎲 **3**|
+> |Player A|**`1d6`|🎲 **6**|
+> |Player B|**`1d6`|🎲 **2**|
+> |Player C|**`1d6`|🎲 **3**|
 > 
 > As a result, **Player A** goes first.  Play would proceed *counter clockwise* to **Player A**
 
