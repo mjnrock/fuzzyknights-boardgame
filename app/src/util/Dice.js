@@ -16,35 +16,35 @@ class Dice {
 		return Dice.Roll(1, 2) === 1 ? true : false;
 	}
 
-	static D2(bonus = 0) {
-		return Dice.Roll(1, 2) + bonus;
+	static D2(number = 1, bonus = 0) {
+		return Dice.Roll(number, 2) + bonus;
 	}
-	static D3(bonus = 0) {
-		return Dice.Roll(1, 3) + bonus;
+	static D3(number = 1, bonus = 0) {
+		return Dice.Roll(number, 3) + bonus;
 	}
-	static D4(bonus = 0) {
-		return Dice.Roll(1, 4) + bonus;
+	static D4(number = 1, bonus = 0) {
+		return Dice.Roll(number, 4) + bonus;
 	}
-	static D6(bonus = 0) {
-		return Dice.Roll(1, 6) + bonus;
+	static D6(number = 1, bonus = 0) {
+		return Dice.Roll(number, 6) + bonus;
 	}
-	static D10(bonus = 0) {
-		return Dice.Roll(1, 10) + bonus;
+	static D10(number = 1, bonus = 0) {
+		return Dice.Roll(number, 10) + bonus;
 	}
-	static D12(bonus = 0) {
-		return Dice.Roll(1, 12) + bonus;
+	static D12(number = 1, bonus = 0) {
+		return Dice.Roll(number, 12) + bonus;
 	}
-	static D20(bonus = 0) {
-		return Dice.Roll(1, 20) + bonus;
+	static D20(number = 1, bonus = 0) {
+		return Dice.Roll(number, 20) + bonus;
 	}
-	static D25(bonus = 0) {
-		return Dice.Roll(1, 25) + bonus;
+	static D25(number = 1, bonus = 0) {
+		return Dice.Roll(number, 25) + bonus;
 	}
-	static D50(bonus = 0) {
-		return Dice.Roll(1, 50) + bonus;
+	static D50(number = 1, bonus = 0) {
+		return Dice.Roll(number, 50) + bonus;
 	}
-	static D100(bonus = 0) {
-		return Dice.Roll(1, 100) + bonus;
+	static D100(number = 1, bonus = 0) {
+		return Dice.Roll(number, 100) + bonus;
 	}
 
 	static WeightedRandom(weights, values) {                
