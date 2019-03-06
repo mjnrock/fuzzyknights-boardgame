@@ -8,6 +8,24 @@ class Proposition {
 		this.OnComplete = onComplete;
 	}
 
+	Test(...args) {
+		if(typeof this.Condition !== "function" || typeof this.OnTrue !== "function" || typeof this.OnFalse !== "function") {
+			throw new Error("All parameters must be functions.");
+		}
+
+		try {
+			let result = this.Condition(...args);
+
+			return result;
+		} catch (e) {
+			if(this.OnError && typeof this.OnError === "function") {
+				this.OnError([ this.Condition, ...args ], e);
+			} else {
+				console.warn(e);
+			}
+		}
+	}
+
 	Evaluate(...args) {
 		if(typeof this.Condition !== "function" || typeof this.OnTrue !== "function" || typeof this.OnFalse !== "function") {
 			throw new Error("All parameters must be functions.");
@@ -26,7 +44,7 @@ class Proposition {
 				this.OnComplete([ this.Condition, ...args ]);
 			}
 		} catch (e) {
-			if(this.OnComplete && typeof this.OnError === "function") {
+			if(this.OnError && typeof this.OnError === "function") {
 				this.OnError([ this.Condition, ...args ], e);
 			} else {
 				console.warn(e);
