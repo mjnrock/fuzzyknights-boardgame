@@ -7,6 +7,7 @@ import Movement from "./Movement";
 import Power from "./Power";
 import Resource from "./Resource";
 import Hero from "./Hero";
+import Player from "./Player";
 
 export default {
 	Building,
@@ -17,5 +18,6 @@ export default {
 	Movement,
 	Power,
 	Resource,
-	Hero
+	Hero,
+	Player
 };

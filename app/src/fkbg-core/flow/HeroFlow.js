@@ -1,11 +1,6 @@
 import Flow from "./Flow";
 import Hero from "../mats/Hero";
 
-import Dice from "../../util/Dice";
-import Power from "../mats/Power";
-
-import Config from "../config";
-
 class HeroFlow extends Flow {
 	constructor() {
 		super(Hero);
