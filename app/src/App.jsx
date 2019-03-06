@@ -53,7 +53,12 @@ class App extends Component {
 	render() {
 		return (
             <div>
-				
+				<Components.RollEvent
+					icon="⚒️"
+					dice="dP-yellow"
+					label="Mine"
+					onClick={ console.log }
+				/>
 			</div>
 		);
 	}

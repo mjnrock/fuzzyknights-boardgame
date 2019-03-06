@@ -1,7 +1,11 @@
-import City from "./City";
+import Settlement from "./Settlement";
 import Hero from "./Hero";
+import Player from "./Player";
+import RollEvent from "./RollEvent";
 
 export default {
-	City,
-	Hero
+	Settlement,
+	Hero,
+	Player,
+	RollEvent
 };

@@ -84,8 +84,6 @@ class PlayerFlow extends Flow {
 			value
 		);
 	}
-
-	
 }
 
 export default PlayerFlow;
