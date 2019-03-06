@@ -14,50 +14,62 @@ class ResourceFlow extends Flow {
 		return _Resource.Type;
 	}
 	SetType(_Resource, value) {
-		this.SetState(_Resource);
-
 		return this.Flux(
+			_Resource,
+
 			value,
 			_Resource.Quantity
 		);
 	}
 
-	Add(_Resource, value) {
-		this.SetState(_Resource);
+	GetQuantity(_Resource) {
+		return _Resource.Quantity;
+	}
+	SetQuantity(_Resource, value) {
+		return this.Flux(
+			_Resource,
 
+			_Resource.Type,
+			value
+		);
+	}
+
+	Add(_Resource, value) {
 		let amount = Helper.MinClamp(_Resource.Quantity + value, 0);
 
 		return this.Flux(
+			_Resource,
+			
 			_Resource.Type,
 			amount
 		);
 	}
 	Subtract(_Resource, value) {
-		this.SetState(_Resource);
-
 		let amount = Helper.MinClamp(_Resource.Quantity - value, 0);
 
 		return this.Flux(
+			_Resource,
+			
 			_Resource.Type,
 			amount
 		);
 	}
 	Multiply(_Resource, value) {
-		this.SetState(_Resource);
-
 		let amount = Helper.MinClamp(_Resource.Quantity * value, 0);
 
 		return this.Flux(
+			_Resource,
+			
 			_Resource.Type,
 			amount
 		);
 	}
 	Divide(_Resource, value) {
-		this.SetState(_Resource);
-
 		let amount = Helper.MinClamp(_Resource.Quantity / value, 0);
 
 		return this.Flux(
+			_Resource,
+			
 			_Resource.Type,
 			amount
 		);
@@ -71,45 +83,45 @@ class ResourceFlow extends Flow {
 		return Dice.Roll(number, sided, bonus);
 	}
 	AddRoll(_Resource, number, sided, bonus = 0) {
-		this.SetState(_Resource);
-
 		let value = this._rollHelper(number, sided, bonus),
 			amount = Helper.MinClamp(_Resource.Quantity + value, 0);
 
 		return this.Flux(
+			_Resource,
+			
 			_Resource.Type,
 			amount
 		);
 	}
 	SubtractRoll(_Resource, number, sided, bonus = 0) {
-		this.SetState(_Resource);
-
 		let value = this._rollHelper(number, sided, bonus),
 			amount = Helper.MinClamp(_Resource.Quantity - value, 0);
 
 		return this.Flux(
+			_Resource,
+			
 			_Resource.Type,
 			amount
 		);
 	}
 	MultiplyRoll(_Resource, number, sided, bonus = 0) {
-		this.SetState(_Resource);
-
 		let value = this._rollHelper(number, sided, bonus),
 			amount = Helper.MinClamp(_Resource.Quantity * value, 0);
 
 		return this.Flux(
+			_Resource,
+			
 			_Resource.Type,
 			amount
 		);
 	}
 	DivideRoll(_Resource, number, sided, bonus = 0) {
-		this.SetState(_Resource);
-
 		let value = this._rollHelper(number, sided, bonus),
 			amount = Helper.MinClamp(_Resource.Quantity / value, 0);
 
 		return this.Flux(
+			_Resource,
+			
 			_Resource.Type,
 			amount
 		);

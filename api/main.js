@@ -9,10 +9,6 @@ const flatted = require("flatted");
 
 const PORT = 3087;
 
-import FKBG from "./fkbg-core/package";
-FKBG.Main = (new FKBG.Main(FKBG)).NewGame();
-FKBG.Main.Daybreak().Daybreak().Daybreak();
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(function(req, res, next) {
@@ -29,7 +25,6 @@ app.listen(PORT, () => {
 app.get("/validate", function (req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*");
 	res.set("Content-Type", "Application/json");
-	res.json(FKBG.Main.Players);
 });
 
 //! Use this and/or a GET/POST API to coordinate Save/Load for the Player
@@ -38,6 +33,7 @@ app.ws("/ws", function (client, req) {
 
 	client.on("message", function(msg) {
 		console.log(`[MESSAGE RECEIVED]: { Timestamp: ${Date.now()} }`);
+		console.log(msg);
 	});
 
 	client.on("close", function() {

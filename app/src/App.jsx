@@ -9,6 +9,8 @@ import Components from "./components/package";
 import Flow from "./fkbg-core/flow/package";
 import Resource from "./fkbg-core/Resource";
 
+import { webSocket } from "rxjs/webSocket";
+
 class App extends Component {
     componentDidMount() {
 		let rflow = new Flow.ResourceFlow();
@@ -19,10 +21,27 @@ class App extends Component {
 		};
 		rflow.Subscribe(subscriber);
 
-		let res = new Resource(3, 100);
+		let res = new Resource(3, 100);		
+		rflow.Inflow(res, "Add", 111);
+		rflow.Inflow({
+			OldState: res,
+			Method: "Add",
+			VarArgs: [ 222 ]
+		});
+		rflow.Inflow([
+			res, "Add", [ 333 ]
+		]);
+
+		let ws = webSocket("ws://localhost:3087/ws");
+		ws.subscribe(
+			(msg) => console.log("message received: " + msg),
+			(err) => console.log(err),
+			() => console.log("complete")
+		);
+		ws.next(JSON.stringify({ op: "hello" }));
+
+		rflow.Subscribe(ws);
 		rflow.Add(res, 4);
-		res = rflow.Add(res, 501)
-		rflow.Add(res, 9);
 
 		console.log(rflow);
     }

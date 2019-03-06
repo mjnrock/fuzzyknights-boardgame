@@ -6,30 +6,36 @@ class Flow {
 
 		this.Model = _model;
 		this.Enum = _enum;
-
-		this.State = {};
 	}
 
-	SetState(state = {}) {
-		this.State = Object.freeze(state);
+	Inflow(obj, fnName, ...args) {
+		try {
+			if(arguments.length === 1) {
+				if(Array.isArray(obj)) {
+					return this[obj[1]](obj[0], ...obj[2]);
+				}
 
-		return this;
+				return this[obj.Method](obj.OldState, ...obj.VarArgs);
+			}
+
+			return this[fnName](obj, ...args);
+		} catch (e) {
+			console.warn(e);
+		}
 	}
 
-	Flux(...args) {
+	Flux(oldState, ...args) {
 		try {
 			let newState = Object.freeze(new this.Model(...args));
 
 			this.Subject$.next({
-				OldState: this.State,
+				OldState: Object.freeze(oldState),
 				NewState: newState,
 			});
 
-			this.SetState(newState);
-
 			return newState;
 		} catch (e) {
-			console.log("Invalid Model");
+			console.warn(e);
 		}
 	}
 
