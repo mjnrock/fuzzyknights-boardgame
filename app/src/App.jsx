@@ -8,61 +8,85 @@ import Components from "./components/package";
 
 import Flow from "./fkbg-core/flow/package";
 import Resource from "./fkbg-core/mats/Resource";
+import Config from "./fkbg-core/config";
 
 import { webSocket } from "rxjs/webSocket";
 
 class App extends Component {
-    componentDidMount() {
-		let rflow = new Flow.ResourceFlow();
-		let subscriber = {
-			next(value) {
-				console.log(value);
-			}
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			Result: null,
+			Message: null
 		};
-		rflow.Subscribe(subscriber);
+	}
 
-		let res = new Resource(3, 100);		
-		rflow.Inflow(res, "Add", 111);
-
-		rflow.Inflow({
-			OldState: res,
-			Method: "Add",
-			VarArgs: [ 222 ]
+	setLastResult(result, message) {
+		this.setState({
+			Result: result,
+			Message: message
 		});
-		rflow.Inflow([
-			res, "Add", [ 333 ]
-		]);
+	}
 
-		let ws = webSocket("ws://localhost:3087/ws");
+	RollDice(sequence = []) {
+		sequence.forEach((v, i) => {
 
-		rflow.Subscribe(ws);
-		rflow.Add(res, 4);
-
-		ws.subscribe(
-			(msg) => {
-				console.log(msg);
-				rflow.Inflow([
-					res, "Add", [ 5 ]
-				]);
-			}
-		);
-
-		console.log(rflow);
-    }
+		});
+	}
 
 	render() {
 		return (
-            <div>
-				<Components.RollEvent
-					icon="⚒️"
-					dice="dP-yellow"
-					label="Mine"
-					onClick={ console.log }
-				/>
+			<div className="container">
+				<Components.RollTileGrid
+					size="size-2"
+					title="General"
+				>
+					<Components.RollTile
+						icon="⚒️"
+						diceIcon="dP-yellow"
+						label="Mine"
+						sequence={[
+							{
+								Roll: [ "DP", 1, 0 ],
+								Threshold: Config.MINE_THRESHOLD,
+								Success: true,
+								Failure: false
+							},
+							{
+								Roll: [ "D6", 1, 0 ]
+							}
+						]}
+						onClick={ console.log }
+					/>
+					<Components.RollTile
+						icon="💰"
+						diceIcon="dP-yellow"
+						label="Resources"
+						onClick={ console.log }
+					/>
+					<Components.RollTile
+						icon="🎁"
+						diceIcon="dP-yellow"
+						label="Items"
+						onClick={ console.log }
+					/>
+					<Components.RollTile
+						icon="🧟"
+						diceIcon="d6-yellow"
+						label="Creatures"
+						onClick={ console.log }
+					/>
+					<Components.RollResult
+						result={ this.state.Result }
+						message={ this.state.Message }
+					/>
+				</Components.RollTileGrid>
 			</div>
 		);
 	}
 }
+
 export default connect(
 	(state) => ({
         Players: state.Player

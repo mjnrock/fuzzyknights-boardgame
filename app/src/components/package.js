@@ -1,11 +1,15 @@
 import Settlement from "./Settlement";
 import Hero from "./Hero";
 import Player from "./Player";
-import RollEvent from "./RollEvent";
+import RollTile from "./RollTile";
+import RollTileGrid from "./RollTileGrid";
+import RollResult from "./RollResult";
 
 export default {
 	Settlement,
 	Hero,
 	Player,
-	RollEvent
+	RollTile,
+	RollTileGrid,
+	RollResult
 };
