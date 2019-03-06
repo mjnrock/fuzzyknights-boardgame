@@ -1,0 +1,4 @@
+export default {
+	RARITY_THRESHOLD: 80,
+	RARITY_MAX_LEVEL: 5
+};

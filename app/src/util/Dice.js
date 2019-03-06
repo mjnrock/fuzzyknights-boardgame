@@ -46,6 +46,24 @@ class Dice {
 	static D100(number = 1, bonus = 0) {
 		return Dice.Roll(number, 100) + bonus;
 	}
+	
+	static DP(number = 1) {
+		return Dice.Roll(number, 10) * 10;
+	}
+
+	static GamblersStreak(minThreshold = 80, maxStreak = 5) {
+		let recurser = (level = 1) => {
+			let roll = Dice.DP();
+
+			if(roll >= minThreshold && level < maxStreak) {
+				return recurser(level + 1);
+			}
+
+			return level;
+		}
+
+		return recurser();
+	}
 
 	static WeightedRandom(weights, values) {                
 		let total = 0;

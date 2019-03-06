@@ -23,6 +23,7 @@ class App extends Component {
 
 		let res = new Resource(3, 100);		
 		rflow.Inflow(res, "Add", 111);
+
 		rflow.Inflow({
 			OldState: res,
 			Method: "Add",
@@ -33,15 +34,18 @@ class App extends Component {
 		]);
 
 		let ws = webSocket("ws://localhost:3087/ws");
-		ws.subscribe(
-			(msg) => console.log("message received: " + msg),
-			(err) => console.log(err),
-			() => console.log("complete")
-		);
-		ws.next(JSON.stringify({ op: "hello" }));
 
 		rflow.Subscribe(ws);
 		rflow.Add(res, 4);
+
+		ws.subscribe(
+			(msg) => {
+				console.log(msg);
+				rflow.Inflow([
+					res, "Add", [ 5 ]
+				]);
+			}
+		);
 
 		console.log(rflow);
     }

@@ -1,10 +1,31 @@
 import { Subject } from "rxjs";
 
 class Flow {
-	constructor(_model, _enum) {
+	constructor(_model, _enum = null) {
 		this.Subject$ = new Subject();
 
 		this.Model = _model;
+		this.Enum = _enum;
+	}
+
+	getSubject() {
+		return this.Subject;
+	}
+	setSubject(_subject$) {
+		this.Subject = _subject$;
+	}
+
+	getModel() {
+		return this.Model;
+	}
+	setModel(_model) {
+		this.Model = _model;
+	}
+
+	getEnum() {
+		return this.Enum;
+	}
+	setEnum(_enum) {
 		this.Enum = _enum;
 	}
 
