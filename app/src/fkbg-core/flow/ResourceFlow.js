@@ -1,5 +1,5 @@
 import Flow from "./Flow";
-import Resource from "./../Resource";
+import Resource from "./../mats/Resource";
 import ResourceType from "./../enum/ResourceType";
 
 import Helper from "./../../util/Helper";

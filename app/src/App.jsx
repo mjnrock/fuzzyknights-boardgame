@@ -7,7 +7,7 @@ import { Actions as PlayerActions } from "./dux/Player";
 import Components from "./components/package";
 
 import Flow from "./fkbg-core/flow/package";
-import Resource from "./fkbg-core/Resource";
+import Resource from "./fkbg-core/mats/Resource";
 
 import { webSocket } from "rxjs/webSocket";
 
