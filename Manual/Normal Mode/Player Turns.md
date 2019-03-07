@@ -78,12 +78,7 @@ In `Battle`, the `🧙‍ Hero` is a unit itself with a roll of `🎲 2d6 +6`.  
 
 *[Back to Top](#table-of-contents)*
 
-Each `🧙‍ Hero` is able to `MOVE` up to `🎲 1d12 +12` Tiles.  A `🧙‍ Hero` may **only** expend movement from its own movement roll, and can voluntarily end its own movement for that turn at any point.
-
-> **ELI5**
-> 
-> - *A `🧙‍ Hero` can't "gift" another `🧙‍ Hero` movement*
-> - *A `🧙‍ Hero` does not have to use all of its movement*
+Each `🧙‍ Hero` is able to `MOVE` up to `20` Tiles.
 
 A `🧙‍ Hero` may move on any **unoccupied** Tile for `🐎(-1)`.
 
@@ -261,13 +256,13 @@ The `Item's` final stats are determined by the `Rarity` chart below:
 
 ***Amulet***
 
-|Rarity Level|Name|Roll|
-|-|-|-|
-|1|`Common`|`🎲 1d6 +2`|
-|2|`Uncommon`|`🎲 1d6 +3`|
-|3|`Rare`|`🎲 2d6 +3`|
-|4|`Epic`|`🎲 3d6 +3`|
-|5|`Legendary`|`🎲 4d6 +5`|
+|Rarity Level|Name|Roll|Extra|
+|-|-|-|-|
+|1|`Common`|`🎲 1d6 +2`|-|
+|2|`Uncommon`|`🎲 1d6 +3`|-|
+|3|`Rare`|`🎲 2d6 +3`|`🐎(+1)`|
+|4|`Epic`|`🎲 3d6 +3`|`🐎(+3)`|
+|5|`Legendary`|`🎲 4d6 +5`|`🐎(+5)`|
 
 ## Monsters [ 🧟 ]
 
