@@ -78,7 +78,7 @@ In `Battle`, the `🧙‍ Hero` is a unit itself with a roll of `🎲 2d6 +6`.  
 
 *[Back to Top](#table-of-contents)*
 
-Each `🧙‍ Hero` is able to `MOVE` up to `20` Tiles.
+Each `🧙‍ Hero` is able to `MOVE` up to `15` Tiles.
 
 A `🧙‍ Hero` may move on any **unoccupied** Tile for `🐎(-1)`.
 
@@ -124,7 +124,7 @@ If the `⚒️ Mine` was owned by a Player, then no ***bonus*** `💰 Resource` 
 
 **Check for Guardians**
 
-|Roll|🎲[10 - 80]|🎲[90 - 100]|
+|Roll|🎲[10 - 70]|🎲[80 - 100]|
 |---|---|---|
 |`🎲 1dP`|`CAPTURE`|`FIGHT 🧟 Monsters`|
 
