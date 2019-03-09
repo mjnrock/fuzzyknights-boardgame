@@ -134,13 +134,13 @@ Each Player that rolls **successfully** should then roll a `🎲 1d4` to determi
 
 |Roll|🎲[10 - 50]|🎲[60 - 100]|
 |---|---|---|
-|`🎲 1dP`|-|Roll `1d4` to determine Token type|
+|`🎲 1dP`|-|Roll `1P` to determine Token type|
 
 **Roll for Token Type**
 
-|Roll|🎲[1 - 2]|🎲[3]|🎲[4]|
+|Roll|🎲[10 - 40]|🎲[50 - 80]|🎲[90 - 100]|
 |---|---|---|---|
-|`🎲 1d4`|`💰 Resource`|`🎁 Item`|`🧟 Monster`|
+|`🎲 1dP`|`💰 Resource`|`🧟 Monster`|`🎁 Item`|
 
 ## Step 5) Player Turns
 
