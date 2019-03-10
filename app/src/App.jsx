@@ -16,6 +16,7 @@ import Dice from "./util/Dice";
 
 import Cell from "./util/entity/Cell";
 import Organelle from "./util/entity/Organelle";
+import Antenna from "./util/entity/Antenna";
 
 class App extends Component {
 	constructor(props) {
@@ -38,18 +39,14 @@ class App extends Component {
 					cacheType: roll >= 80 ? "large" : "small"
 				};
 			}),
-			new Organelle((payload, o, c) => {
-				return {
-					...payload,
-					dice: payload.cacheType === "large" ? [ 2, 6 ] : [ 1, 6 ]
-				};
-			}),
-			new Organelle((payload, o, c) => {
-				return {
-					...payload,
-					roll: Dice.Roll(...payload.dice)
-				};
-			})
+			new Organelle((payload, o, c) => ({
+				...payload,
+				dice: payload.cacheType === "large" ? [ 2, 6 ] : [ 1, 6 ]
+			})),
+			new Organelle((payload, o, c) => ({
+				...payload,
+				roll: Dice.Roll(...payload.dice)
+			}))
 		]),
 		CacheListener = {
 			next: (caller, obj) => {
@@ -59,9 +56,10 @@ class App extends Component {
 
 				return obj;
 			}
-		};
+		},
+		ant = new Antenna();
 
-		CacheRoller.Subscribe(CacheListener).Metabolize();
+		CacheRoller.Subscribe(ant).Metabolize();
 
 	}
 

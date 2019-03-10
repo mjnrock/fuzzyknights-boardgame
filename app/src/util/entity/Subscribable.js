@@ -5,6 +5,7 @@ class Subscribable {
 	constructor(state = {}) {
 		this.UUID = NewUUID();
 		this.Subject$ = new ReplaySubject();
+		this.Subscriptions = {};
 
 		this.State = Object.freeze(state);
 	}
@@ -39,11 +40,26 @@ class Subscribable {
 				error: subscriber.error,
 				complete: subscriber.complete
 			});
+
+			this.Subscriptions[subscriber.UUID] = subscriber;
 		}
 
 		this.Invoke(Subscribable.EnumEventType.SUBSCRIBE, {
 			Subscriber: subscriber
 		});
+
+		return this;
+	}
+	Unsubscribe(subscriber) {
+		if(typeof subscriber === "string" || subscriber instanceof String) {
+			this.Subscriptions[subscriber].unsubscribe();
+
+			delete this.Subscriptions[subscriber];
+		} else {
+			this.Subscriptions[subscriber.UUID].unsubscribe();
+
+			delete this.Subscriptions[subscriber.UUID];
+		}
 
 		return this;
 	}
