@@ -12,8 +12,10 @@ import Config from "./fkbg-core/config";
 
 import { webSocket } from "rxjs/webSocket";
 
-import Cell from "./util/flow/Cell";
-import Organelle from "./util/flow/Organelle";
+import Dice from "./util/Dice";
+
+import Cell from "./util/entity/Cell";
+import Organelle from "./util/entity/Organelle";
 
 class App extends Component {
 	constructor(props) {
@@ -26,37 +28,41 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		let cell = new Cell(
-				(payload) => {
-					return payload.Input === true
-				},
-				[
-					new Organelle((payload, organelle, cell) => {
-						console.log(payload, organelle, cell);
-					})
-				]
-			),
-			subscriber = {
-				next(...args) {
-					console.log(`OBSERVABLE - ${ args[0].Type }`);
-					console.log(...args);
+		let CacheRoller = new Cell([
+			new Organelle((payload, o, c) => {
+				let roll = Dice.DP();
+
+				return {
+					...payload,
+					dp: roll,
+					cacheType: roll >= 80 ? "large" : "small"
+				};
+			}),
+			new Organelle((payload, o, c) => {
+				return {
+					...payload,
+					dice: payload.cacheType === "large" ? [ 2, 6 ] : [ 1, 6 ]
+				};
+			}),
+			new Organelle((payload, o, c) => {
+				return {
+					...payload,
+					roll: Dice.Roll(...payload.dice)
+				};
+			})
+		]),
+		CacheListener = {
+			next: (caller, obj) => {
+				if(obj.type === Cell.EnumEventType.METABOLISM) {
+					return obj.data.Outflux.roll;
 				}
-			},
-			subscriber2 = {
-				next(...args) {
-					console.log(`OBSERVABLE 2 - ${ args[0].Type }`);
-					console.log(...args);
-				}
-			};
 
-		cell.Subscribe(subscriber);
-		cell.Subscribe(subscriber2);
+				return obj;
+			}
+		};
 
+		CacheRoller.Subscribe(CacheListener).Metabolize();
 
-		
-		cell.Metabolize({
-			Input: true
-		});
 	}
 
 	setLastResult(result, message) {
