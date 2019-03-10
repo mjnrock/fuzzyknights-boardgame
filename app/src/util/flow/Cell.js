@@ -5,7 +5,7 @@ class Cell {
 	constructor(activator, organelles = []) {
 		this.UUID = NewUUID();
 		this.Subject$ = new Subject();
-		
+
 		this.Activator = activator;
 		this.Organelles = organelles;
 
@@ -39,7 +39,7 @@ class Cell {
 			});
 		
 			this.Subject$.next({
-				Type: Cell.EnumEventType.METABOLIZE,
+				Type: Cell.EnumEventType.METABOLISM,
 				Influx: _oldPayload,
 				Outflux: payload
 			});
@@ -50,7 +50,7 @@ class Cell {
 			});
 		}
 
-		return payload;
+		return this;
 	}
 
 	Subscribe(subscriber) {
@@ -60,13 +60,15 @@ class Cell {
 		});
 
 		this.Subject$.subscribe(subscriber);
+
+		return this;
 	}
 }
 
 Cell.EnumEventType = Object.freeze({
 	ACTIVATION: "onactivation",
 	ATTEMPT: "onattempt",
-	METABOLIZE: "onmetabolize",
+	METABOLISM: "onmetabolism",
 	STATE: "onstate",
 	SUBSCRIBE: "onsubscribe"
 });

@@ -51,6 +51,9 @@ class App extends Component {
 
 		cell.Subscribe(subscriber);
 		cell.Subscribe(subscriber2);
+
+
+		
 		cell.Metabolize({
 			Input: true
 		});
