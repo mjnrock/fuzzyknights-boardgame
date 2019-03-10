@@ -97,7 +97,7 @@ Each Player can `Recruit` as many `🤺 Mercenaries` as s/he can afford at a `�
 
 |🛡️ Ramparts|Cost|Base Roll|Prerequisite|
 |-|-|-|-|
-|*Palisade*|**`5 💰`**|`🎲 1d6 +3`|`🏰 Settlement`, *Villa*|
+|*Palisade*|**`5 💰`**|`🎲 1d6 +3`|`🏰 Settlement`|
 |*Fortifications*|**`15 💰`**|`🎲 2d6 +6`|*Palisade*, *Castle*|
 
 ### Step 3.B) Recruitment [ 🧙‍, 🤺 ]
@@ -134,13 +134,13 @@ Each Player that rolls **successfully** should then roll a `🎲 1d4` to determi
 
 |Roll|🎲[10 - 50]|🎲[60 - 100]|
 |---|---|---|
-|`🎲 1dP`|-|Roll `1d4` to determine Token type|
+|`🎲 1dP`|-|Roll `1P` to determine Token type|
 
 **Roll for Token Type**
 
-|Roll|🎲[1 - 2]|🎲[3]|🎲[4]|
+|Roll|🎲[10 - 40]|🎲[50 - 80]|🎲[90 - 100]|
 |---|---|---|---|
-|`🎲 1d4`|`💰 Resource`|`🎁 Item`|`🧟 Monster`|
+|`🎲 1dP`|`💰 Resource`|`🧟 Monster`|`🎁 Item`|
 
 ## Step 5) Player Turns
 
