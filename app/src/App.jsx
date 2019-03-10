@@ -12,6 +12,9 @@ import Config from "./fkbg-core/config";
 
 import { webSocket } from "rxjs/webSocket";
 
+import Cell from "./util/flow/Cell";
+import Organelle from "./util/flow/Organelle";
+
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -20,6 +23,37 @@ class App extends Component {
 			Result: null,
 			Message: null
 		};
+	}
+
+	componentDidMount() {
+		let cell = new Cell(
+				(payload) => {
+					return payload.Input === true
+				},
+				[
+					new Organelle((payload, organelle, cell) => {
+						console.log(payload, organelle, cell);
+					})
+				]
+			),
+			subscriber = {
+				next(...args) {
+					console.log(`OBSERVABLE - ${ args[0].Type }`);
+					console.log(...args);
+				}
+			},
+			subscriber2 = {
+				next(...args) {
+					console.log(`OBSERVABLE 2 - ${ args[0].Type }`);
+					console.log(...args);
+				}
+			};
+
+		cell.Subscribe(subscriber);
+		cell.Subscribe(subscriber2);
+		cell.Metabolize({
+			Input: true
+		});
 	}
 
 	setLastResult(result, message) {
