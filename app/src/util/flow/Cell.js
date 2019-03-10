@@ -25,7 +25,7 @@ class Cell {
 	}
 
 	Metabolize(payload) {
-		let _oldPayload = Object.freeze(payload),
+		let oldPayload = Object.freeze(payload),
 			isActivated = this.Activator(payload);
 		
 		if(isActivated) {
@@ -40,7 +40,7 @@ class Cell {
 		
 			this.Subject$.next({
 				Type: Cell.EnumEventType.METABOLISM,
-				Influx: _oldPayload,
+				Influx: oldPayload,
 				Outflux: payload
 			});
 		} else {
