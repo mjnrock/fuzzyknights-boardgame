@@ -21,10 +21,27 @@ class Cell extends Subscribable {
 			return target[prop];
 		}
 
+		if(target.Actions[prop]) {
+			return new Proxy(() => {}, {
+				apply: function(target, _this, ...args) {
+					return _this.Perform(prop, ...args[0]);
+				}
+			});
+		}
+
 		return new Proxy(() => {}, {
-		apply: function(target, _this, ...args) {
-			return _this.Perform(prop, ...args);
-		}});
+			apply: function(target, _this, ...args) {
+				let index = false;
+
+				_this.Organelles.forEach((o, i) => {
+					if(o.Name === prop) {
+						index = i;
+					}
+				});
+
+				return _this.Organelles[index].Metabolize(args[0], args[1] ? args[1] : null, _this);
+			}
+		});
 	}
 
 	Train(key, fn, ...args) {

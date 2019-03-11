@@ -16,7 +16,7 @@ import Dice from "./util/Dice";
 
 import Cell from "./util/entity/Cell";
 import Organelle from "./util/entity/Organelle";
-import Relay from "./util/entity/Relay";
+import Beacon from "./util/entity/Beacon";
 
 class App extends Component {
 	constructor(props) {
@@ -71,19 +71,19 @@ class App extends Component {
 		
 		let WS = new Cell([
 			new Organelle("message", (payload, oldPayload, o, c) => {
-				console.log(payload, oldPayload);
+				console.log(payload, oldPayload, c);
 
-				c.speak("sup");
+				c.$_speak("watuh");
 			})
 		]);
 
-        let relay = new Relay();
-		relay.Attach(Cell.EnumEventType.METABOLISM, (obj) => {
+        let beacon = new Beacon();
+		beacon.Attach(Cell.EnumEventType.METABOLISM, (obj) => {
             console.log(obj);
 		});
-		WS.Subscribe(relay);
+		WS.Subscribe(beacon);
 		
-		WS.Train("websocket", (cell, port, endpoint) => {
+		WS.Train("$_websocket", (cell, port, endpoint) => {
 			if(endpoint[0] === "/") {
 				endpoint = endpoint.substring(1);
 			}
@@ -95,15 +95,17 @@ class App extends Component {
 				(payload, oldPayload) => cell.Metabolize(payload, oldPayload)
 			);
 		})
-			.Train("send", (cell, ...args) => {
+			.Train("$_send", (cell, ...args) => {
 				cell.GetState().connection$.next(...args);
 			})
-			.Train("speak", (cell, ...args) => {
+			.Train("$_speak", (cell, ...args) => {
 				console.log("HEYA! ^_^", ...args);
 			});
-		WS.Perform("websocket", 3087, `/ws`)
-			.Perform("send", "PAYLOADDDDDDDDD")
-			.Perform("send", "yo yo yo");
+		WS.Perform("$_websocket", 3087, `/ws`)
+			.Perform("$_send", "PAYLOADDDDDDDDD")
+			.Perform("$_send", "yo yo yo");
+
+		WS.message("cats");
 	}
 
 	render() {

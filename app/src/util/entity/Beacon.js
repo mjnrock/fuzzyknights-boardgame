@@ -4,7 +4,7 @@ import Subscribable from "./Subscribable";
 import Cell from "./Cell";
 import Organelle from "./Organelle";
 
-class Relay extends Subscribable {
+class Beacon extends Subscribable {
 	constructor(state = {}) {
 		super(state);
 
@@ -16,7 +16,7 @@ class Relay extends Subscribable {
 		let result = this.Metabolizer(payload, this, parent);
 
 		this.Subject$.next({
-			Type: Relay.EnumEventType.METABOLIZE,
+			Type: Beacon.EnumEventType.METABOLIZE,
 			Influx: Object.freeze(payload),
 			Outflux: result
 		});
@@ -65,4 +65,4 @@ class Relay extends Subscribable {
 	}
 }
 
-export default Relay;
+export default Beacon;
