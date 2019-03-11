@@ -13,6 +13,18 @@ class Cell extends Subscribable {
 
 		this.Organelles = organelles;
 		this.Actions = {};
+
+		return new Proxy(this, this);
+	}
+	get (target, prop) {
+		if(target[prop]) {
+			return target[prop];
+		}
+
+		return new Proxy(() => {}, {
+		apply: function(target, _this, ...args) {
+			return _this.Perform(prop, ...args);
+		}});
 	}
 
 	Train(key, fn, ...args) {
@@ -112,7 +124,7 @@ class Cell extends Subscribable {
             Activator: this.Activator,
             Organelles: organelles
         });
-    }
+	}
 }
 
 Cell.EnumEventType = Object.freeze({

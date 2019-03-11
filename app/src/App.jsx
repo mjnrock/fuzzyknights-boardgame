@@ -72,6 +72,8 @@ class App extends Component {
 		let WS = new Cell([
 			new Organelle("message", (payload, oldPayload, o, c) => {
 				console.log(payload, oldPayload);
+
+				c.speak("sup");
 			})
 		]);
 
@@ -92,9 +94,13 @@ class App extends Component {
 			cell.GetState().connection$.subscribe(
 				(payload, oldPayload) => cell.Metabolize(payload, oldPayload)
 			);
-		}).Train("send", (cell, ...args) => {
-			cell.GetState().connection$.next(...args);
-		});
+		})
+			.Train("send", (cell, ...args) => {
+				cell.GetState().connection$.next(...args);
+			})
+			.Train("speak", (cell, ...args) => {
+				console.log("HEYA! ^_^", ...args);
+			});
 		WS.Perform("websocket", 3087, `/ws`)
 			.Perform("send", "PAYLOADDDDDDDDD")
 			.Perform("send", "yo yo yo");
