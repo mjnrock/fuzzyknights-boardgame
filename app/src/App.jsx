@@ -84,13 +84,13 @@ class App extends Component {
 		});
 		WS.Subscribe(beacon);
 		
-		WS.Train("$_websocket", (cell, port, endpoint) => {
-			if(endpoint[0] === "/") {
-				endpoint = endpoint.substring(1);
+		WS.Train("$_websocket", (cell, host, port, endpoint = "/") => {
+			if(endpoint[0] !== "/") {
+				endpoint = `/${ endpoint }`;
 			}
 
 			cell.SetState({
-				connection$: webSocket(`ws://localhost:${ port }/${ endpoint }`)
+				connection$: webSocket(`ws://${ host }:${ port }${ endpoint }`)
 			});
 			cell.GetState().connection$.subscribe(
 				(payload, oldPayload) => cell.Metabolize(payload, oldPayload)
@@ -108,7 +108,7 @@ class App extends Component {
 
 				return cell;
 			});
-		WS.Perform("$_websocket", 3087, `/ws`)
+		WS.Perform("$_websocket", "localhost", 3087, `/ws`)
 			.Perform("$_send", "PAYLOADDDDDDDDD")
 			.Perform("$_send", "yo yo yo");
 
