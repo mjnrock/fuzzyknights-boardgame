@@ -29,58 +29,75 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		let CacheRoller = new Cell([
-			new Organelle((payload, o, c) => {
-				let roll = Dice.DP();
+		// let CacheRoller = new Cell([
+		// 	new Organelle("roll-dP", (payload, oldPayload, o, c) => {
+		// 		let roll = Dice.DP();
 
-				return {
-					...payload,
-					dp: roll,
-					cacheType: roll >= 80 ? "large" : "small"
-				};
-			}),
-			new Organelle((payload, o, c) => ({
-				...payload,
-				dice: payload.cacheType === "large" ? [ 2, 6 ] : [ 1, 6 ]
-			})),
-			new Organelle((payload, o, c) => ({
-				...payload,
-				roll: Dice.Roll(...payload.dice)
-			}))
-        ]),
-        CacheRoller2 = CacheRoller.Copy(),
-        CacheRoller3 = CacheRoller.Copy(),
-        CacheRoller4 = CacheRoller.Copy(),
-        ant = new Relay();
+		// 		return {
+		// 			...payload,
+		// 			dp: roll,
+		// 			cacheType: roll >= 80 ? "large" : "small"
+		// 		};
+		// 	}),
+		// 	new Organelle("cache-size", (payload, oldPayload, o, c) => ({
+		// 		...payload,
+		// 		dice: payload.cacheType === "large" ? [ 2, 6 ] : [ 1, 6 ]
+		// 	})),
+		// 	new Organelle("cache-qty", (payload, oldPayload, o, c) => ({
+		// 		...payload,
+		// 		roll: Dice.Roll(...payload.dice)
+		// 	}))
+        // ]),
+        // CacheRoller2 = CacheRoller.Copy(),
+        // CacheRoller3 = CacheRoller.Copy(),
+        // CacheRoller4 = CacheRoller.Copy(),
+        // ant = new Relay();
 
-        ant.Attach(Cell.EnumEventType.METABOLISM, (obj) => {
-            console.log(obj.data.Outflux.roll);
-        });
+        // ant.Attach(Cell.EnumEventType.METABOLISM, (obj) => {
+        //     console.log(obj.data.Outflux.roll);
+        // });
 
-        console.log(CacheRoller.GetHash());
-        console.log(CacheRoller);
-        console.log(CacheRoller2);
+        // console.log(CacheRoller.GetHash());
+        // console.log(CacheRoller);
+        // console.log(CacheRoller2);
 
-		// CacheRoller.Subscribe(ant);
-        CacheRoller4.Subscribe(ant);
+		// // CacheRoller.Subscribe(ant);
+        // CacheRoller4.Subscribe(ant);
 
-        // CacheRoller2.Activator = () => Math.random() >= 0.5 ? true : false;
+        // // CacheRoller2.Activator = () => Math.random() >= 0.5 ? true : false;
 
-        // CacheRoller.Chain(CacheRoller2).Chain(CacheRoller3).Chain(CacheRoller4);
-        CacheRoller.Metabolize();
-	}
+        // // CacheRoller.Entangle(CacheRoller2).Entangle(CacheRoller3).Entangle(CacheRoller4);
+		// CacheRoller.Metabolize();
+		
+		let WS = new Cell([
+			new Organelle("message", (payload, oldPayload, o, c) => {
+				console.log(payload, oldPayload);
+			})
+		]);
 
-	setLastResult(result, message) {
-		this.setState({
-			Result: result,
-			Message: message
+        let relay = new Relay();
+		relay.Attach(Cell.EnumEventType.METABOLISM, (obj) => {
+            console.log(obj);
 		});
-	}
+		WS.Subscribe(relay);
+		
+		WS.Train("websocket", (cell, port, endpoint) => {
+			if(endpoint[0] === "/") {
+				endpoint = endpoint.substring(1);
+			}
 
-	RollDice(sequence = []) {
-		sequence.forEach((v, i) => {
-
+			cell.SetState({
+				connection$: webSocket(`ws://localhost:${ port }/${ endpoint }`)
+			});
+			cell.GetState().connection$.subscribe(
+				(payload, oldPayload) => cell.Metabolize(payload, oldPayload)
+			);
+		}).Train("send", (cell, ...args) => {
+			cell.GetState().connection$.next(...args);
 		});
+		WS.Perform("websocket", 3087, `/ws`)
+			.Perform("send", "PAYLOADDDDDDDDD")
+			.Perform("send", "yo yo yo");
 	}
 
 	render() {

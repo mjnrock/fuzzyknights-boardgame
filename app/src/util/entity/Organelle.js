@@ -1,16 +1,17 @@
 import Subscribable from "./Subscribable";
 
 class Organelle extends Subscribable {
-	constructor(callback, state = {}) {
+	constructor(name, callback, state = {}) {
 		super(state);
 
 		this.Metabolizer = callback;
 
+		this.Name = name;
 		this.State = Object.freeze(state);
 	}
 	
-	Metabolize(payload, parent) {
-		let result = this.Metabolizer(payload, this, parent);
+	Metabolize(payload, oldPayload, parent) {
+		let result = this.Metabolizer(payload, oldPayload, this, parent);
 
 		this.Subject$.next({
 			Type: Organelle.EnumEventType.METABOLIZE,

@@ -10,6 +10,9 @@ class Subscribable {
 		this.State = Object.freeze(state);
 	}
 
+	GetState() {
+		return this.State;
+	}
 	SetState(state) {
 		this.Invoke(Subscribable.EnumEventType.STATE, {
 			OldState: Object.freeze(this.State),

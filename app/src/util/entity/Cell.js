@@ -12,6 +12,34 @@ class Cell extends Subscribable {
 		}
 
 		this.Organelles = organelles;
+		this.Actions = {};
+	}
+
+	Train(key, fn, ...args) {
+		this.Actions[key] = {
+			key: key,
+			callback: fn,
+			args: [
+				...args
+			]
+		};
+
+		return this;
+	}
+	Untrain(key) {
+		delete this.Actions[key];
+
+		return this;
+	}
+
+	Perform(key, ...args) {
+		if(args.length >= 0) {
+			this.Actions[key].callback(this, ...args);
+		} else {
+			this.Actions[key].callback(this, ...this.Actions[key].args);
+		}
+
+		return this;
 	}
 
 	AddOrganelle(callback) {
@@ -31,17 +59,16 @@ class Cell extends Subscribable {
 		return this;
 	}
 
-	Metabolize(payload = {}) {
-		let oldPayload = Object.freeze(payload),
-            isActivated = this.Activator(payload);
-            
-            console.log(this.Activator);
+	Metabolize(payload = {}, oldPayload = null) {
+		oldPayload = oldPayload === null || oldPayload === void 0 ? Object.freeze(payload) : Object.freeze(oldPayload);
+
+        let isActivated = this.Activator(payload);
 		
 		if(isActivated) {
 			this.Invoke(Cell.EnumEventType.ACTIVATION);
 
 			Object.values(this.Organelles).forEach((organelle, i) => {
-				payload = organelle.Metabolize(payload, this);
+				payload = organelle.Metabolize(payload, oldPayload, this);
 			});
 			
 			this.Invoke(Cell.EnumEventType.METABOLISM, {
@@ -55,7 +82,7 @@ class Cell extends Subscribable {
 		return this;
     }
     
-    Chain(cell) {
+    Entangle(cell) {
         this.Subscribe({
             next: (caller, obj) => {
                 if(obj.type === Cell.EnumEventType.METABOLISM) {

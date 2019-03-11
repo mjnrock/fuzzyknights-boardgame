@@ -33,6 +33,8 @@ app.ws("/ws", function (client, req) {
 
 	client.on("message", function(msg) {
 		console.log(`[MESSAGE RECEIVED]: { Timestamp: ${Date.now()} }`);
+		console.log(msg);
+		client.send(msg);
 	});
 
 	client.on("close", function() {
