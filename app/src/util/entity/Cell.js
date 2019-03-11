@@ -16,6 +16,7 @@ class Cell extends Subscribable {
 		this.Organelles = organelles;
 		this.Actions = {};
 
+		this._origin = Date.now();
 		// return new Proxy(this, this);
 	}
 	// get (target, prop) {
@@ -63,6 +64,22 @@ class Cell extends Subscribable {
 		return this;
 	}
 
+	Learn(key, cell) {
+		this.Train(
+			key,
+			cell.Actions[key].callback
+		);
+
+		return this;
+	}
+	LearnAll(cell) {
+		this.Actions = {
+			...this.Actions,
+			...cell.Actions
+		};
+		
+		return this;
+	}
 	Teach(key, cell) {
 		cell.Train(
 			key,
@@ -70,6 +87,14 @@ class Cell extends Subscribable {
 			this.Actions[key].args
 		);
 
+		return this;
+	}
+	TeachAll(cell) {
+		cell.Actions = {
+			...this.Actions,
+			...cell.Actions
+		};
+		
 		return this;
 	}
 
