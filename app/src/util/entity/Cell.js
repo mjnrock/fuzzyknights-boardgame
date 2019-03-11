@@ -25,7 +25,7 @@ class Cell extends Subscribable {
 		if(typeof input === "string" || input instanceof String) {
 			delete this.Organelles[input];
 		} else if(typeof input === "object") {
-			delete this.Organelles[input.UUID];
+			delete this.Organelles[input.GetHash()];
 		}
 
 		return this;
@@ -52,6 +52,26 @@ class Cell extends Subscribable {
 
 		return this;
 	}
+    
+    Copy() {
+        let organelles = [];
+        this.Organelles.forEach((org, i) => {
+            organelles.push(org.Copy());
+        });
+
+        return new Cell(organelles, this.Activator, this.State);
+    }
+    GetHash() {
+        let organelles = [];
+        this.Organelles.forEach((org, i) => {
+            organelles.push(org.GetHash());
+        });
+
+        return Subscribable.Hashify({
+            Activator: this.Activator,
+            Organelles: organelles
+        });
+    }
 }
 
 Cell.EnumEventType = Object.freeze({

@@ -16,7 +16,7 @@ import Dice from "./util/Dice";
 
 import Cell from "./util/entity/Cell";
 import Organelle from "./util/entity/Organelle";
-import Antenna from "./util/entity/Antenna";
+import Relay from "./util/entity/Relay";
 
 class App extends Component {
 	constructor(props) {
@@ -47,19 +47,20 @@ class App extends Component {
 				...payload,
 				roll: Dice.Roll(...payload.dice)
 			}))
-		]),
-		CacheListener = {
-			next: (caller, obj) => {
-				if(obj.type === Cell.EnumEventType.METABOLISM) {
-					return obj.data.Outflux.roll;
-				}
+        ]),
+        CacheRoller2 = CacheRoller.Copy(),
+        ant = new Relay();
 
-				return obj;
-			}
-		},
-		ant = new Antenna();
+        ant.Attach(Cell.EnumEventType.METABOLISM, (obj) => {
+            console.log(obj.data.Outflux.roll);
+        });
+
+        console.log(CacheRoller.GetHash());
+        console.log(CacheRoller);
+        console.log(CacheRoller2);
 
 		CacheRoller.Subscribe(ant).Metabolize();
+		CacheRoller2.Subscribe(ant).Metabolize();
 
 	}
 

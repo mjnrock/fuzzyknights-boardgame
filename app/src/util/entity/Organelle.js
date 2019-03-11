@@ -19,7 +19,17 @@ class Organelle extends Subscribable {
 		});
 
 		return result;
-	}
+    }
+    
+    Copy() {
+        return new Organelle(this.Metabolizer, this.State);
+    }
+    GetHash() {
+        return Subscribable.Hashify({
+            Metabolizer: this.Metabolizer,
+            State: this.State
+        });
+    }
 }
 
 Organelle.EnumEventType = Object.freeze({
