@@ -8,6 +8,8 @@ class Subscribable {
 		this.Subscriptions = {};
 
 		this.State = Object.freeze(state);
+		
+		this._origin = Date.now();
 	}
 
 	GetState() {

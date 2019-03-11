@@ -16,7 +16,6 @@ class Cell extends Subscribable {
 		this.Organelles = organelles;
 		this.Actions = {};
 
-		this._origin = Date.now();
 		// return new Proxy(this, this);
 	}
 	// get (target, prop) {
