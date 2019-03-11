@@ -1,4 +1,6 @@
 import Subscribable from "./Subscribable";
+import { cloneDeep } from "lodash";
+import { NewUUID } from "./../Helper";
 
 class Organelle extends Subscribable {
 	constructor(name, callback, state = {}) {
@@ -23,7 +25,10 @@ class Organelle extends Subscribable {
     }
     
     Copy() {
-        return new Organelle(this.Metabolizer, this.State);
+		let organelle = cloneDeep(this);
+		organelle.UUID = NewUUID();
+
+		return organelle;
     }
     GetHash() {
         return Subscribable.Hashify({

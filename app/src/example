@@ -76,11 +76,14 @@
         // // CacheRoller.Entangle(CacheRoller2).Entangle(CacheRoller3).Entangle(CacheRoller4);
 		// CacheRoller.Metabolize();
 		
+		
+		
 		let WS = new Cell([
 			new Organelle("message", (payload, oldPayload, o, c) => {
-				console.log(payload, oldPayload);
+				console.log(payload, oldPayload, c);
 
-				c.speak("sup");
+				// c.$_speak("watuh").$_speak("watuh2");
+				WS.Perform("$_speak", "watuh");
 			})
 		]);
 
@@ -90,7 +93,7 @@
 		});
 		WS.Subscribe(beacon);
 		
-		WS.Train("websocket", (cell, port, endpoint) => {
+		WS.Train("$_websocket", (cell, port, endpoint) => {
 			if(endpoint[0] === "/") {
 				endpoint = endpoint.substring(1);
 			}
@@ -101,13 +104,24 @@
 			cell.GetState().connection$.subscribe(
 				(payload, oldPayload) => cell.Metabolize(payload, oldPayload)
 			);
+
+			return cell;
 		})
-			.Train("send", (cell, ...args) => {
+			.Train("$_send", (cell, ...args) => {
 				cell.GetState().connection$.next(...args);
+
+				return cell;
 			})
-			.Train("speak", (cell, ...args) => {
+			.Train("$_speak", (cell, ...args) => {
 				console.log("HEYA! ^_^", ...args);
+
+				return cell;
 			});
-		WS.Perform("websocket", 3087, `/ws`)
-			.Perform("send", "PAYLOADDDDDDDDD")
-			.Perform("send", "yo yo yo");
+		WS.Perform("$_websocket", 3087, `/ws`)
+			.Perform("$_send", "PAYLOADDDDDDDDD")
+			.Perform("$_send", "yo yo yo");
+
+		let WS2 = WS.Copy();
+		console.log(WS);
+		WS2.Perform("$_speak", "watuhzzz");
+		console.log(WS2);

@@ -73,7 +73,8 @@ class App extends Component {
 			new Organelle("message", (payload, oldPayload, o, c) => {
 				console.log(payload, oldPayload, c);
 
-				c.$_speak("watuh");
+				// c.$_speak("watuh").$_speak("watuh2");
+				WS.Perform("$_speak", "watuh");
 			})
 		]);
 
@@ -94,18 +95,27 @@ class App extends Component {
 			cell.GetState().connection$.subscribe(
 				(payload, oldPayload) => cell.Metabolize(payload, oldPayload)
 			);
+
+			return cell;
 		})
 			.Train("$_send", (cell, ...args) => {
 				cell.GetState().connection$.next(...args);
+
+				return cell;
 			})
 			.Train("$_speak", (cell, ...args) => {
 				console.log("HEYA! ^_^", ...args);
+
+				return cell;
 			});
 		WS.Perform("$_websocket", 3087, `/ws`)
 			.Perform("$_send", "PAYLOADDDDDDDDD")
 			.Perform("$_send", "yo yo yo");
 
-		WS.message("cats");
+		let WS2 = WS.Copy();
+		console.log(WS);
+		WS2.Perform("$_speak", "watuhzzz");
+		console.log(WS2);
 	}
 
 	render() {

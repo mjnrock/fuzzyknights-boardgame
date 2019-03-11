@@ -1,5 +1,7 @@
 import Subscribable from "./Subscribable";
 import Organelle from "./Organelle";
+import { cloneDeep } from "lodash";
+import { NewUUID } from "./../Helper";
 
 class Cell extends Subscribable {
 	constructor(organelles = {}, activator = null, state = {}) {
@@ -14,34 +16,38 @@ class Cell extends Subscribable {
 		this.Organelles = organelles;
 		this.Actions = {};
 
-		return new Proxy(this, this);
+		// return new Proxy(this, this);
 	}
-	get (target, prop) {
-		if(target[prop]) {
-			return target[prop];
-		}
+	// get (target, prop) {
+	// 	if(target[prop]) {
+	// 		return target[prop];
+	// 	}
 
-		if(target.Actions[prop]) {
-			return new Proxy(() => {}, {
-				apply: function(target, _this, ...args) {
-					return _this.Perform(prop, ...args[0]);
-				}
-			});
-		}
+	// 	if(target.Actions[prop]) {
+	// 		return new Proxy(() => {}, {
+	// 			apply: function(target, _this, ...args) {
+	// 				return _this.Perform(prop, ...args[0]);
+	// 			}
+	// 		});
+	// 	}
 
-		return new Proxy(() => {}, {
-			apply: function(target, _this, ...args) {
-				let index = false;
+	// 	return new Proxy(() => {}, {
+	// 		apply: function(target, _this, ...args) {
+	// 			let index = false;
 
-				_this.Organelles.forEach((o, i) => {
-					if(o.Name === prop) {
-						index = i;
-					}
-				});
+	// 			_this.Organelles.forEach((o, i) => {
+	// 				if(o.Name === prop) {
+	// 					index = i;
+	// 				}
+	// 			});
 
-				return _this.Organelles[index].Metabolize(args[0], args[1] ? args[1] : null, _this);
-			}
-		});
+	// 			return _this.Organelles[index].Metabolize(args[0], args[1] ? args[1] : null, _this);
+	// 		}
+	// 	});
+	// }
+
+	getActions() {
+		return this.Actions;
 	}
 
 	Train(key, fn, ...args) {
@@ -124,12 +130,10 @@ class Cell extends Subscribable {
     }
     
     Copy() {
-        let organelles = [];
-        this.Organelles.forEach((org, i) => {
-            organelles.push(org.Copy());
-        });
+		let cell = cloneDeep(this);
+		cell.UUID = NewUUID();
 
-        return new Cell(organelles, this.Activator, this.State);
+		return cell;
     }
     GetHash() {
         let organelles = [];
