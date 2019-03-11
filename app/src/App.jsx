@@ -116,6 +116,36 @@ class App extends Component {
 		console.log(WS);
 		WS2.Perform("$_speak", "watuhzzz");
 		console.log(WS2);
+
+
+
+		// TODO :: This code creates an intervalic broadcaster; add this functionality to Cell to .Metabolize at interval
+		//? Perhaps use the Cell's state as the payload when called at interval
+		//! This code can make the Cell be able to perform a Game Loop once integrated
+		// var pauser = new Rx.Subject();
+		// var source = Rx.Observable
+		// 	.interval(500)
+		// 	.timeInterval()
+		// //   .map(function (x) { return x.value + ':' + x.interval; })
+		// 	.pausable(pauser);
+	
+		// var subscription = source.subscribe(
+		// 	function (x) {
+		// 		$("#result").append('Next: ' + x + ' ');
+		// 	},
+		// 	function (err) {
+		// 	$("#result").append('Error: ' + err);
+		// 	},
+		// 	function () {
+		// 	$("#result").append('Completed');
+		// });
+	
+		// 	// To begin the flow
+		// pauser.onNext(true); // or source.resume();
+	
+		// // To pause the flow at any point
+		// pauser.onNext(false);  // or source.pause();		
+		
 	}
 
 	render() {
