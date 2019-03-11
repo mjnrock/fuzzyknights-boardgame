@@ -49,6 +49,8 @@ class App extends Component {
 			}))
         ]),
         CacheRoller2 = CacheRoller.Copy(),
+        CacheRoller3 = CacheRoller.Copy(),
+        CacheRoller4 = CacheRoller.Copy(),
         ant = new Relay();
 
         ant.Attach(Cell.EnumEventType.METABOLISM, (obj) => {
@@ -59,9 +61,13 @@ class App extends Component {
         console.log(CacheRoller);
         console.log(CacheRoller2);
 
-		CacheRoller.Subscribe(ant).Metabolize();
-		CacheRoller2.Subscribe(ant).Metabolize();
+		// CacheRoller.Subscribe(ant);
+        CacheRoller4.Subscribe(ant);
 
+        // CacheRoller2.Activator = () => Math.random() >= 0.5 ? true : false;
+
+        // CacheRoller.Chain(CacheRoller2).Chain(CacheRoller3).Chain(CacheRoller4);
+        CacheRoller.Metabolize();
 	}
 
 	setLastResult(result, message) {

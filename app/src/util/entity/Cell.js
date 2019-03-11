@@ -33,7 +33,9 @@ class Cell extends Subscribable {
 
 	Metabolize(payload = {}) {
 		let oldPayload = Object.freeze(payload),
-			isActivated = this.Activator(payload);
+            isActivated = this.Activator(payload);
+            
+            console.log(this.Activator);
 		
 		if(isActivated) {
 			this.Invoke(Cell.EnumEventType.ACTIVATION);
@@ -51,7 +53,19 @@ class Cell extends Subscribable {
 		}
 
 		return this;
-	}
+    }
+    
+    Chain(cell) {
+        this.Subscribe({
+            next: (caller, obj) => {
+                if(obj.type === Cell.EnumEventType.METABOLISM) {
+                    cell.Metabolize(obj.data.Outflux);
+                }
+            }
+        });
+
+        return cell;
+    }
     
     Copy() {
         let organelles = [];
