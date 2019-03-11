@@ -46,10 +46,6 @@ class Cell extends Subscribable {
 	// 	});
 	// }
 
-	getActions() {
-		return this.Actions;
-	}
-
 	Train(key, fn, ...args) {
 		this.Actions[key] = {
 			key: key,
@@ -63,6 +59,16 @@ class Cell extends Subscribable {
 	}
 	Untrain(key) {
 		delete this.Actions[key];
+
+		return this;
+	}
+
+	Teach(key, cell) {
+		cell.Train(
+			key,
+			this.Actions[key].callback,
+			this.Actions[key].args
+		);
 
 		return this;
 	}

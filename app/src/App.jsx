@@ -74,7 +74,7 @@ class App extends Component {
 				console.log(payload, oldPayload, c);
 
 				// c.$_speak("watuh").$_speak("watuh2");
-				WS.Perform("$_speak", "watuh");
+				// WS.Perform("$_speak", "watuh");
 			})
 		]);
 
@@ -102,19 +102,23 @@ class App extends Component {
 				cell.GetState().connection$.next(...args);
 
 				return cell;
-			})
-			.Train("$_speak", (cell, ...args) => {
-				console.log("HEYA! ^_^", ...args);
-
-				return cell;
 			});
 		WS.Perform("$_websocket", "localhost", 3087, `/ws`)
-			.Perform("$_send", "PAYLOADDDDDDDDD")
-			.Perform("$_send", "yo yo yo");
+			.Perform("$_send", "PAYLOADDDDDDDDD");
 
 		let WS2 = WS.Copy();
+
+		WS.Train("$_speak", (cell, ...args) => {
+			console.log("HEYA! ^_^", ...args);
+
+			return cell;
+		});
+
+		WS.Perform("$_speak", "watuhzzz");
+		WS.Teach("$_speak", WS2);
+		WS2.Perform("$_speak", "TAUGHT");
+
 		console.log(WS);
-		WS2.Perform("$_speak", "watuhzzz");
 		console.log(WS2);
 
 
