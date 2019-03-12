@@ -116,7 +116,7 @@ class App extends Component {
 		WS.Teach("$_speak", WS2);
 		WS2.Perform("$_speak", "TAUGHT");
 
-		WS.Cycle();
+		// WS.Cycle();
 
 		console.log(WS);
 		console.log(WS2);
