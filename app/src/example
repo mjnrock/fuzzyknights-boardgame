@@ -125,3 +125,67 @@
 		console.log(WS);
 		WS2.Perform("$_speak", "watuhzzz");
 		console.log(WS2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+		let WS = new Cell([
+			new Organelle("cycle-send", (payload, oldPayload, o, c) => {
+				c.Perform("$_send", payload);
+			})
+		]);
+
+        let beacon = new Beacon();
+		beacon.Attach(Cell.EnumEventType.METABOLISM, (obj) => {
+            console.log(obj.data.Outflux.Timer.value);
+		});
+		WS.Subscribe(beacon);
+		
+		WS.Train("$_websocket", (cell, host, port, endpoint = "/") => {
+			if(endpoint[0] !== "/") {
+				endpoint = `/${ endpoint }`;
+			}
+
+			cell.SetState({
+				connection$: webSocket(`ws://${ host }:${ port }${ endpoint }`)
+			});
+			cell.GetState().connection$.subscribe(
+				(payload, oldPayload) => cell.Metabolize(payload, oldPayload),
+				(e) => console.log("Error: ", e)
+			);
+
+			return cell;
+		})
+			.Train("$_send", (cell, ...args) => {
+				cell.GetState().connection$.next(...args);
+
+				return cell;
+			});
+		WS.Perform("$_websocket", "localhost", 3087, `/ws`)
+			.Perform("$_send", "PAYLOADDDDDDDDD");
+
+		let WS2 = WS.Copy();
+
+		WS.Train("$_speak", (cell, ...args) => {
+			console.log("HEYA! ^_^", ...args);
+
+			return cell;
+		});
+
+		WS.Perform("$_speak", "watuhzzz");
+		WS.Teach("$_speak", WS2);
+		WS2.Perform("$_speak", "TAUGHT");
+
+		WS.Cycle();
+
+		console.log(WS);
+		console.log(WS2);
