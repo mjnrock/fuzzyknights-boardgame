@@ -2,7 +2,7 @@ import Subscribable from "./Subscribable";
 import Organelle from "./Organelle";
 import { cloneDeep } from "lodash";
 import { NewUUID } from "./../Helper";
-import { interval, pausable } from "rxjs";
+import { interval } from "rxjs";
 import { timeInterval } from "rxjs/operators";
 
 class Cell extends Subscribable {
@@ -16,10 +16,8 @@ class Cell extends Subscribable {
 		}
 
 		this.Organelles = organelles;
-		this.Actions = {};
-		this.Loops = [];
-
-		// return new Proxy(this, this);
+		this.Actions = Object.freeze({});
+		this.Loops = Object.freeze([]);
 	}
 
 	Cycle(timeout = 1000) {
@@ -37,12 +35,15 @@ class Cell extends Subscribable {
 			}
 		);
 
-		this.Loops.push(source);
+		this.Loops = Object.freeze([
+			...this.Loops,
+			source
+		]);
 
 		return this;
 	}
 	Stagnate() {
-		this.Loops = [];
+		this.Loops = Object.freeze([]);
 
 		return this;
 	}
@@ -76,13 +77,19 @@ class Cell extends Subscribable {
 	// }
 
 	Train(key, fn, ...args) {
-		this.Actions[key] = {
+		let actions = {};
+		actions[key] = {
 			key: key,
 			callback: fn,
 			args: [
 				...args
 			]
 		};
+
+		this.Actions = Object.freeze({
+			...this.Actions,
+			...actions
+		});
 
 		return this;
 	}

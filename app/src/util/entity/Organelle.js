@@ -21,7 +21,7 @@ class Organelle extends Subscribable {
 			Outflux: result
 		});
 
-		return result;
+		return result === null || result === void 0 ? payload : result;
     }
     
     Copy() {
