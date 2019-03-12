@@ -2,6 +2,8 @@ import Subscribable from "./Subscribable";
 import Organelle from "./Organelle";
 import { cloneDeep } from "lodash";
 import { NewUUID } from "./../Helper";
+import { interval, pausable } from "rxjs";
+import { timeInterval } from "rxjs/operators";
 
 class Cell extends Subscribable {
 	constructor(organelles = {}, activator = null, state = {}) {
@@ -15,9 +17,36 @@ class Cell extends Subscribable {
 
 		this.Organelles = organelles;
 		this.Actions = {};
+		this.Loops = [];
 
 		// return new Proxy(this, this);
 	}
+
+	Cycle(timeout = 1000) {
+		let source = interval(timeout).pipe(
+			timeInterval()
+		)
+		.subscribe(
+			(timer) => {
+				this.Invoke(Cell.EnumEventType.CYCLE);
+
+				this.Metabolize({
+					Timer: timer,
+					State: this.GetState()
+				});
+			}
+		);
+
+		this.Loops.push(source);
+
+		return this;
+	}
+	Stagnate() {
+		this.Loops = [];
+
+		return this;
+	}
+
 	// get (target, prop) {
 	// 	if(target[prop]) {
 	// 		return target[prop];
@@ -179,6 +208,7 @@ class Cell extends Subscribable {
 }
 
 Cell.EnumEventType = Object.freeze({
+	CYCLE: "cell-oncycle",
 	ACTIVATION: "cell-onactivation",
 	ATTEMPT: "cell-onattempt",
 	METABOLISM: "cell-onmetabolism"
