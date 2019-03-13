@@ -16,7 +16,7 @@ class Cell extends Subscribable {
 		}
 
 		this.Organelles = organelles;
-		this.Actions = Object.freeze({});
+		this.Behaviors = Object.freeze({});
 		this.Loops = Object.freeze([]);
 	}
 
@@ -53,7 +53,7 @@ class Cell extends Subscribable {
 	// 		return target[prop];
 	// 	}
 
-	// 	if(target.Actions[prop]) {
+	// 	if(target.Behaviors[prop]) {
 	// 		return new Proxy(() => {}, {
 	// 			apply: function(target, _this, ...args) {
 	// 				return _this.Perform(prop, ...args[0]);
@@ -77,8 +77,8 @@ class Cell extends Subscribable {
 	// }
 
 	Train(key, fn, ...args) {
-		let actions = {};
-		actions[key] = {
+		let Behaviors = {};
+		Behaviors[key] = {
 			key: key,
 			callback: fn,
 			args: [
@@ -86,15 +86,15 @@ class Cell extends Subscribable {
 			]
 		};
 
-		this.Actions = Object.freeze({
-			...this.Actions,
-			...actions
+		this.Behaviors = Object.freeze({
+			...this.Behaviors,
+			...Behaviors
 		});
 
 		return this;
 	}
 	Untrain(key) {
-		delete this.Actions[key];
+		delete this.Behaviors[key];
 
 		return this;
 	}
@@ -102,15 +102,15 @@ class Cell extends Subscribable {
 	Learn(key, cell) {
 		this.Train(
 			key,
-			cell.Actions[key].callback
+			cell.Behaviors[key].callback
 		);
 
 		return this;
 	}
 	LearnAll(cell) {
-		this.Actions = {
-			...this.Actions,
-			...cell.Actions
+		this.Behaviors = {
+			...this.Behaviors,
+			...cell.Behaviors
 		};
 		
 		return this;
@@ -118,16 +118,16 @@ class Cell extends Subscribable {
 	Teach(key, cell) {
 		cell.Train(
 			key,
-			this.Actions[key].callback,
-			this.Actions[key].args
+			this.Behaviors[key].callback,
+			this.Behaviors[key].args
 		);
 
 		return this;
 	}
 	TeachAll(cell) {
-		cell.Actions = {
-			...this.Actions,
-			...cell.Actions
+		cell.Behaviors = {
+			...this.Behaviors,
+			...cell.Behaviors
 		};
 		
 		return this;
@@ -135,9 +135,9 @@ class Cell extends Subscribable {
 
 	Perform(key, ...args) {
 		if(args.length >= 0) {
-			this.Actions[key].callback(this, ...args);
+			this.Behaviors[key].callback(this, ...args);
 		} else {
-			this.Actions[key].callback(this, ...this.Actions[key].args);
+			this.Behaviors[key].callback(this, ...this.Behaviors[key].args);
 		}
 
 		return this;
