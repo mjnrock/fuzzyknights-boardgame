@@ -38,7 +38,7 @@ class Cell extends Subscribable {
 		this.Loops = Object.freeze([
 			...this.Loops,
 			source
-		]);
+        ]);
 
 		return this;
 	}

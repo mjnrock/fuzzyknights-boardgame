@@ -67,7 +67,35 @@ class Subscribable {
 		}
 
 		return this;
-	}
+    }
+    
+    Attempt(callback, scope, ...args) {
+        try {
+            if(typeof callback === "function") {
+                this.Invoke(Subscribable.EnumEventType.PRE_ATTEMPT, {
+                    Scope: scope,
+                    Callback: callback,
+                    Arguments: args
+                });
+
+                callback(scope, ...args);
+                
+                this.Invoke(Subscribable.EnumEventType.POST_ATTEMPT, {
+                    Scope: scope,
+                    Callback: callback,
+                    Arguments: args
+                });
+            }
+        } catch(e) {
+            this.Invoke(Subscribable.EnumEventType.ATTEMPT_ERROR, {
+                Scope: scope,
+                Callback: callback,
+                Arguments: args
+            });
+
+            console.warn("Error");
+        }
+    }
 
 	next(caller, obj) {
 		return {
@@ -103,8 +131,11 @@ class Subscribable {
 }
 
 Subscribable.EnumEventType = Object.freeze({
-	STATE: "subscribbable-onstate",
-	SUBSCRIBE: "subscribbable-onsubscribe",
+	STATE: "subscribable-onState",
+    SUBSCRIBE: "subscribable-onSubscribe",
+    PRE_ATTEMPT: "subscribable-onPreAttempt",
+    POST_ATTEMPT: "subscribable-onPostAttempt",
+    ATTEMPT_ERROR: "subscribable-onAttemptError"
 });
 
 export default Subscribable;

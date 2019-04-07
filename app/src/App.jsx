@@ -77,6 +77,7 @@ class App extends Component {
 
         let beacon = new Beacon();
 		beacon.Attach(Cell.EnumEventType.METABOLISM, (obj) => {
+            console.log(obj);
             console.log(obj.data.Outflux.Timer.value);
 		});
 		WS.Subscribe(beacon);
@@ -116,7 +117,7 @@ class App extends Component {
 		WS.Teach("$_speak", WS2);
 		WS2.Perform("$_speak", "TAUGHT");
 
-		// WS.Cycle();
+		WS.Cycle();
 
 		console.log(WS);
 		console.log(WS2);
