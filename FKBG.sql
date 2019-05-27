@@ -1,0 +1,285 @@
+USE FuzzyKnights
+GO
+
+--	CREATE SCHEMA FKBG
+--	GO
+
+
+IF OBJECT_ID('FKBG.[Game.MatchDetail]') IS NOT NULL DROP TABLE FKBG.[Game.MatchDetail];
+IF OBJECT_ID('FKBG.[Game.Match]') IS NOT NULL DROP TABLE FKBG.[Game.Match];
+IF OBJECT_ID('FKBG.[Game.BuildingNode]') IS NOT NULL DROP TABLE FKBG.[Game.BuildingNode];
+IF OBJECT_ID('FKBG.[Game.BuildingCreature]') IS NOT NULL DROP TABLE FKBG.[Game.BuildingCreature];
+IF OBJECT_ID('FKBG.[Game.BuildingResource]') IS NOT NULL DROP TABLE FKBG.[Game.BuildingResource];
+IF OBJECT_ID('FKBG.[Game.CreatureResource]') IS NOT NULL DROP TABLE FKBG.[Game.CreatureResource];
+IF OBJECT_ID('FKBG.[Game.PlayerResource]') IS NOT NULL DROP TABLE FKBG.[Game.PlayerResource];
+IF OBJECT_ID('FKBG.[Game.CityResource]') IS NOT NULL DROP TABLE FKBG.[Game.CityResource];
+IF OBJECT_ID('FKBG.[Game.CityBuilding]') IS NOT NULL DROP TABLE FKBG.[Game.CityBuilding];
+IF OBJECT_ID('FKBG.[Game.CityCreature]') IS NOT NULL DROP TABLE FKBG.[Game.CityCreature];
+IF OBJECT_ID('FKBG.[Game.CityItem]') IS NOT NULL DROP TABLE FKBG.[Game.CityItem];
+IF OBJECT_ID('FKBG.[Game.City]') IS NOT NULL DROP TABLE FKBG.[Game.City];
+IF OBJECT_ID('FKBG.[Game.HeroCreature]') IS NOT NULL DROP TABLE FKBG.[Game.HeroCreature];
+IF OBJECT_ID('FKBG.[Game.HeroItem]') IS NOT NULL DROP TABLE FKBG.[Game.HeroItem];
+IF OBJECT_ID('FKBG.[Game.Hero]') IS NOT NULL DROP TABLE FKBG.[Game.Hero];
+IF OBJECT_ID('FKBG.[Game.Player]') IS NOT NULL DROP TABLE FKBG.[Game.Player];
+IF OBJECT_ID('FKBG.[Game.Team]') IS NOT NULL DROP TABLE FKBG.[Game.Team];
+IF OBJECT_ID('FKBG.[Game.MapNode]') IS NOT NULL DROP TABLE FKBG.[Game.MapNode];
+IF OBJECT_ID('FKBG.[Game.Map]') IS NOT NULL DROP TABLE FKBG.[Game.Map];
+
+IF OBJECT_ID('FKBG.[Dictionary.BuildingType]') IS NOT NULL DROP TABLE FKBG.[Dictionary.BuildingType];
+IF OBJECT_ID('FKBG.[Dictionary.ResourceType]') IS NOT NULL DROP TABLE FKBG.[Dictionary.ResourceType];
+IF OBJECT_ID('FKBG.[Dictionary.ResourceActionType]') IS NOT NULL DROP TABLE FKBG.[Dictionary.ResourceActionType];
+IF OBJECT_ID('FKBG.[Dictionary.CreatureType]') IS NOT NULL DROP TABLE FKBG.[Dictionary.CreatureType];
+IF OBJECT_ID('FKBG.[Dictionary.ItemType]') IS NOT NULL DROP TABLE FKBG.[Dictionary.ItemType];
+IF OBJECT_ID('FKBG.[Dictionary.RarityType]') IS NOT NULL DROP TABLE FKBG.[Dictionary.RarityType];
+IF OBJECT_ID('FKBG.[Dictionary.TerrainType]') IS NOT NULL DROP TABLE FKBG.[Dictionary.TerrainType];
+IF OBJECT_ID('FKBG.[Dictionary.ColorType]') IS NOT NULL DROP TABLE FKBG.[Dictionary.ColorType];
+GO
+
+
+--	=========== DICTIONARY ===========
+CREATE TABLE FKBG.[Dictionary.TerrainType] (
+	TerrainTypeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	Code VARCHAR(25) UNIQUE NOT NULL,
+	Label VARCHAR(255) NOT NULL,
+	Movement DECIMAL(5,2) NOT NULL DEFAULT 1.00,
+	ParentTerrainTypeID INT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.TerrainType] (TerrainTypeID),
+	VariantFlag TINYINT NULL
+);
+INSERT INTO FKBG.[Dictionary.TerrainType] (Code, Label, Movement)
+VALUES
+	('VOID', 'Void', 0.00),
+	('PATH', 'Path', 1.15),
+	('GRASS', 'Grass', 1.00),
+	('DIRT', 'Dirt', 0.90),
+	('SAND', 'Sand', 0.75),
+	('WATER', 'Water', 0.00);
+DECLARE @TerrainTypePathID INT = (SELECT TerrainTypeID FROM FKBG.[Dictionary.TerrainType] WHERE Code = 'PATH');
+INSERT INTO FKBG.[Dictionary.TerrainType] (Code, Label, Movement, ParentTerrainTypeID, VariantFlag)
+VALUES
+	('PATH_BRICK', 'Path', 1.10, @TerrainTypePathID, 1),
+	('PATH_STONE', 'Path', 1.25, @TerrainTypePathID, 2);
+
+CREATE TABLE FKBG.[Dictionary.ColorType] (
+	ColorTypeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	Code VARCHAR(25) UNIQUE NOT NULL,
+	Label VARCHAR(255) NOT NULL,
+	HexCode VARCHAR(6) NOT NULL
+);
+INSERT INTO FKBG.[Dictionary.ColorType] (Code, Label, HexCode)
+VALUES
+	('BLACK', 'Black', '000000'),
+	('WHITE', 'White', 'FFFFFF');
+
+CREATE TABLE FKBG.[Dictionary.ResourceType] (
+	ResourceTypeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	Code VARCHAR(25) UNIQUE NOT NULL,
+	Label VARCHAR(255) NOT NULL
+);
+INSERT INTO FKBG.[Dictionary.ResourceType] (Code, Label)
+VALUES
+	('GOLD', 'Gold');
+
+CREATE TABLE FKBG.[Dictionary.ResourceActionType] (
+	ResourceActionTypeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	Code VARCHAR(25) UNIQUE NOT NULL,
+	Label VARCHAR(255) NOT NULL
+);
+INSERT INTO FKBG.[Dictionary.ResourceActionType] (Code, Label)
+VALUES
+	('COST', 'Cost'),
+	('GAIN', 'Gain');
+
+CREATE TABLE FKBG.[Dictionary.RarityType] (
+	RarityTypeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	ColorTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.ColorType] (ColorTypeID),
+	Code VARCHAR(25) UNIQUE NOT NULL,
+	Label VARCHAR(255) NOT NULL
+);
+DECLARE @ColorTypeWhiteID INT = (SELECT ColorTypeID FROM FKBG.[Dictionary.ColorType] WHERE Code = 'WHITE');
+INSERT INTO FKBG.[Dictionary.RarityType] (Code, Label, ColorTypeID)
+VALUES
+	('COMMON', 'Common', @ColorTypeWhiteID),
+	('UNCOMMON', 'Uncommon', @ColorTypeWhiteID),
+	('RARE', 'Rare', @ColorTypeWhiteID),
+	('EPIC', 'Epic', @ColorTypeWhiteID),
+	('LEGENDARY', 'Legendary', @ColorTypeWhiteID);
+
+CREATE TABLE FKBG.[Dictionary.CreatureType] (
+	CreatureTypeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	Code VARCHAR(25) UNIQUE NOT NULL,
+	Label VARCHAR(255) NOT NULL,
+	Number TINYINT NOT NULL DEFAULT 0,
+	Sided TINYINT NOT NULL DEFAULT 0,
+	Bonus TINYINT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE FKBG.[Dictionary.ItemType] (
+	ItemTypeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	RarityTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.RarityType] (RarityTypeID),
+	Code VARCHAR(25) UNIQUE NOT NULL,
+	Label VARCHAR(255) NOT NULL,
+	Number TINYINT NOT NULL DEFAULT 0,
+	Sided TINYINT NOT NULL DEFAULT 0,
+	Bonus TINYINT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE FKBG.[Dictionary.BuildingType] (
+	BuildingTypeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	ParentBuildingTypeID INT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.BuildingType] (BuildingTypeID),
+	Code VARCHAR(25) UNIQUE NOT NULL,
+	Label VARCHAR(255) NOT NULL,
+	Number TINYINT NOT NULL DEFAULT 0,
+	Sided TINYINT NOT NULL DEFAULT 0,
+	Bonus TINYINT NOT NULL DEFAULT 0
+);
+
+
+--	=========== GAME ===========
+CREATE TABLE FKBG.[Game.Map] (
+	MapID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	Width TINYINT NOT NULL DEFAULT 24,
+	Height TINYINT NOT NULL DEFAULT 24,
+	UUID UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID()
+);
+
+CREATE TABLE FKBG.[Game.MapNode] (
+	MapNodeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	MapID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.Map] (MapID),
+	TerrainTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.TerrainType] (TerrainTypeID),
+	X INT NOT NULL,
+	Y INT NOT NULL,
+	UUID UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID()
+);
+
+CREATE TABLE FKBG.[Game.Match] (
+	MatchID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	MapID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.Map] (MapID),
+	Name NVARCHAR(255) NOT NULL,
+	StartDateTime DATETIME2(0) NOT NULL DEFAULT SYSDATETIME(),
+	EndDateTime DATETIME2(0) NULL,
+	UUID UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID()
+);
+
+CREATE TABLE FKBG.[Game.Player] (
+	PlayerID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	ColorTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.ColorType] (ColorTypeID),
+	Name NVARCHAR(255) NOT NULL,
+	UUID UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID()
+);
+
+CREATE TABLE FKBG.[Game.Team] (
+	TeamID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	ColorTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.ColorType] (ColorTypeID),
+	Name NVARCHAR(255) NOT NULL,
+	UUID UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID()
+);
+
+CREATE TABLE FKBG.[Game.MatchDetail] (
+	MatchDetailID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	MatchID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.Match] (MatchID),
+	TeamID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.Team] (TeamID),
+	PlayerID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.Player] (PlayerID)
+);
+
+CREATE TABLE FKBG.[Game.PlayerResource] (
+	PlayerResourceID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	PlayerID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.Player] (PlayerID),
+	ResourceTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.ResourceType] (ResourceTypeID),
+	Quantity INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE FKBG.[Game.Hero] (
+	HeroID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	PlayerID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.Player] (PlayerID),
+	MapNodeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.MapNode] (MapNodeID),
+	Name NVARCHAR(255) NOT NULL,
+	Number TINYINT NOT NULL DEFAULT 0,
+	Sided TINYINT NOT NULL DEFAULT 0,
+	Bonus TINYINT NOT NULL DEFAULT 0,
+	UUID UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID()
+);
+
+CREATE TABLE FKBG.[Game.HeroCreature] (
+	HeroCreatureID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	HeroID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.Hero] (HeroID),
+	CreatureTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.CreatureType] (CreatureTypeID),
+	Quantity INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE FKBG.[Game.HeroItem] (
+	HeroItemID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	HeroID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.Hero] (HeroID),
+	ItemTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.ItemType] (ItemTypeID),
+	Quantity INT NOT NULL DEFAULT 0,
+	IsEquipped BIT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE FKBG.[Game.City] (
+	CityID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	PlayerID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.Player] (PlayerID),
+	MapNodeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.MapNode] (MapNodeID),
+	Name NVARCHAR(255) NOT NULL,
+	Number TINYINT NOT NULL DEFAULT 0,
+	Sided TINYINT NOT NULL DEFAULT 0,
+	Bonus TINYINT NOT NULL DEFAULT 0,
+	UUID UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID()
+);
+
+CREATE TABLE FKBG.[Game.CityItem] (
+	CityItemID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	CityID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.City] (CityID),
+	ItemTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.ItemType] (ItemTypeID),
+	Quantity INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE FKBG.[Game.CityCreature] (
+	CityCreatureID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	CityID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.City] (CityID),
+	CreatureTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.CreatureType] (CreatureTypeID),
+	Quantity INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE FKBG.[Game.CityResource] (
+	CityResourceID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	CityID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.City] (CityID),
+	ResourceTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.ResourceType] (ResourceTypeID),
+	ResourceActionTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.ResourceActionType] (ResourceActionTypeID),
+	Quantity INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE FKBG.[Game.CityBuilding] (
+	CityBuildingID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	CityID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.City] (CityID),
+	BuildingTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.BuildingType] (BuildingTypeID)
+);
+
+CREATE TABLE FKBG.[Game.BuildingResource] (
+	BuildingResourceID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	BuildingTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.BuildingType] (BuildingTypeID),
+	ResourceTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.ResourceType] (ResourceTypeID),
+	ResourceActionTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.ResourceActionType] (ResourceActionTypeID),
+	Quantity INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE FKBG.[Game.CreatureResource] (
+	CreatureResourceID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	CreatureTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.CreatureType] (CreatureTypeID),
+	ResourceTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.ResourceType] (ResourceTypeID),
+	ResourceActionTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.ResourceActionType] (ResourceActionTypeID),
+	Quantity INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE FKBG.[Game.BuildingCreature] (
+	BuildingCreatureID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	BuildingTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.BuildingType] (BuildingTypeID),
+	CreatureTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.CreatureType] (CreatureTypeID),
+	Quantity INT NOT NULL DEFAULT 0
+);
+
+-- This table is exclusively for overworld buildings, such as Mines
+CREATE TABLE FKBG.[Game.BuildingNode] (
+	BuildingNodeID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	BuildingTypeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Dictionary.BuildingType] (BuildingTypeID),
+	MapNodeID INT NOT NULL FOREIGN KEY REFERENCES FKBG.[Game.MapNode] (MapNodeID),
+	ControlledByPlayerID INT NULL FOREIGN KEY REFERENCES FKBG.[Game.Player] (PlayerID)
+);
